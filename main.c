@@ -4,12 +4,8 @@
 #include <string.h>
 #include <math.h>
 #include "aide_projet.c"
+#include "arraylist.c"
 
-
-/*uint32_t isWin(uint32_t table)
-{
-
-}*/
 
 uint32_t tableTo3(uint8_t table[3][3])
 {
