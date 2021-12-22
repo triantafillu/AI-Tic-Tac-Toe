@@ -3,6 +3,44 @@
 #include <stdint.h>
 #include <string.h>
 #include <math.h>
+#include "aide_projet.c"
+
+
+/*uint32_t isWin(uint32_t table)
+{
+
+}*/
+
+uint32_t tableTo3(uint8_t table[3][3])
+{
+    uint32_t res = 0;
+    uint32_t mult = 100000000;
+    for (uint32_t i = 0; i < 3; i++)
+    {
+        for (uint32_t j = 0; j < 3; j++)
+        {
+            res += table[i][j] * mult;
+            mult /= 10;
+        }
+    }
+
+    return res;
+}
+
+/*uint32_t[3][3] * threeToTable(uint32_t three)
+{
+    uint32_t res[3][3];
+    for (int i = 2; i > -1 ; i--)
+    {
+        for (int j = 2; j > -1 ; j--)
+        {
+            res[i][j] = three % 10;
+            three /= 10;
+        }
+    }
+
+    return res;
+}*/
 
 // Translate the table represented by a number of base 3 to the base 10
 uint32_t translate10 (uint32_t table)
