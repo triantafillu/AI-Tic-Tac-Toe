@@ -22,6 +22,7 @@ typedef struct
 
 typedef struct
 {
+    uint32_t game; 
     list *free;
     list *taken;
 } configuration;
