@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/alexa/Desktop/Uni/Structures/Projet/aide_projet.c
+stdio.h
+-
+stdint.h
+-
+assert.h
+-
+stdlib.h
+-
+
+C:/Users/alexa/Desktop/Uni/Structures/Projet/arraylist.c
+stdio.h
+-
+stdlib.h
+-
+stdint.h
+-
+
+C:/Users/alexa/Desktop/Uni/Structures/Projet/main.c
+stdio.h
+-
+stdlib.h
+-
+stdint.h
+-
+string.h
+-
+math.h
+-
+aide_projet.c
+C:/Users/alexa/Desktop/Uni/Structures/Projet/aide_projet.c
+arraylist.c
+C:/Users/alexa/Desktop/Uni/Structures/Projet/arraylist.c
+
