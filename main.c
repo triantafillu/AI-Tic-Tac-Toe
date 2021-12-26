@@ -3,6 +3,7 @@
 #include <stdint.h>
 #include <string.h>
 #include <math.h>
+#include <time.h>
 #include "aide_projet.c"
 #include "arraylist.c"
 #include "game.c"
@@ -12,9 +13,9 @@
 //Fonction qui initialise un boite:
 //Une boite se compose de 9 boules de couleurs différentes
 //Et on a un nombre en base 3 correspondant au jeu de la carte
-configuration* init_box(uint32_t g){
-    configuration* res= malloc(sizeof(configuration));
-    res->game=g;
+matchbox* init_box(uint32_t g){
+    matchbox* res= malloc(sizeof(matchbox));
+    res->config=g;
     //on initialise l'arraylist
     maillon* boules=malloc(sizeof(boules)*9);
     for(int i=0; i<8; i++){
@@ -36,7 +37,7 @@ configuration* init_box(uint32_t g){
 }
 
 //Fonction qui renvoie une bille au hasard dans une boite
-enum billes rand_bille(configuration* boite){
+enum billes rand_bille(matchbox* boite){
     srand(time(NULL));
     int nb=rand()%(boite->free->size);
     int i=0;
