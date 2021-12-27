@@ -1,12 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
-#include <string.h>
-#include <math.h>
 #include <time.h>
-#include "aide_projet.c"
-#include "arraylist.c"
-#include "game.c"
+#include "matchboxes.h"
+#include "arraylist.h"
+#include "aide_projet.h"
+
 
 
 
@@ -54,11 +53,15 @@ enum billes rand_bille(matchbox* boite){
 }
 
 int main() {
-    uint8_t table[3][3] = {{2, 1, 1},
+   /* uint8_t table[3][3] = {{2, 1, 1},
                             {1, 2, 1},
                             {0, 1, 2}};
 
-    uint32_t w = isWin(table);
+    uint32_t w = isWin(table);*/
+
+    FILE* stream = fopen("game_state.csv", "r");
+    matchbox mb = *readGameState(stream);
+
     // 210122020
     return 0;
 }

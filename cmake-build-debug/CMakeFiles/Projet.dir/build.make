@@ -78,19 +78,64 @@ CMakeFiles/Projet.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Projet.dir/main.c.s"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\alexa\Desktop\Uni\Structures\Projet\main.c -o CMakeFiles\Projet.dir\main.c.s
 
+CMakeFiles/Projet.dir/matchboxes.c.obj: CMakeFiles/Projet.dir/flags.make
+CMakeFiles/Projet.dir/matchboxes.c.obj: ../matchboxes.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\alexa\Desktop\Uni\Structures\Projet\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Projet.dir/matchboxes.c.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Projet.dir\matchboxes.c.obj -c C:\Users\alexa\Desktop\Uni\Structures\Projet\matchboxes.c
+
+CMakeFiles/Projet.dir/matchboxes.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Projet.dir/matchboxes.c.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\alexa\Desktop\Uni\Structures\Projet\matchboxes.c > CMakeFiles\Projet.dir\matchboxes.c.i
+
+CMakeFiles/Projet.dir/matchboxes.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Projet.dir/matchboxes.c.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\alexa\Desktop\Uni\Structures\Projet\matchboxes.c -o CMakeFiles\Projet.dir\matchboxes.c.s
+
+CMakeFiles/Projet.dir/arraylist.c.obj: CMakeFiles/Projet.dir/flags.make
+CMakeFiles/Projet.dir/arraylist.c.obj: ../arraylist.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\alexa\Desktop\Uni\Structures\Projet\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/Projet.dir/arraylist.c.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Projet.dir\arraylist.c.obj -c C:\Users\alexa\Desktop\Uni\Structures\Projet\arraylist.c
+
+CMakeFiles/Projet.dir/arraylist.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Projet.dir/arraylist.c.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\alexa\Desktop\Uni\Structures\Projet\arraylist.c > CMakeFiles\Projet.dir\arraylist.c.i
+
+CMakeFiles/Projet.dir/arraylist.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Projet.dir/arraylist.c.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\alexa\Desktop\Uni\Structures\Projet\arraylist.c -o CMakeFiles\Projet.dir\arraylist.c.s
+
+CMakeFiles/Projet.dir/aide_projet.c.obj: CMakeFiles/Projet.dir/flags.make
+CMakeFiles/Projet.dir/aide_projet.c.obj: ../aide_projet.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\alexa\Desktop\Uni\Structures\Projet\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/Projet.dir/aide_projet.c.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Projet.dir\aide_projet.c.obj -c C:\Users\alexa\Desktop\Uni\Structures\Projet\aide_projet.c
+
+CMakeFiles/Projet.dir/aide_projet.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Projet.dir/aide_projet.c.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\alexa\Desktop\Uni\Structures\Projet\aide_projet.c > CMakeFiles\Projet.dir\aide_projet.c.i
+
+CMakeFiles/Projet.dir/aide_projet.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Projet.dir/aide_projet.c.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\alexa\Desktop\Uni\Structures\Projet\aide_projet.c -o CMakeFiles\Projet.dir\aide_projet.c.s
+
 # Object files for target Projet
 Projet_OBJECTS = \
-"CMakeFiles/Projet.dir/main.c.obj"
+"CMakeFiles/Projet.dir/main.c.obj" \
+"CMakeFiles/Projet.dir/matchboxes.c.obj" \
+"CMakeFiles/Projet.dir/arraylist.c.obj" \
+"CMakeFiles/Projet.dir/aide_projet.c.obj"
 
 # External object files for target Projet
 Projet_EXTERNAL_OBJECTS =
 
 Projet.exe: CMakeFiles/Projet.dir/main.c.obj
+Projet.exe: CMakeFiles/Projet.dir/matchboxes.c.obj
+Projet.exe: CMakeFiles/Projet.dir/arraylist.c.obj
+Projet.exe: CMakeFiles/Projet.dir/aide_projet.c.obj
 Projet.exe: CMakeFiles/Projet.dir/build.make
 Projet.exe: CMakeFiles/Projet.dir/linklibs.rsp
 Projet.exe: CMakeFiles/Projet.dir/objects1.rsp
 Projet.exe: CMakeFiles/Projet.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\alexa\Desktop\Uni\Structures\Projet\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable Projet.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\alexa\Desktop\Uni\Structures\Projet\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable Projet.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Projet.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

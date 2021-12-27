@@ -128,6 +128,54 @@ Projet/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projet.dir\build.make CMakeFiles/Projet.dir/build
 .PHONY : Projet/fast
 
+aide_projet.obj: aide_projet.c.obj
+.PHONY : aide_projet.obj
+
+# target to build an object file
+aide_projet.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projet.dir\build.make CMakeFiles/Projet.dir/aide_projet.c.obj
+.PHONY : aide_projet.c.obj
+
+aide_projet.i: aide_projet.c.i
+.PHONY : aide_projet.i
+
+# target to preprocess a source file
+aide_projet.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projet.dir\build.make CMakeFiles/Projet.dir/aide_projet.c.i
+.PHONY : aide_projet.c.i
+
+aide_projet.s: aide_projet.c.s
+.PHONY : aide_projet.s
+
+# target to generate assembly for a file
+aide_projet.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projet.dir\build.make CMakeFiles/Projet.dir/aide_projet.c.s
+.PHONY : aide_projet.c.s
+
+arraylist.obj: arraylist.c.obj
+.PHONY : arraylist.obj
+
+# target to build an object file
+arraylist.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projet.dir\build.make CMakeFiles/Projet.dir/arraylist.c.obj
+.PHONY : arraylist.c.obj
+
+arraylist.i: arraylist.c.i
+.PHONY : arraylist.i
+
+# target to preprocess a source file
+arraylist.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projet.dir\build.make CMakeFiles/Projet.dir/arraylist.c.i
+.PHONY : arraylist.c.i
+
+arraylist.s: arraylist.c.s
+.PHONY : arraylist.s
+
+# target to generate assembly for a file
+arraylist.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projet.dir\build.make CMakeFiles/Projet.dir/arraylist.c.s
+.PHONY : arraylist.c.s
+
 main.obj: main.c.obj
 .PHONY : main.obj
 
@@ -152,6 +200,30 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projet.dir\build.make CMakeFiles/Projet.dir/main.c.s
 .PHONY : main.c.s
 
+matchboxes.obj: matchboxes.c.obj
+.PHONY : matchboxes.obj
+
+# target to build an object file
+matchboxes.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projet.dir\build.make CMakeFiles/Projet.dir/matchboxes.c.obj
+.PHONY : matchboxes.c.obj
+
+matchboxes.i: matchboxes.c.i
+.PHONY : matchboxes.i
+
+# target to preprocess a source file
+matchboxes.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projet.dir\build.make CMakeFiles/Projet.dir/matchboxes.c.i
+.PHONY : matchboxes.c.i
+
+matchboxes.s: matchboxes.c.s
+.PHONY : matchboxes.s
+
+# target to generate assembly for a file
+matchboxes.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projet.dir\build.make CMakeFiles/Projet.dir/matchboxes.c.s
+.PHONY : matchboxes.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -161,9 +233,18 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Projet
+	@echo ... aide_projet.obj
+	@echo ... aide_projet.i
+	@echo ... aide_projet.s
+	@echo ... arraylist.obj
+	@echo ... arraylist.i
+	@echo ... arraylist.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... matchboxes.obj
+	@echo ... matchboxes.i
+	@echo ... matchboxes.s
 .PHONY : help
 
 

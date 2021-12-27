@@ -2,8 +2,11 @@
 #include <stdlib.h>
 #include <stdint.h>
 #include <string.h>
-#include "arraylist.c"
-#include "aide_projet.c"
+#include "aide_projet.h"
+#include "math.h"
+#include "matchboxes.h"
+
+#define CONTINUE 0
 
 /*
  *
@@ -12,7 +15,8 @@
  *
  */
 
-uint32_t tableTo3(uint8_t table[3][3])
+
+/*uint32_t tableTo3(uint8_t table[3][3])
 {
     uint32_t res = 0;
     uint32_t mult = 100000000;
@@ -26,7 +30,7 @@ uint32_t tableTo3(uint8_t table[3][3])
     }
 
     return res;
-}
+}*/
 
 
 /*uint32_t[3][3] * threeToTable(uint32_t three)
@@ -170,7 +174,7 @@ void initializeMatchboxes()
     // Empty board
     uint8_t g[3][3] = {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}};
     // Matchbox with 9 free beads
-    mb[0] = newMatchbox(9, 000000000);
+    mb[0] = *newMatchbox(9, 000000000);
     // Fill up the names of free beads
     addBilles(mb[0].free, tableToBilles(g, 9));
 
@@ -178,13 +182,60 @@ void initializeMatchboxes()
     while(next_configuration(g)==CONTINUE)
     {
         num_of_billes = freePlaces(g);
-        mb[c] = newMatchbox(num_of_billes, tableTo3(g));
+        mb[c] = *newMatchbox(num_of_billes, tableTo3(g));
         addBilles(mb[c].free, tableToBilles(g, num_of_billes));
         c++;
     }
 
 }
 
+const char* getCaseCSV(char* line, int num)
+{
+    const char* tok;
+    for (tok = strtok(line, ",");
+         tok && *tok;
+         tok = strtok(NULL, ",\n"))
+    {
+        if (!--num)
+            return tok;
+    }
+    return NULL;
+}
+
+matchbox * readGameState(FILE* file)
+{
+    // Table of matchboxes
+    matchbox mb[1];
+    // Index of matchbox
+    uint32_t c = 0;
+
+    char line[1];
+    // For each line in file
+    while (fgets(line, 1, file))
+    {
+        // Next line
+        char* tmp = strdup(line);
+        // First cell - configuration
+        mb[c].config = atoi(getCaseCSV(tmp, 1));
+
+        uint32_t case_c = 2;
+        // For every number of beads
+        while(case_c < 10)
+        {
+            // Add corresponding beads to the list of free beads
+            for(int i=0; i<atoi(getCaseCSV(tmp, case_c)); i++)
+            {
+                addHead(mb[c].free, getBille(case_c - 1));
+
+            }
+            case_c++;
+        }
+        free(tmp);
+        c++;
+    }
+
+    return mb;
+}
 
 
 

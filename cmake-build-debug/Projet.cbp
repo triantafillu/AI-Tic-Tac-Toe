@@ -74,7 +74,25 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/alexa/Desktop/Uni/Structures/Projet/aide_projet.c">
+			<Option target="Projet"/>
+		</Unit>
+		<Unit filename="C:/Users/alexa/Desktop/Uni/Structures/Projet/aide_projet.h">
+			<Option target="Projet"/>
+		</Unit>
+		<Unit filename="C:/Users/alexa/Desktop/Uni/Structures/Projet/arraylist.c">
+			<Option target="Projet"/>
+		</Unit>
+		<Unit filename="C:/Users/alexa/Desktop/Uni/Structures/Projet/arraylist.h">
+			<Option target="Projet"/>
+		</Unit>
 		<Unit filename="C:/Users/alexa/Desktop/Uni/Structures/Projet/main.c">
+			<Option target="Projet"/>
+		</Unit>
+		<Unit filename="C:/Users/alexa/Desktop/Uni/Structures/Projet/matchboxes.c">
+			<Option target="Projet"/>
+		</Unit>
+		<Unit filename="C:/Users/alexa/Desktop/Uni/Structures/Projet/matchboxes.h">
 			<Option target="Projet"/>
 		</Unit>
 		<Unit filename="C:/Users/alexa/Desktop/Uni/Structures/Projet/CMakeLists.txt">

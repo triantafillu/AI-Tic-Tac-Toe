@@ -15,6 +15,12 @@ assert.h
 -
 stdlib.h
 -
+matchboxes.c
+C:/Users/alexa/Desktop/Uni/Structures/Projet/matchboxes.c
+aide_projet.h
+C:/Users/alexa/Desktop/Uni/Structures/Projet/aide_projet.h
+
+C:/Users/alexa/Desktop/Uni/Structures/Projet/aide_projet.h
 
 C:/Users/alexa/Desktop/Uni/Structures/Projet/arraylist.c
 stdio.h
@@ -23,6 +29,12 @@ stdlib.h
 -
 stdint.h
 -
+assert.h
+-
+arraylist.h
+C:/Users/alexa/Desktop/Uni/Structures/Projet/arraylist.h
+
+C:/Users/alexa/Desktop/Uni/Structures/Projet/arraylist.h
 
 C:/Users/alexa/Desktop/Uni/Structures/Projet/main.c
 stdio.h
@@ -31,12 +43,32 @@ stdlib.h
 -
 stdint.h
 -
+time.h
+-
+matchboxes.h
+C:/Users/alexa/Desktop/Uni/Structures/Projet/matchboxes.h
+arraylist.h
+C:/Users/alexa/Desktop/Uni/Structures/Projet/arraylist.h
+aide_projet.h
+C:/Users/alexa/Desktop/Uni/Structures/Projet/aide_projet.h
+
+C:/Users/alexa/Desktop/Uni/Structures/Projet/matchboxes.c
+stdio.h
+-
+stdlib.h
+-
+stdint.h
+-
 string.h
 -
+aide_projet.h
+C:/Users/alexa/Desktop/Uni/Structures/Projet/aide_projet.h
 math.h
--
-aide_projet.c
-C:/Users/alexa/Desktop/Uni/Structures/Projet/aide_projet.c
-arraylist.c
-C:/Users/alexa/Desktop/Uni/Structures/Projet/arraylist.c
+C:/Users/alexa/Desktop/Uni/Structures/Projet/math.h
+matchboxes.h
+C:/Users/alexa/Desktop/Uni/Structures/Projet/matchboxes.h
+
+C:/Users/alexa/Desktop/Uni/Structures/Projet/matchboxes.h
+arraylist.h
+C:/Users/alexa/Desktop/Uni/Structures/Projet/arraylist.h
 
