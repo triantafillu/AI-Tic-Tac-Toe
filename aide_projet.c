@@ -2,7 +2,7 @@
 #include <stdint.h>
 #include <assert.h>
 #include <stdlib.h>
-#include "matchboxes.c"
+#include "matchboxes.h"
 #define CONTINUE 0
 #define FINISHED 1
 #include "aide_projet.h"

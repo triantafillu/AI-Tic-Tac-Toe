@@ -5,7 +5,7 @@
 #include "aide_projet.h"
 #include "math.h"
 #include "matchboxes.h"
-
+#include "arraylist.h"
 #define CONTINUE 0
 
 /*
@@ -125,6 +125,7 @@ enum billes getBille(uint32_t ind)
         default:
             break;
     }
+    return -1;
 }
 
 // Get a list of free billes for the configuration
@@ -205,7 +206,7 @@ const char* getCaseCSV(char* line, int num)
 matchbox * readGameState(FILE* file)
 {
     // Table of matchboxes
-    matchbox mb[1];
+    matchbox* mb=malloc(sizeof(matchbox));
     // Index of matchbox
     uint32_t c = 0;
 

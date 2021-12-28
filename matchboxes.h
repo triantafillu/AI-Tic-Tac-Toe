@@ -3,6 +3,7 @@
 //
 
 #include "arraylist.h"
+#include "aide_projet.h"
 #ifndef PROJET_MATCHBOXES_H
 #define PROJET_MATCHBOXES_H
 
