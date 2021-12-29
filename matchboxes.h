@@ -15,6 +15,7 @@ enum billes *tableToBilles(uint8_t table[3][3], uint32_t size);
 uint32_t freePlaces(uint8_t table[3][3]);
 void initializeMatchboxes();
 const char* getCaseCSV(char* line, int num);
-matchbox * readGameState(FILE* file);
+matchbox ** readGameState(FILE* file);
+void writeGameState(FILE * file, matchbox **mb);
 
 #endif //PROJET_MATCHBOXES_H

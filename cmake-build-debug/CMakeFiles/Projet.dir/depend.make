@@ -5,7 +5,6 @@ CMakeFiles/Projet.dir/aide_projet.c.obj: \
  ../aide_projet.c \
  ../aide_projet.h \
  ../arraylist.h \
- ../matchboxes.c \
  ../matchboxes.h
 CMakeFiles/Projet.dir/arraylist.c.obj: \
  ../arraylist.c \

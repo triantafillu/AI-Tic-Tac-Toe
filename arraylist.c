@@ -49,7 +49,7 @@ void addHead(list *l, enum billes b)
     l->size += 1;
 }
 
-void enlargeFree(matchbox *mb, uint32_t size)
+/*void enlargeFree(matchbox *mb, uint32_t size)
 {
     maillon *t;
     uint32_t i;
@@ -68,9 +68,9 @@ void enlargeFree(matchbox *mb, uint32_t size)
     mb->free->head = &(t[0]);
     mb->free->tail = &(t[size - 1]);
     mb->free->size = size;
-}
+}*/
 
-matchbox *newMatchbox(uint32_t size, uint32_t config)
+matchbox *newMatchbox(uint32_t config)
 {
     matchbox *mb;
     mb = malloc(sizeof(matchbox));
@@ -80,7 +80,7 @@ matchbox *newMatchbox(uint32_t size, uint32_t config)
     mb->free = newList();
     mb->config = config;
 
-    enlargeFree(mb, size);
+    //enlargeFree(mb, size);
 
     return mb;
 }
@@ -95,6 +95,23 @@ void addBilles(list *l, enum billes *b)
         c++;
         p = p->next;
     }
+}
+
+uint32_t countBilles(list *l, enum billes b)
+{
+    maillon *p = l->head;
+    uint32_t c = 0;
+    uint32_t res = 0;
+    while(p != NULL)
+    {
+        if (p->bille == b)
+        {
+            res++;
+        }
+        c++;
+        p = p->next;
+    }
+    return res;
 }
 
 

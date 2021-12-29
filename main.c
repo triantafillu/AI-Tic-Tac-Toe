@@ -12,7 +12,8 @@
 //Fonction qui initialise un boite:
 //Une boite se compose de 9 boules de couleurs différentes
 //Et on a un nombre en base 3 correspondant au jeu de la carte
-matchbox* init_box(uint32_t g){
+matchbox* init_box(uint32_t g)
+{
     matchbox* res= malloc(sizeof(matchbox));
     res->config=g;
     //on initialise l'arraylist
@@ -59,8 +60,11 @@ int main() {
 
     uint32_t w = isWin(table);*/
 
-    FILE* stream = fopen("game_state.csv", "r");
-    matchbox mb = *readGameState(stream);
+    FILE* in = fopen("C:\\Users\\alexa\\Desktop\\Uni\\Structures\\Projet\\game_state.csv", "r");
+    FILE* out = fopen("C:\\Users\\alexa\\Desktop\\Uni\\Structures\\Projet\\gs_out.csv", "w");
+    matchbox** mb = readGameState(in);
+    writeGameState(out, mb);
+    fclose(out);
 
     // 210122020
     return 0;

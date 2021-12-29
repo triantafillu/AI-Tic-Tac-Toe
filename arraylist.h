@@ -35,7 +35,8 @@ maillon *newMaillon(enum billes b);
 list *newList();
 void addHead(list *l, enum billes b);
 void enlargeFree(matchbox *mb, uint32_t size);
-matchbox *newMatchbox(uint32_t size, uint32_t config);
+matchbox *newMatchbox(uint32_t config);
 void addBilles(list *l, enum billes *b);
+uint32_t countBilles(list *l, enum billes b);
 
 #endif //PROJET_ARRAYLIST_H

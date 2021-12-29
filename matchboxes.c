@@ -16,7 +16,7 @@
  */
 
 
-/*uint32_t tableTo3(uint8_t table[3][3])
+uint32_t tableTo3(uint8_t table[3][3])
 {
     uint32_t res = 0;
     uint32_t mult = 100000000;
@@ -30,7 +30,7 @@
     }
 
     return res;
-}*/
+}
 
 
 /*uint32_t[3][3] * threeToTable(uint32_t three)
@@ -165,7 +165,7 @@ uint32_t freePlaces(uint8_t table[3][3])
 }
 
 // Initialize matchboxes for the start of learning
-void initializeMatchboxes()
+/*void initializeMatchboxes()
 {
     // Table of matchboxes
     matchbox mb[304];
@@ -188,7 +188,7 @@ void initializeMatchboxes()
         c++;
     }
 
-}
+}*/
 
 const char* getCaseCSV(char* line, int num)
 {
@@ -203,39 +203,134 @@ const char* getCaseCSV(char* line, int num)
     return NULL;
 }
 
-matchbox * readGameState(FILE* file)
+void emptyBuffer(char *buf, uint32_t length)
+{
+    for (uint32_t i = 0; i < length; i++)
+    {
+        buf[i] = 0;
+    }
+}
+// Read the matchboxes from file
+// File structure:
+// config, yellow, red, green, blue, orange, purple, white, black, pink
+matchbox ** readGameState(FILE* file)
 {
     // Table of matchboxes
-    matchbox* mb=malloc(sizeof(matchbox));
+    matchbox** mb= malloc(3 * sizeof(matchbox));
+
+    // Initialize empty matchboxes
+    for (int l = 0; l<3; l++)
+    {
+        mb[l] = newMatchbox(0);
+    }
+
     // Index of matchbox
     uint32_t c = 0;
+    // Variable used to read next character
+    uint32_t tmp;
+    // Buffer index
+    uint32_t i;
+    // The character read from file
+    uint8_t r=0;
+    // Buffer to stock characters and transform them to int
+    uint8_t buffer[9];
+    // Number of beads of specific colour
+    uint32_t num_of_billes;
+    // Current case of csv file
+    uint32_t case_c;
 
-    char line[1];
     // For each line in file
-    while (fgets(line, 1, file))
+    while (fscanf(file,"%c",&r) != EOF)
     {
-        // Next line
-        char* tmp = strdup(line);
         // First cell - configuration
-        mb[c].config = atoi(getCaseCSV(tmp, 1));
-
-        uint32_t case_c = 2;
-        // For every number of beads
-        while(case_c < 10)
+        i=0;
+        while( r != ',' )
         {
-            // Add corresponding beads to the list of free beads
-            for(int i=0; i<atoi(getCaseCSV(tmp, case_c)); i++)
-            {
-                addHead(mb[c].free, getBille(case_c - 1));
+            buffer[i]=r;
+            i++;
+            tmp = fscanf(file,"%c",&r);
 
+        }
+        mb[c]->config = atoi(buffer);
+        emptyBuffer(buffer, 9);
+
+        // For each cell after 2 (quantities of beads)
+        case_c = 2;
+        for (int j=0; j<9; j++)
+        {
+            i = 0;
+            // Read the next character after ","
+            tmp = fscanf(file,"%c",&r);
+
+            // Read till ",", if the last cell - read till "\n"
+            if (case_c != 10)
+            {
+                while( r != ',' )
+                {
+                    buffer[i]=r;
+                    i++;
+                    tmp = fscanf(file,"%c",&r);
+                }
+            }
+            else
+            {
+                while( r != '\n')
+                {
+                    buffer[i]=r;
+                    i++;
+
+                    // If the "\n" is EOF
+                    if (fscanf(file,"%c",&r) == EOF)
+                    {
+                        break;
+                    }
+                }
+            }
+            num_of_billes = atoi(buffer);
+            emptyBuffer(buffer, 9);
+
+            // Add beads of this colour
+            for(int k = 0; k < num_of_billes; k++)
+            {
+                addHead(mb[c]->free, getBille(case_c - 1)); // Beads correspond to cell in csv file - 1
             }
             case_c++;
         }
-        free(tmp);
         c++;
     }
-
     return mb;
+}
+
+// Write game state to the csv file
+void writeGameState(FILE * file, matchbox **mb)
+{
+    for (uint32_t i = 0; i < 3; i++)
+    {
+        // Print configuration
+        fprintf(file, "%d,", mb[i]->config);
+
+        // For each bead colour: count beads, print the number
+        for (uint32_t j = 0; j<10; j++)
+        {
+            // If the last line and the last cell
+            if ((j == 9) & (i == 2))
+            {
+                fprintf(file, "%d", countBilles(mb[i]->free, getBille(j)));
+            }
+
+            // If the last cell
+            else if (j == 9)
+            {
+                fprintf(file, "%d\n", countBilles(mb[i]->free, getBille(j)));
+            }
+
+
+            else
+            {
+                fprintf(file, "%d,", countBilles(mb[i]->free, getBille(j)));
+            }
+        }
+    }
 }
 
 
