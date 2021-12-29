@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
+#include<string.h>
 #include <time.h>
 #include "matchboxes.h"
 #include "arraylist.h"
@@ -16,24 +17,36 @@ matchbox* init_box(uint32_t g)
 {
     matchbox* res= malloc(sizeof(matchbox));
     res->config=g;
-    //on initialise l'arraylist
-    maillon* boules=malloc(sizeof(boules)*9);
-    for(int i=0; i<8; i++){
-        boules[i].bille=i; //couleur de la bille
-        boules[i].next=&(boules[i+1]);
+    char buffer[9]; 
+    //On transforme l'entier en chaine de caractère
+    sprintf(buffer, "%d", g);
+    uint32_t empty=nb_zero(buffer); //Le nombre de cases vides
+    maillon* boules=malloc(sizeof(boules)*empty); 
+    for(int j=0; j<empty; j++){
+        if(buffer[j]=='0'){
+            boules[j].bille=j; //On met la boule correspondante à chaque case libre 
+        }
     }
-    //Boules non jouées
-    boules[8].bille=8; //8 <=> pink
-    boules[8].next=NULL;
+    boules[empty].next=NULL;
     res->free->head=&(boules[0]);
-    res->free->tail=&(boules[8]);
-    res->free->size=9;
+    res->free->tail=&(boules[empty]);
+    res->free->size=empty;
     //Boules jouées
     res->taken->head=NULL;
     res->taken->tail=NULL;
     res->taken->size=0;
 
     return res;
+}
+
+uint32_t nb_zero(char* string){
+    int res=0; 
+    for(int i=0; i<stlen(string); i++ ){
+        if(string[i]=='0'){
+            res++; 
+        }
+    }
+    return res; 
 }
 
 //Fonction qui renvoie une bille au hasard dans une boite
