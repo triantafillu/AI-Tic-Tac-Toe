@@ -3,3 +3,1077 @@ x        |  x      |        x|      x  |  x      |        x|      x  |x
 o        |  o      |        o|      o  |  o      |        o|      o  |o        
  x       |     x   |       x |   x     | x       |     x   |       x |   x     
  o       |     o   |       o |   o     | o       |     o   |       o |   o     
+oxx      |  o  x  x|      xxo|x  x  o  |xxo      |  x  x  o|      oxx|o  x  x  
+xox      |  x  o  x|      xox|x  o  x  |xox      |  x  o  x|      xox|x  o  x  
+oox      |  o  o  x|      xoo|x  o  o  |xoo      |  x  o  o|      oox|o  o  x  
+oxo      |  o  x  o|      oxo|o  x  o  |oxo      |  o  x  o|      oxo|o  x  o  
+ox x     | xo  x   |     x xo|   x  ox | xo  x   |     x xo|   x  ox |ox x     
+xo x     | xx  o   |     x ox|   o  xx | ox  x   |     o xx|   x  xo |xx o     
+oo x     | xo  o   |     x oo|   o  ox | oo  x   |     o xo|   x  oo |ox o     
+o xx     | xo     x|     xx o|x     ox |x o  x   |  x    xo|   x  o x|ox    x  
+ oxx     | x   o  x|     xxo |x  o   x |xo   x   |  x  o x |   x   ox| x o  x  
+x ox     | xx     o|     xo x|o     xx |o x  x   |  o    xx|   x  x o|xx    o  
+o ox     | xo     o|     xo o|o     ox |o o  x   |  o    xo|   x  o o|ox    o  
+ xox     | x   x  o|     xox |o  x   x |ox   x   |  o  x x |   x   xo| x x  o  
+ oox     | x   o  o|     xoo |o  o   x |oo   x   |  o  o x |   x   oo| x o  o  
+xx o     | ox  x   |     o xx|   x  xo | xx  o   |     x ox|   o  xx |xo x     
+ox o     | oo  x   |     o xo|   x  oo | xo  o   |     x oo|   o  ox |oo x     
+xo o     | ox  o   |     o ox|   o  xo | ox  o   |     o ox|   o  xo |xo o     
+x xo     | ox     x|     ox x|x     xo |x x  o   |  x    ox|   o  x x|xo    x  
+o xo     | oo     x|     ox o|x     oo |x o  o   |  x    oo|   o  o x|oo    x  
+ xxo     | o   x  x|     oxx |x  x   o |xx   o   |  x  x o |   o   xx| o x  x  
+ oxo     | o   o  x|     oxo |x  o   o |xo   o   |  x  o o |   o   ox| o o  x  
+x oo     | ox     o|     oo x|o     xo |o x  o   |  o    ox|   o  x o|xo    o  
+ xoo     | o   x  o|     oox |o  x   o |ox   o   |  o  x o |   o   xo| o x  o  
+    x    |    x    |    x    |    x    |    x    |    x    |    x    |    x    
+ox  x    |  o xx   |    x  xo|   xx o  | xo x    |    xx  o|    x ox |o  xx    
+xo  x    |  x xo   |    x  ox|   ox x  | ox x    |    xo  x|    x xo |x  ox    
+oo  x    |  o xo   |    x  oo|   ox o  | oo x    |    xo  o|    x oo |o  ox    
+o x x    |  o x   x|    x x o|x   x o  |x o x    |  x x   o|    x o x|o   x x  
+o o x    |  o x   o|    x o o|o   x o  |o o x    |  o x   o|    x o o|o   x o  
+o  xx    | xo x    |    xx  o|    x ox |  o xx   |    x  xo|   xx o  |ox  x    
+ o xx    | x  xo   |    xx o |   ox  x | o  xx   |    xo x |   xx  o | x ox    
+ooxxx    | xo xo  x|    xxxoo|x  ox ox |xoo xx   |  x xo xo|   xx oox|ox ox x  
+  oxx    | x  x   o|    xxo  |o   x  x |o   xx   |  o x  x |   xx   o| x  x o  
+oxoxx    | xo xx  o|    xxoxo|o  xx ox |oxo xx   |  o xx xo|   xx oxo|ox xx o  
+xooxx    | xx xo  o|    xxoox|o  ox xx |oox xx   |  o xo xx|   xx xoo|xx ox o  
+x  ox    | ox x    |    xo  x|    x xo |  x xo   |    x  ox|   ox x  |xo  x    
+o  ox    | oo x    |    xo  o|    x oo |  o xo   |    x  oo|   ox o  |oo  x    
+ x ox    | o  xx   |    xo x |   xx  o | x  xo   |    xx o |   ox  x | o xx    
+ o ox    | o  xo   |    xo o |   ox  o | o  xo   |    xo o |   ox  o | o ox    
+  xox    | o  x   x|    xox  |x   x  o |x   xo   |  x x  o |   ox   x| o  x x  
+oxxox    | oo xx  x|    xoxxo|x  xx oo |xxo xo   |  x xx oo|   ox oxx|oo xx x  
+xoxox    | ox xo  x|    xoxox|x  ox xo |xox xo   |  x xo ox|   ox xox|xo ox x  
+ooxox    | oo xo  x|    xoxoo|x  ox oo |xoo xo   |  x xo oo|   ox oox|oo ox x  
+  oox    | o  x   o|    xoo  |o   x  o |o   xo   |  o x  o |   ox   o| o  x o  
+xxoox    | ox xx  o|    xooxx|o  xx xo |oxx xo   |  o xx ox|   ox xxo|xo xx o  
+oxoox    | oo xx  o|    xooxo|o  xx oo |oxo xo   |  o xx oo|   ox oxo|oo xx o  
+xooox    | ox xo  o|    xooox|o  ox xo |oox xo   |  o xo ox|   ox xoo|xo ox o  
+    o    |    o    |    o    |    o    |    o    |    o    |    o    |    o    
+xx  o    |  x ox   |    o  xx|   xo x  | xx o    |    ox  x|    o xx |x  xo    
+ox  o    |  o ox   |    o  xo|   xo o  | xo o    |    ox  o|    o ox |o  xo    
+xo  o    |  x oo   |    o  ox|   oo x  | ox o    |    oo  x|    o xo |x  oo    
+x x o    |  x o   x|    o x x|x   o x  |x x o    |  x o   x|    o x x|x   o x  
+o x o    |  o o   x|    o x o|x   o o  |x o o    |  x o   o|    o o x|o   o x  
+x  xo    | xx o    |    ox  x|    o xx |  x ox   |    o  xx|   xo x  |xx  o    
+o  xo    | xo o    |    ox  o|    o ox |  o ox   |    o  xo|   xo o  |ox  o    
+ x xo    | x  ox   |    ox x |   xo  x | x  ox   |    ox x |   xo  x | x xo    
+ o xo    | x  oo   |    ox o |   oo  x | o  ox   |    oo x |   xo  o | x oo    
+  xxo    | x  o   x|    oxx  |x   o  x |x   ox   |  x o  x |   xo   x| x  o x  
+oxxxo    | xo ox  x|    oxxxo|x  xo ox |xxo ox   |  x ox xo|   xo oxx|ox xo x  
+xoxxo    | xx oo  x|    oxxox|x  oo xx |xox ox   |  x oo xx|   xo xox|xx oo x  
+ooxxo    | xo oo  x|    oxxoo|x  oo ox |xoo ox   |  x oo xo|   xo oox|ox oo x  
+  oxo    | x  o   o|    oxo  |o   o  x |o   ox   |  o o  x |   xo   o| x  o o  
+xxoxo    | xx ox  o|    oxoxx|o  xo xx |oxx ox   |  o ox xx|   xo xxo|xx xo o  
+oxoxo    | xo ox  o|    oxoxo|o  xo ox |oxo ox   |  o ox xo|   xo oxo|ox xo o  
+xooxo    | xx oo  o|    oxoox|o  oo xx |oox ox   |  o oo xx|   xo xoo|xx oo o  
+x  oo    | ox o    |    oo  x|    o xo |  x oo   |    o  ox|   oo x  |xo  o    
+ x oo    | o  ox   |    oo x |   xo  o | x  oo   |    ox o |   oo  x | o xo    
+  xoo    | o  o   x|    oox  |x   o  o |x   oo   |  x o  o |   oo   x| o  o x  
+oxxoo    | oo ox  x|    ooxxo|x  xo oo |xxo oo   |  x ox oo|   oo oxx|oo xo x  
+xoxoo    | ox oo  x|    ooxox|x  oo xo |xox oo   |  x oo ox|   oo xox|xo oo x  
+xxooo    | ox ox  o|    oooxx|o  xo xo |oxx oo   |  o ox ox|   oo xxo|xo xo o  
+o  x x   | xo    x |   x x  o| x    ox |  ox x   | x     xo|   x xo  |ox     x 
+ o x x   | x   o x |   x x o | x o   x | o x x   | x   o x |   x x o | x o   x 
+ooxx x   | xo  o xx|   x xxoo|xx o  ox |xoox x   | xx  o xo|   x xoox|ox o  xx 
+oxox x   | xo  x xo|   x xoxo|ox x  ox |oxox x   | xo  x xo|   x xoxo|ox x  ox 
+x  o x   | ox    x |   x o  x| x    xo |  xx o   | x     ox|   o xx  |xo     x 
+o  o x   | oo    x |   x o  o| x    oo |  ox o   | x     oo|   o xo  |oo     x 
+ x o x   | o   x x |   x o x | x x   o | x x o   | x   x o |   o x x | o x   x 
+ o o x   | o   o x |   x o o | x o   o | o x o   | x   o o |   o x o | o o   x 
+  xo x   | o     xx|   x ox  |xx     o |x  x o   | xx    o |   o x  x| o    xx 
+oxxo x   | oo  x xx|   x oxxo|xx x  oo |xxox o   | xx  x oo|   o xoxx|oo x  xx 
+xoxo x   | ox  o xx|   x oxox|xx o  xo |xoxx o   | xx  o ox|   o xxox|xo o  xx 
+ooxo x   | oo  o xx|   x oxoo|xx o  oo |xoox o   | xx  o oo|   o xoox|oo o  xx 
+  oo x   | o     xo|   x oo  |ox     o |o  x o   | xo    o |   o x  o| o    ox 
+xxoo x   | ox  x xo|   x ooxx|ox x  xo |oxxx o   | xo  x ox|   o xxxo|xo x  ox 
+oxoo x   | oo  x xo|   x ooxo|ox x  oo |oxox o   | xo  x oo|   o xoxo|oo x  ox 
+xooo x   | ox  o xo|   x ooox|ox o  xo |ooxx o   | xo  o ox|   o xxoo|xo o  ox 
+   oxx   | o  x  x |   xxo   | x  x  o |   xxo   | x  x  o |   oxx   | o  x  x 
+ox oxx   | oo xx x |   xxo xo| x xx oo | xoxxo   | x  xx oo|   oxxox |oo xx  x 
+xo oxx   | ox xo x |   xxo ox| x ox xo | oxxxo   | x  xo ox|   oxxxo |xo ox  x 
+oo oxx   | oo xo x |   xxo oo| x ox oo | ooxxo   | x  xo oo|   oxxoo |oo ox  x 
+o xoxx   | oo x  xx|   xxox o|xx  x oo |x oxxo   | xx x  oo|   oxxo x|oo  x xx 
+ oxoxx   | o  xo xx|   xxoxo |xx ox  o |xo xxo   | xx xo o |   oxx ox| o ox xx 
+x ooxx   | ox x  xo|   xxoo x|ox  x xo |o xxxo   | xo x  ox|   oxxx o|xo  x ox 
+o ooxx   | oo x  xo|   xxoo o|ox  x oo |o oxxo   | xo x  oo|   oxxo o|oo  x ox 
+ xooxx   | o  xx xo|   xxoox |ox xx  o |ox xxo   | xo xx o |   oxx xo| o xx ox 
+ oooxx   | o  xo xo|   xxooo |ox ox  o |oo xxo   | xo xo o |   oxx oo| o ox ox 
+   xox   | x  o  x |   xox   | x  o  x |   xox   | x  o  x |   xox   | x  o  x 
+ox xox   | xo ox x |   xox xo| x xo ox | xoxox   | x  ox xo|   xoxox |ox xo  x 
+xo xox   | xx oo x |   xox ox| x oo xx | oxxox   | x  oo xx|   xoxxo |xx oo  x 
+oo xox   | xo oo x |   xox oo| x oo ox | ooxox   | x  oo xo|   xoxoo |ox oo  x 
+o xxox   | xo o  xx|   xoxx o|xx  o ox |x oxox   | xx o  xo|   xoxo x|ox  o xx 
+o oxox   | xo o  xo|   xoxo o|ox  o ox |o oxox   | xo o  xo|   xoxo o|ox  o ox 
+   oox   | o  o  x |   xoo   | x  o  o |   xoo   | x  o  o |   oox   | o  o  x 
+xx oox   | ox ox x |   xoo xx| x xo xo | xxxoo   | x  ox ox|   ooxxx |xo xo  x 
+ox oox   | oo ox x |   xoo xo| x xo oo | xoxoo   | x  ox oo|   ooxox |oo xo  x 
+xo oox   | ox oo x |   xoo ox| x oo xo | oxxoo   | x  oo ox|   ooxxo |xo oo  x 
+x xoox   | ox o  xx|   xoox x|xx  o xo |x xxoo   | xx o  ox|   ooxx x|xo  o xx 
+o xoox   | oo o  xx|   xoox o|xx  o oo |x oxoo   | xx o  oo|   ooxo x|oo  o xx 
+ xxoox   | o  ox xx|   xooxx |xx xo  o |xx xoo   | xx ox o |   oox xx| o xo xx 
+ oxoox   | o  oo xx|   xooxo |xx oo  o |xo xoo   | xx oo o |   oox ox| o oo xx 
+x ooox   | ox o  xo|   xooo x|ox  o xo |o xxoo   | xo o  ox|   ooxx o|xo  o ox 
+ xooox   | o  ox xo|   xooox |ox xo  o |ox xoo   | xo ox o |   oox xo| o xo ox 
+x  o o   | ox    o |   o o  x| o    xo |  xo o   | o     ox|   o ox  |xo     o 
+ x o o   | o   x o |   o o x | o x   o | x o o   | o   x o |   o o x | o x   o 
+oxxo o   | oo  x ox|   o oxxo|xo x  oo |xxoo o   | ox  x oo|   o ooxx|oo x  xo 
+xoxo o   | ox  o ox|   o oxox|xo o  xo |xoxo o   | ox  o ox|   o oxox|xo o  xo 
+   oxo   | o  x  o |   oxo   | o  x  o |   oxo   | o  x  o |   oxo   | o  x  o 
+xx oxo   | ox xx o |   oxo xx| o xx xo | xxoxo   | o  xx ox|   oxoxx |xo xx  o 
+ox oxo   | oo xx o |   oxo xo| o xx oo | xooxo   | o  xx oo|   oxoox |oo xx  o 
+xo oxo   | ox xo o |   oxo ox| o ox xo | oxoxo   | o  xo ox|   oxoxo |xo ox  o 
+x xoxo   | ox x  ox|   oxox x|xo  x xo |x xoxo   | ox x  ox|   oxox x|xo  x xo 
+o xoxo   | oo x  ox|   oxox o|xo  x oo |x ooxo   | ox x  oo|   oxoo x|oo  x xo 
+ox    x  |x o  x   |  x    xo|   x  o x| xo     x|     xx o|x     ox |o xx     
+xo    x  |x x  o   |  x    ox|   o  x x| ox     x|     ox x|x     xo |x xo     
+oo    x  |x o  o   |  x    oo|   o  o x| oo     x|     ox o|x     oo |o xo     
+o x   x  |x o     x|  x   x o|x     o x|x o     x|  x   x o|x     o x|o x   x  
+ ox   x  |x    o  x|  x   xo |x  o    x|xo      x|  x  ox  |x      ox|  xo  x  
+x o   x  |x x     o|  x   o x|o     x x|o x     x|  o   x x|x     x o|x x   o  
+o o   x  |x o     o|  x   o o|o     o x|o o     x|  o   x o|x     o o|o x   o  
+ xo   x  |x    x  o|  x   ox |o  x    x|ox      x|  o  xx  |x      xo|  xx  o  
+ oo   x  |x    o  o|  x   oo |o  o    x|oo      x|  o  ox  |x      oo|  xo  o  
+o  x  x  |xxo      |  x  x  o|      oxx|  o  x  x|      xxo|x  x  o  |oxx      
+ o x  x  |xx   o   |  x  x o |   o   xx| o   x  x|     oxx |x  x   o | xxo     
+ooxx  x  |xxo  o  x|  x  xxoo|x  o  oxx|xoo  x  x|  x  oxxo|x  x  oox|oxxo  x  
+  ox  x  |xx      o|  x  xo  |o      xx|o    x  x|  o   xx |x  x    o| xx   o  
+oxox  x  |xxo  x  o|  x  xoxo|o  x  oxx|oxo  x  x|  o  xxxo|x  x  oxo|oxxx  o  
+o  o  x  |xoo      |  x  o  o|      oox|  o  o  x|      xoo|x  o  o  |oox      
+ x o  x  |xo   x   |  x  o x |   x   ox| x   o  x|     xxo |x  o   x | oxx     
+ o o  x  |xo   o   |  x  o o |   o   ox| o   o  x|     oxo |x  o   o | oxo     
+  xo  x  |xo      x|  x  ox  |x      ox|x    o  x|  x   xo |x  o    x| ox   x  
+oxxo  x  |xoo  x  x|  x  oxxo|x  x  oox|xxo  o  x|  x  xxoo|x  o  oxx|ooxx  x  
+xoxo  x  |xox  o  x|  x  oxox|x  o  xox|xox  o  x|  x  oxox|x  o  xox|xoxo  x  
+ooxo  x  |xoo  o  x|  x  oxoo|x  o  oox|xoo  o  x|  x  oxoo|x  o  oox|ooxo  x  
+  oo  x  |xo      o|  x  oo  |o      ox|o    o  x|  o   xo |x  o    o| ox   o  
+xxoo  x  |xox  x  o|  x  ooxx|o  x  xox|oxx  o  x|  o  xxox|x  o  xxo|xoxx  o  
+oxoo  x  |xoo  x  o|  x  ooxo|o  x  oox|oxo  o  x|  o  xxoo|x  o  oxo|ooxx  o  
+xooo  x  |xox  o  o|  x  ooox|o  o  xox|oox  o  x|  o  oxox|x  o  xoo|xoxo  o  
+o   x x  |x o x    |  x x   o|    x o x|  o x   x|    x x o|x   x o  |o x x    
+ o  x x  |x   xo   |  x x  o |   ox   x| o  x   x|    xox  |x   x  o |  xox    
+  o x x  |x   x   o|  x x o  |o   x   x|o   x   x|  o x x  |x   x   o|  x x o  
+oxo x x  |x o xx  o|  x x oxo|o  xx o x|oxo x   x|  o xxx o|x   x oxo|o xxx o  
+xoo x x  |x x xo  o|  x x oox|o  ox x x|oox x   x|  o xox x|x   x xoo|x xox o  
+oo xx x  |xxo xo   |  x xx oo|   ox oxx| oo xx  x|    xoxxo|x  xx oo |oxxox    
+o oxx x  |xxo x   o|  x xxo o|o   x oxx|o o xx  x|  o x xxo|x  xx o o|oxx x o  
+ ooxx x  |xx  xo  o|  x xxoo |o  ox  xx|oo  xx  x|  o xoxx |x  xx  oo| xxox o  
+ox ox x  |xoo xx   |  x xo xo|   xx oox| xo xo  x|    xxxoo|x  ox ox |ooxxx    
+xo ox x  |xox xo   |  x xo ox|   ox xox| ox xo  x|    xoxox|x  ox xo |xoxox    
+oo ox x  |xoo xo   |  x xo oo|   ox oox| oo xo  x|    xoxoo|x  ox oo |ooxox    
+x oox x  |xox x   o|  x xoo x|o   x xox|o x xo  x|  o x xox|x  ox x o|xox x o  
+o oox x  |xoo x   o|  x xoo o|o   x oox|o o xo  x|  o x xoo|x  ox o o|oox x o  
+ xoox x  |xo  xx  o|  x xoox |o  xx  ox|ox  xo  x|  o xxxo |x  ox  xo| oxxx o  
+ ooox x  |xo  xo  o|  x xooo |o  ox  ox|oo  xo  x|  o xoxo |x  ox  oo| oxox o  
+o   o x  |x o o    |  x o   o|    o o x|  o o   x|    o x o|x   o o  |o x o    
+ x  o x  |x   ox   |  x o  x |   xo   x| x  o   x|    oxx  |x   o  x |  xxo    
+ o  o x  |x   oo   |  x o  o |   oo   x| o  o   x|    oox  |x   o  o |  xoo    
+  x o x  |x   o   x|  x o x  |x   o   x|x   o   x|  x o x  |x   o   x|  x o x  
+oxx o x  |x o ox  x|  x o xxo|x  xo o x|xxo o   x|  x oxx o|x   o oxx|o xxo x  
+xox o x  |x x oo  x|  x o xox|x  oo x x|xox o   x|  x oox x|x   o xox|x xoo x  
+oox o x  |x o oo  x|  x o xoo|x  oo o x|xoo o   x|  x oox o|x   o oox|o xoo x  
+  o o x  |x   o   o|  x o o  |o   o   x|o   o   x|  o o x  |x   o   o|  x o o  
+xxo o x  |x x ox  o|  x o oxx|o  xo x x|oxx o   x|  o oxx x|x   o xxo|x xxo o  
+oxo o x  |x o ox  o|  x o oxo|o  xo o x|oxo o   x|  o oxx o|x   o oxo|o xxo o  
+xoo o x  |x x oo  o|  x o oox|o  oo x x|oox o   x|  o oox x|x   o xoo|x xoo o  
+ox xo x  |xxo ox   |  x ox xo|   xo oxx| xo ox  x|    oxxxo|x  xo ox |oxxxo    
+oo xo x  |xxo oo   |  x ox oo|   oo oxx| oo ox  x|    ooxxo|x  xo oo |oxxoo    
+o xxo x  |xxo o   x|  x oxx o|x   o oxx|x o ox  x|  x o xxo|x  xo o x|oxx o x  
+ oxxo x  |xx  oo  x|  x oxxo |x  oo  xx|xo  ox  x|  x ooxx |x  xo  ox| xxoo x  
+o oxo x  |xxo o   o|  x oxo o|o   o oxx|o o ox  x|  o o xxo|x  xo o o|oxx o o  
+ xoxo x  |xx  ox  o|  x oxox |o  xo  xx|ox  ox  x|  o oxxx |x  xo  xo| xxxo o  
+ ooxo x  |xx  oo  o|  x oxoo |o  oo  xx|oo  ox  x|  o ooxx |x  xo  oo| xxoo o  
+xx oo x  |xox ox   |  x oo xx|   xo xox| xx oo  x|    oxxox|x  oo xx |xoxxo    
+ox oo x  |xoo ox   |  x oo xo|   xo oox| xo oo  x|    oxxoo|x  oo ox |ooxxo    
+xo oo x  |xox oo   |  x oo ox|   oo xox| ox oo  x|    ooxox|x  oo xo |xoxoo    
+x xoo x  |xox o   x|  x oox x|x   o xox|x x oo  x|  x o xox|x  oo x x|xox o x  
+o xoo x  |xoo o   x|  x oox o|x   o oox|x o oo  x|  x o xoo|x  oo o x|oox o x  
+ xxoo x  |xo  ox  x|  x ooxx |x  xo  ox|xx  oo  x|  x oxxo |x  oo  xx| oxxo x  
+ oxoo x  |xo  oo  x|  x ooxo |x  oo  ox|xo  oo  x|  x ooxo |x  oo  ox| oxoo x  
+x ooo x  |xox o   o|  x ooo x|o   o xox|o x oo  x|  o o xox|x  oo x o|xox o o  
+ xooo x  |xo  ox  o|  x ooox |o  xo  ox|ox  oo  x|  o oxxo |x  oo  xo| oxxo o  
+o    xx  |x o    x |  xx    o| x    o x|  ox    x| x    x o|x    xo  |o x    x 
+ o   xx  |x    o x |  xx   o | x o    x| o x    x| x   ox  |x    x o |  xo   x 
+oox  xx  |x o  o xx|  xx  xoo|xx o  o x|xoox    x| xx  ox o|x    xoox|o xo  xx 
+  o  xx  |x      xo|  xx  o  |ox      x|o  x    x| xo   x  |x    x  o|  x   ox 
+oxo  xx  |x o  x xo|  xx  oxo|ox x  o x|oxox    x| xo  xx o|x    xoxo|o xx  ox 
+xoo  xx  |x x  o xo|  xx  oox|ox o  x x|ooxx    x| xo  ox x|x    xxoo|x xo  ox 
+oo x xx  |xxo  o x |  xx x oo| x o  oxx| oox x  x| x   oxxo|x  x xoo |oxxo   x 
+o ox xx  |xxo    xo|  xx xo o|ox    oxx|o ox x  x| xo   xxo|x  x xo o|oxx   ox 
+ oox xx  |xx   o xo|  xx xoo |ox o   xx|oo x x  x| xo  oxx |x  x x oo| xxo  ox 
+   o xx  |xo     x |  xx o   | x     ox|   x o  x| x    xo |x  o x   | ox    x 
+ox o xx  |xoo  x x |  xx o xo| x x  oox| xox o  x| x   xxoo|x  o xox |ooxx   x 
+xo o xx  |xox  o x |  xx o ox| x o  xox| oxx o  x| x   oxox|x  o xxo |xoxo   x 
+oo o xx  |xoo  o x |  xx o oo| x o  oox| oox o  x| x   oxoo|x  o xoo |ooxo   x 
+o xo xx  |xoo    xx|  xx ox o|xx    oox|x ox o  x| xx   xoo|x  o xo x|oox   xx 
+ oxo xx  |xo   o xx|  xx oxo |xx o   ox|xo x o  x| xx  oxo |x  o x ox| oxo  xx 
+x oo xx  |xox    xo|  xx oo x|ox    xox|o xx o  x| xo   xox|x  o xx o|xox   ox 
+o oo xx  |xoo    xo|  xx oo o|ox    oox|o ox o  x| xo   xoo|x  o xo o|oox   ox 
+ xoo xx  |xo   x xo|  xx oox |ox x   ox|ox x o  x| xo  xxo |x  o x xo| oxx  ox 
+ ooo xx  |xo   o xo|  xx ooo |ox o   ox|oo x o  x| xo  oxo |x  o x oo| oxo  ox 
+oo  xxx  |x o xo x |  xxx  oo| x ox o x| ooxx   x| x  xox o|x   xxoo |o xox  x 
+o o xxx  |x o x  xo|  xxx o o|ox  x o x|o oxx   x| xo x x o|x   xxo o|o x x ox 
+ oo xxx  |x   xo xo|  xxx oo |ox ox   x|oo xx   x| xo xox  |x   xx oo|  xox ox 
+o  oxxx  |xoo x  x |  xxxo  o| x  x oox|  oxxo  x| x  x xoo|x  oxxo  |oox x  x 
+ o oxxx  |xo  xo x |  xxxo o | x ox  ox| o xxo  x| x  xoxo |x  oxx o | oxox  x 
+  ooxxx  |xo  x  xo|  xxxoo  |ox  x  ox|o  xxo  x| xo x xo |x  oxx  o| ox x ox 
+oxooxxx  |xoo xx xo|  xxxooxo|ox xx oox|oxoxxo  x| xo xxxoo|x  oxxoxo|ooxxx ox 
+xoooxxx  |xox xo xo|  xxxooox|ox ox xox|ooxxxo  x| xo xoxox|x  oxxxoo|xoxox ox 
+ox  oxx  |x o ox x |  xxo  xo| x xo o x| xoxo   x| x  oxx o|x   oxox |o xxo  x 
+xo  oxx  |x x oo x |  xxo  ox| x oo x x| oxxo   x| x  oox x|x   oxxo |x xoo  x 
+oo  oxx  |x o oo x |  xxo  oo| x oo o x| ooxo   x| x  oox o|x   oxoo |o xoo  x 
+o x oxx  |x o o  xx|  xxo x o|xx  o o x|x oxo   x| xx o x o|x   oxo x|o x o xx 
+ ox oxx  |x   oo xx|  xxo xo |xx oo   x|xo xo   x| xx oox  |x   ox ox|  xoo xx 
+x o oxx  |x x o  xo|  xxo o x|ox  o x x|o xxo   x| xo o x x|x   oxx o|x x o ox 
+o o oxx  |x o o  xo|  xxo o o|ox  o o x|o oxo   x| xo o x o|x   oxo o|o x o ox 
+ xo oxx  |x   ox xo|  xxo ox |ox xo   x|ox xo   x| xo oxx  |x   ox xo|  xxo ox 
+ oo oxx  |x   oo xo|  xxo oo |ox oo   x|oo xo   x| xo oox  |x   ox oo|  xoo ox 
+o  xoxx  |xxo o  x |  xxox  o| x  o oxx|  oxox  x| x  o xxo|x  xoxo  |oxx o  x 
+ o xoxx  |xx  oo x |  xxox o | x oo  xx| o xox  x| x  ooxx |x  xox o | xxoo  x 
+ooxxoxx  |xxo oo xx|  xxoxxoo|xx oo oxx|xooxox  x| xx ooxxo|x  xoxoox|oxxoo xx 
+  oxoxx  |xx  o  xo|  xxoxo  |ox  o  xx|o  xox  x| xo o xx |x  xox  o| xx o ox 
+oxoxoxx  |xxo ox xo|  xxoxoxo|ox xo oxx|oxoxox  x| xo oxxxo|x  xoxoxo|oxxxo ox 
+x  ooxx  |xox o  x |  xxoo  x| x  o xox|  xxoo  x| x  o xox|x  ooxx  |xox o  x 
+o  ooxx  |xoo o  x |  xxoo  o| x  o oox|  oxoo  x| x  o xoo|x  ooxo  |oox o  x 
+ x ooxx  |xo  ox x |  xxoo x | x xo  ox| x xoo  x| x  oxxo |x  oox x | oxxo  x 
+ o ooxx  |xo  oo x |  xxoo o | x oo  ox| o xoo  x| x  ooxo |x  oox o | oxoo  x 
+  xooxx  |xo  o  xx|  xxoox  |xx  o  ox|x  xoo  x| xx o xo |x  oox  x| ox o xx 
+oxxooxx  |xoo ox xx|  xxooxxo|xx xo oox|xxoxoo  x| xx oxxoo|x  ooxoxx|ooxxo xx 
+xoxooxx  |xox oo xx|  xxooxox|xx oo xox|xoxxoo  x| xx ooxox|x  ooxxox|xoxoo xx 
+ooxooxx  |xoo oo xx|  xxooxoo|xx oo oox|xooxoo  x| xx ooxoo|x  ooxoox|ooxoo xx 
+  oooxx  |xo  o  xo|  xxooo  |ox  o  ox|o  xoo  x| xo o xo |x  oox  o| ox o ox 
+xxoooxx  |xox ox xo|  xxoooxx|ox xo xox|oxxxoo  x| xo oxxox|x  ooxxxo|xoxxo ox 
+oxoooxx  |xoo ox xo|  xxoooxo|ox xo oox|oxoxoo  x| xo oxxoo|x  ooxoxo|ooxxo ox 
+xooooxx  |xox oo xo|  xxoooox|ox oo xox|ooxxoo  x| xo ooxox|x  ooxxoo|xoxoo ox 
+x    ox  |x x    o |  xo    x| o    x x|  xo    x| o    x x|x    ox  |x x    o 
+o    ox  |x o    o |  xo    o| o    o x|  oo    x| o    x o|x    oo  |o x    o 
+ x   ox  |x    x o |  xo   x | o x    x| x o    x| o   xx  |x    o x |  xx   o 
+ o   ox  |x    o o |  xo   o | o o    x| o o    x| o   ox  |x    o o |  xo   o 
+oxx  ox  |x o  x ox|  xo  xxo|xo x  o x|xxoo    x| ox  xx o|x    ooxx|o xx  xo 
+xox  ox  |x x  o ox|  xo  xox|xo o  x x|xoxo    x| ox  ox x|x    oxox|x xo  xo 
+oox  ox  |x o  o ox|  xo  xoo|xo o  o x|xooo    x| ox  ox o|x    ooox|o xo  xo 
+  o  ox  |x      oo|  xo  o  |oo      x|o  o    x| oo   x  |x    o  o|  x   oo 
+xxo  ox  |x x  x oo|  xo  oxx|oo x  x x|oxxo    x| oo  xx x|x    oxxo|x xx  oo 
+oxo  ox  |x o  x oo|  xo  oxo|oo x  o x|oxoo    x| oo  xx o|x    ooxo|o xx  oo 
+xoo  ox  |x x  o oo|  xo  oox|oo o  x x|ooxo    x| oo  ox x|x    oxoo|x xo  oo 
+ox x ox  |xxo  x o |  xo x xo| o x  oxx| xoo x  x| o   xxxo|x  x oox |oxxx   o 
+oo x ox  |xxo  o o |  xo x oo| o o  oxx| ooo x  x| o   oxxo|x  x ooo |oxxo   o 
+o xx ox  |xxo    ox|  xo xx o|xo    oxx|x oo x  x| ox   xxo|x  x oo x|oxx   xo 
+ oxx ox  |xx   o ox|  xo xxo |xo o   xx|xo o x  x| ox  oxx |x  x o ox| xxo  xo 
+o ox ox  |xxo    oo|  xo xo o|oo    oxx|o oo x  x| oo   xxo|x  x oo o|oxx   oo 
+ xox ox  |xx   x oo|  xo xox |oo x   xx|ox o x  x| oo  xxx |x  x o xo| xxx  oo 
+ oox ox  |xx   o oo|  xo xoo |oo o   xx|oo o x  x| oo  oxx |x  x o oo| xxo  oo 
+   o ox  |xo     o |  xo o   | o     ox|   o o  x| o    xo |x  o o   | ox    o 
+xx o ox  |xox  x o |  xo o xx| o x  xox| xxo o  x| o   xxox|x  o oxx |xoxx   o 
+ox o ox  |xoo  x o |  xo o xo| o x  oox| xoo o  x| o   xxoo|x  o oox |ooxx   o 
+xo o ox  |xox  o o |  xo o ox| o o  xox| oxo o  x| o   oxox|x  o oxo |xoxo   o 
+x xo ox  |xox    ox|  xo ox x|xo    xox|x xo o  x| ox   xox|x  o ox x|xox   xo 
+o xo ox  |xoo    ox|  xo ox o|xo    oox|x oo o  x| ox   xoo|x  o oo x|oox   xo 
+ xxo ox  |xo   x ox|  xo oxx |xo x   ox|xx o o  x| ox  xxo |x  o o xx| oxx  xo 
+ oxo ox  |xo   o ox|  xo oxo |xo o   ox|xo o o  x| ox  oxo |x  o o ox| oxo  xo 
+x oo ox  |xox    oo|  xo oo x|oo    xox|o xo o  x| oo   xox|x  o ox o|xox   oo 
+ xoo ox  |xo   x oo|  xo oox |oo x   ox|ox o o  x| oo  xxo |x  o o xo| oxx  oo 
+ox  xox  |x o xx o |  xox  xo| o xx o x| xoox   x| o  xxx o|x   xoox |o xxx  o 
+xo  xox  |x x xo o |  xox  ox| o ox x x| oxox   x| o  xox x|x   xoxo |x xox  o 
+oo  xox  |x o xo o |  xox  oo| o ox o x| ooox   x| o  xox o|x   xooo |o xox  o 
+x o xox  |x x x  oo|  xox o x|oo  x x x|o xox   x| oo x x x|x   xox o|x x x oo 
+o o xox  |x o x  oo|  xox o o|oo  x o x|o oox   x| oo x x o|x   xoo o|o x x oo 
+ xo xox  |x   xx oo|  xox ox |oo xx   x|ox ox   x| oo xxx  |x   xo xo|  xxx oo 
+ oo xox  |x   xo oo|  xox oo |oo ox   x|oo ox   x| oo xox  |x   xo oo|  xox oo 
+o  xxox  |xxo x  o |  xoxx  o| o  x oxx|  ooxx  x| o  x xxo|x  xxoo  |oxx x  o 
+ o xxox  |xx  xo o |  xoxx o | o ox  xx| o oxx  x| o  xoxx |x  xxo o | xxox  o 
+  oxxox  |xx  x  oo|  xoxxo  |oo  x  xx|o  oxx  x| oo x xx |x  xxo  o| xx x oo 
+oxoxxox  |xxo xx oo|  xoxxoxo|oo xx oxx|oxooxx  x| oo xxxxo|x  xxooxo|oxxxx oo 
+x  oxox  |xox x  o |  xoxo  x| o  x xox|  xoxo  x| o  x xox|x  oxox  |xox x  o 
+o  oxox  |xoo x  o |  xoxo  o| o  x oox|  ooxo  x| o  x xoo|x  oxoo  |oox x  o 
+ x oxox  |xo  xx o |  xoxo x | o xx  ox| x oxo  x| o  xxxo |x  oxo x | oxxx  o 
+ o oxox  |xo  xo o |  xoxo o | o ox  ox| o oxo  x| o  xoxo |x  oxo o | oxox  o 
+  ooxox  |xo  x  oo|  xoxoo  |oo  x  ox|o  oxo  x| oo x xo |x  oxo  o| ox x oo 
+xxooxox  |xox xx oo|  xoxooxx|oo xx xox|oxxoxo  x| oo xxxox|x  oxoxxo|xoxxx oo 
+oxooxox  |xoo xx oo|  xoxooxo|oo xx oox|oxooxo  x| oo xxxoo|x  oxooxo|ooxxx oo 
+xoooxox  |xox xo oo|  xoxooox|oo ox xox|ooxoxo  x| oo xoxox|x  oxoxoo|xoxox oo 
+xx  oox  |x x ox o |  xoo  xx| o xo x x| xxoo   x| o  oxx x|x   ooxx |x xxo  o 
+ox  oox  |x o ox o |  xoo  xo| o xo o x| xooo   x| o  oxx o|x   ooox |o xxo  o 
+xo  oox  |x x oo o |  xoo  ox| o oo x x| oxoo   x| o  oox x|x   ooxo |x xoo  o 
+x x oox  |x x o  ox|  xoo x x|xo  o x x|x xoo   x| ox o x x|x   oox x|x x o xo 
+o x oox  |x o o  ox|  xoo x o|xo  o o x|x ooo   x| ox o x o|x   ooo x|o x o xo 
+ xx oox  |x   ox ox|  xoo xx |xo xo   x|xx oo   x| ox oxx  |x   oo xx|  xxo xo 
+ ox oox  |x   oo ox|  xoo xo |xo oo   x|xo oo   x| ox oox  |x   oo ox|  xoo xo 
+x o oox  |x x o  oo|  xoo o x|oo  o x x|o xoo   x| oo o x x|x   oox o|x x o oo 
+ xo oox  |x   ox oo|  xoo ox |oo xo   x|ox oo   x| oo oxx  |x   oo xo|  xxo oo 
+o  xoox  |xxo o  o |  xoox  o| o  o oxx|  ooox  x| o  o xxo|x  xooo  |oxx o  o 
+ x xoox  |xx  ox o |  xoox x | o xo  xx| x oox  x| o  oxxx |x  xoo x | xxxo  o 
+ o xoox  |xx  oo o |  xoox o | o oo  xx| o oox  x| o  ooxx |x  xoo o | xxoo  o 
+oxxxoox  |xxo ox ox|  xooxxxo|xo xo oxx|xxooox  x| ox oxxxo|x  xoooxx|oxxxo xo 
+ooxxoox  |xxo oo ox|  xooxxoo|xo oo oxx|xoooox  x| ox ooxxo|x  xoooox|oxxoo xo 
+  oxoox  |xx  o  oo|  xooxo  |oo  o  xx|o  oox  x| oo o xx |x  xoo  o| xx o oo 
+oxoxoox  |xxo ox oo|  xooxoxo|oo xo oxx|oxooox  x| oo oxxxo|x  xoooxo|oxxxo oo 
+xx    o  |o x  x   |  o    xx|   x  x o| xx     o|     xo x|o     xx |x ox     
+ox    o  |o o  x   |  o    xo|   x  o o| xo     o|     xo o|o     ox |o ox     
+xo    o  |o x  o   |  o    ox|   o  x o| ox     o|     oo x|o     xo |x oo     
+x x   o  |o x     x|  o   x x|x     x o|x x     o|  x   o x|o     x x|x o   x  
+o x   o  |o o     x|  o   x o|x     o o|x o     o|  x   o o|o     o x|o o   x  
+ xx   o  |o    x  x|  o   xx |x  x    o|xx      o|  x  xo  |o      xx|  ox  x  
+ ox   o  |o    o  x|  o   xo |x  o    o|xo      o|  x  oo  |o      ox|  oo  x  
+x o   o  |o x     o|  o   o x|o     x o|o x     o|  o   o x|o     x o|x o   o  
+ xo   o  |o    x  o|  o   ox |o  x    o|ox      o|  o  xo  |o      xo|  ox  o  
+ x x  o  |ox   x   |  o  x x |   x   xo| x   x  o|     xox |o  x   x | xox     
+ o x  o  |ox   o   |  o  x o |   o   xo| o   x  o|     oox |o  x   o | xoo     
+oxxx  o  |oxo  x  x|  o  xxxo|x  x  oxo|xxo  x  o|  x  xoxo|o  x  oxx|oxox  x  
+xoxx  o  |oxx  o  x|  o  xxox|x  o  xxo|xox  x  o|  x  ooxx|o  x  xox|xxoo  x  
+ooxx  o  |oxo  o  x|  o  xxoo|x  o  oxo|xoo  x  o|  x  ooxo|o  x  oox|oxoo  x  
+  ox  o  |ox      o|  o  xo  |o      xo|o    x  o|  o   ox |o  x    o| xo   o  
+xxox  o  |oxx  x  o|  o  xoxx|o  x  xxo|oxx  x  o|  o  xoxx|o  x  xxo|xxox  o  
+oxox  o  |oxo  x  o|  o  xoxo|o  x  oxo|oxo  x  o|  o  xoxo|o  x  oxo|oxox  o  
+xoox  o  |oxx  o  o|  o  xoox|o  o  xxo|oox  x  o|  o  ooxx|o  x  xoo|xxoo  o  
+ x o  o  |oo   x   |  o  o x |   x   oo| x   o  o|     xoo |o  o   x | oox     
+xoxo  o  |oox  o  x|  o  oxox|x  o  xoo|xox  o  o|  x  ooox|o  o  xox|xooo  x  
+xxoo  o  |oox  x  o|  o  ooxx|o  x  xoo|oxx  o  o|  o  xoox|o  o  xxo|xoox  o  
+ x  x o  |o   xx   |  o x  x |   xx   o| x  x   o|    xxo  |o   x  x |  oxx    
+ o  x o  |o   xo   |  o x  o |   ox   o| o  x   o|    xoo  |o   x  o |  oox    
+oxx x o  |o o xx  x|  o x xxo|x  xx o o|xxo x   o|  x xxo o|o   x oxx|o oxx x  
+xox x o  |o x xo  x|  o x xox|x  ox x o|xox x   o|  x xoo x|o   x xox|x oox x  
+oox x o  |o o xo  x|  o x xoo|x  ox o o|xoo x   o|  x xoo o|o   x oox|o oox x  
+  o x o  |o   x   o|  o x o  |o   x   o|o   x   o|  o x o  |o   x   o|  o x o  
+xxo x o  |o x xx  o|  o x oxx|o  xx x o|oxx x   o|  o xxo x|o   x xxo|x oxx o  
+oxo x o  |o o xx  o|  o x oxo|o  xx o o|oxo x   o|  o xxo o|o   x oxo|o oxx o  
+xoo x o  |o x xo  o|  o x oox|o  ox x o|oox x   o|  o xoo x|o   x xoo|x oox o  
+ox xx o  |oxo xx   |  o xx xo|   xx oxo| xo xx  o|    xxoxo|o  xx ox |oxoxx    
+xo xx o  |oxx xo   |  o xx ox|   ox xxo| ox xx  o|    xooxx|o  xx xo |xxoox    
+oo xx o  |oxo xo   |  o xx oo|   ox oxo| oo xx  o|    xooxo|o  xx oo |oxoox    
+o xxx o  |oxo x   x|  o xxx o|x   x oxo|x o xx  o|  x x oxo|o  xx o x|oxo x x  
+ oxxx o  |ox  xo  x|  o xxxo |x  ox  xo|xo  xx  o|  x xoox |o  xx  ox| xoox x  
+x oxx o  |oxx x   o|  o xxo x|o   x xxo|o x xx  o|  o x oxx|o  xx x o|xxo x o  
+o oxx o  |oxo x   o|  o xxo o|o   x oxo|o o xx  o|  o x oxo|o  xx o o|oxo x o  
+ xoxx o  |ox  xx  o|  o xxox |o  xx  xo|ox  xx  o|  o xxox |o  xx  xo| xoxx o  
+ ooxx o  |ox  xo  o|  o xxoo |o  ox  xo|oo  xx  o|  o xoox |o  xx  oo| xoox o  
+xx ox o  |oox xx   |  o xo xx|   xx xoo| xx xo  o|    xxoox|o  ox xx |xooxx    
+xo ox o  |oox xo   |  o xo ox|   ox xoo| ox xo  o|    xooox|o  ox xo |xooox    
+x xox o  |oox x   x|  o xox x|x   x xoo|x x xo  o|  x x oox|o  ox x x|xoo x x  
+ xxox o  |oo  xx  x|  o xoxx |x  xx  oo|xx  xo  o|  x xxoo |o  ox  xx| ooxx x  
+ oxox o  |oo  xo  x|  o xoxo |x  ox  oo|xo  xo  o|  x xooo |o  ox  ox| ooox x  
+x oox o  |oox x   o|  o xoo x|o   x xoo|o x xo  o|  o x oox|o  ox x o|xoo x o  
+ xoox o  |oo  xx  o|  o xoox |o  xx  oo|ox  xo  o|  o xxoo |o  ox  xo| ooxx o  
+ x  o o  |o   ox   |  o o  x |   xo   o| x  o   o|    oxo  |o   o  x |  oxo    
+oxx o o  |o o ox  x|  o o xxo|x  xo o o|xxo o   o|  x oxo o|o   o oxx|o oxo x  
+xox o o  |o x oo  x|  o o xox|x  oo x o|xox o   o|  x ooo x|o   o xox|x ooo x  
+xx xo o  |oxx ox   |  o ox xx|   xo xxo| xx ox  o|    oxoxx|o  xo xx |xxoxo    
+ox xo o  |oxo ox   |  o ox xo|   xo oxo| xo ox  o|    oxoxo|o  xo ox |oxoxo    
+xo xo o  |oxx oo   |  o ox ox|   oo xxo| ox ox  o|    oooxx|o  xo xo |xxooo    
+x xxo o  |oxx o   x|  o oxx x|x   o xxo|x x ox  o|  x o oxx|o  xo x x|xxo o x  
+o xxo o  |oxo o   x|  o oxx o|x   o oxo|x o ox  o|  x o oxo|o  xo o x|oxo o x  
+ xxxo o  |ox  ox  x|  o oxxx |x  xo  xo|xx  ox  o|  x oxox |o  xo  xx| xoxo x  
+ oxxo o  |ox  oo  x|  o oxxo |x  oo  xo|xo  ox  o|  x ooox |o  xo  ox| xooo x  
+xx oo o  |oox ox   |  o oo xx|   xo xoo| xx oo  o|    oxoox|o  oo xx |xooxo    
+x xoo o  |oox o   x|  o oox x|x   o xoo|x x oo  o|  x o oox|o  oo x x|xoo o x  
+ xxoo o  |oo  ox  x|  o ooxx |x  xo  oo|xx  oo  o|  x oxoo |o  oo  xx| ooxo x  
+x    xo  |o x    x |  ox    x| x    x o|  xx    o| x    o x|o    xx  |x o    x 
+o    xo  |o o    x |  ox    o| x    o o|  ox    o| x    o o|o    xo  |o o    x 
+ x   xo  |o    x x |  ox   x | x x    o| x x    o| x   xo  |o    x x |  ox   x 
+ o   xo  |o    o x |  ox   o | x o    o| o x    o| x   oo  |o    x o |  oo   x 
+oxx  xo  |o o  x xx|  ox  xxo|xx x  o o|xxox    o| xx  xo o|o    xoxx|o ox  xx 
+xox  xo  |o x  o xx|  ox  xox|xx o  x o|xoxx    o| xx  oo x|o    xxox|x oo  xx 
+oox  xo  |o o  o xx|  ox  xoo|xx o  o o|xoox    o| xx  oo o|o    xoox|o oo  xx 
+xxo  xo  |o x  x xo|  ox  oxx|ox x  x o|oxxx    o| xo  xo x|o    xxxo|x ox  ox 
+oxo  xo  |o o  x xo|  ox  oxo|ox x  o o|oxox    o| xo  xo o|o    xoxo|o ox  ox 
+xoo  xo  |o x  o xo|  ox  oox|ox o  x o|ooxx    o| xo  oo x|o    xxoo|x oo  ox 
+   x xo  |ox     x |  ox x   | x     xo|   x x  o| x    ox |o  x x   | xo    x 
+ox x xo  |oxo  x x |  ox x xo| x x  oxo| xox x  o| x   xoxo|o  x xox |oxox   x 
+xo x xo  |oxx  o x |  ox x ox| x o  xxo| oxx x  o| x   ooxx|o  x xxo |xxoo   x 
+oo x xo  |oxo  o x |  ox x oo| x o  oxo| oox x  o| x   ooxo|o  x xoo |oxoo   x 
+o xx xo  |oxo    xx|  ox xx o|xx    oxo|x ox x  o| xx   oxo|o  x xo x|oxo   xx 
+ oxx xo  |ox   o xx|  ox xxo |xx o   xo|xo x x  o| xx  oox |o  x x ox| xoo  xx 
+x ox xo  |oxx    xo|  ox xo x|ox    xxo|o xx x  o| xo   oxx|o  x xx o|xxo   ox 
+o ox xo  |oxo    xo|  ox xo o|ox    oxo|o ox x  o| xo   oxo|o  x xo o|oxo   ox 
+ xox xo  |ox   x xo|  ox xox |ox x   xo|ox x x  o| xo  xox |o  x x xo| xox  ox 
+ oox xo  |ox   o xo|  ox xoo |ox o   xo|oo x x  o| xo  oox |o  x x oo| xoo  ox 
+   o xo  |oo     x |  ox o   | x     oo|   x o  o| x    oo |o  o x   | oo    x 
+xx o xo  |oox  x x |  ox o xx| x x  xoo| xxx o  o| x   xoox|o  o xxx |xoox   x 
+xo o xo  |oox  o x |  ox o ox| x o  xoo| oxx o  o| x   ooox|o  o xxo |xooo   x 
+x xo xo  |oox    xx|  ox ox x|xx    xoo|x xx o  o| xx   oox|o  o xx x|xoo   xx 
+ xxo xo  |oo   x xx|  ox oxx |xx x   oo|xx x o  o| xx  xoo |o  o x xx| oox  xx 
+ oxo xo  |oo   o xx|  ox oxo |xx o   oo|xo x o  o| xx  ooo |o  o x ox| ooo  xx 
+x oo xo  |oox    xo|  ox oo x|ox    xoo|o xx o  o| xo   oox|o  o xx o|xoo   ox 
+ xoo xo  |oo   x xo|  ox oox |ox x   oo|ox x o  o| xo  xoo |o  o x xo| oox  ox 
+ox  xxo  |o o xx x |  oxx  xo| x xx o o| xoxx   o| x  xxo o|o   xxox |o oxx  x 
+xo  xxo  |o x xo x |  oxx  ox| x ox x o| oxxx   o| x  xoo x|o   xxxo |x oox  x 
+oo  xxo  |o o xo x |  oxx  oo| x ox o o| ooxx   o| x  xoo o|o   xxoo |o oox  x 
+o x xxo  |o o x  xx|  oxx x o|xx  x o o|x oxx   o| xx x o o|o   xxo x|o o x xx 
+ ox xxo  |o   xo xx|  oxx xo |xx ox   o|xo xx   o| xx xoo  |o   xx ox|  oox xx 
+x o xxo  |o x x  xo|  oxx o x|ox  x x o|o xxx   o| xo x o x|o   xxx o|x o x ox 
+o o xxo  |o o x  xo|  oxx o o|ox  x o o|o oxx   o| xo x o o|o   xxo o|o o x ox 
+ xo xxo  |o   xx xo|  oxx ox |ox xx   o|ox xx   o| xo xxo  |o   xx xo|  oxx ox 
+ oo xxo  |o   xo xo|  oxx oo |ox ox   o|oo xx   o| xo xoo  |o   xx oo|  oox ox 
+x  oxxo  |oox x  x |  oxxo  x| x  x xoo|  xxxo  o| x  x oox|o  oxxx  |xoo x  x 
+ x oxxo  |oo  xx x |  oxxo x | x xx  oo| x xxo  o| x  xxoo |o  oxx x | ooxx  x 
+ o oxxo  |oo  xo x |  oxxo o | x ox  oo| o xxo  o| x  xooo |o  oxx o | ooox  x 
+xoxoxxo  |oox xo xx|  oxxoxox|xx ox xoo|xoxxxo  o| xx xooox|o  oxxxox|xooox xx 
+  ooxxo  |oo  x  xo|  oxxoo  |ox  x  oo|o  xxo  o| xo x oo |o  oxx  o| oo x ox 
+xxooxxo  |oox xx xo|  oxxooxx|ox xx xoo|oxxxxo  o| xo xxoox|o  oxxxxo|xooxx ox 
+xoooxxo  |oox xo xo|  oxxooox|ox ox xoo|ooxxxo  o| xo xooox|o  oxxxoo|xooox ox 
+xx  oxo  |o x ox x |  oxo  xx| x xo x o| xxxo   o| x  oxo x|o   oxxx |x oxo  x 
+ox  oxo  |o o ox x |  oxo  xo| x xo o o| xoxo   o| x  oxo o|o   oxox |o oxo  x 
+xo  oxo  |o x oo x |  oxo  ox| x oo x o| oxxo   o| x  ooo x|o   oxxo |x ooo  x 
+x x oxo  |o x o  xx|  oxo x x|xx  o x o|x xxo   o| xx o o x|o   oxx x|x o o xx 
+o x oxo  |o o o  xx|  oxo x o|xx  o o o|x oxo   o| xx o o o|o   oxo x|o o o xx 
+ xx oxo  |o   ox xx|  oxo xx |xx xo   o|xx xo   o| xx oxo  |o   ox xx|  oxo xx 
+ ox oxo  |o   oo xx|  oxo xo |xx oo   o|xo xo   o| xx ooo  |o   ox ox|  ooo xx 
+x  xoxo  |oxx o  x |  oxox  x| x  o xxo|  xxox  o| x  o oxx|o  xoxx  |xxo o  x 
+o  xoxo  |oxo o  x |  oxox  o| x  o oxo|  oxox  o| x  o oxo|o  xoxo  |oxo o  x 
+ x xoxo  |ox  ox x |  oxox x | x xo  xo| x xox  o| x  oxox |o  xox x | xoxo  x 
+ o xoxo  |ox  oo x |  oxox o | x oo  xo| o xox  o| x  ooox |o  xox o | xooo  x 
+oxxxoxo  |oxo ox xx|  oxoxxxo|xx xo oxo|xxoxox  o| xx oxoxo|o  xoxoxx|oxoxo xx 
+xoxxoxo  |oxx oo xx|  oxoxxox|xx oo xxo|xoxxox  o| xx oooxx|o  xoxxox|xxooo xx 
+ooxxoxo  |oxo oo xx|  oxoxxoo|xx oo oxo|xooxox  o| xx oooxo|o  xoxoox|oxooo xx 
+x  ooxo  |oox o  x |  oxoo  x| x  o xoo|  xxoo  o| x  o oox|o  ooxx  |xoo o  x 
+ x ooxo  |oo  ox x |  oxoo x | x xo  oo| x xoo  o| x  oxoo |o  oox x | ooxo  x 
+xoxooxo  |oox oo xx|  oxooxox|xx oo xoo|xoxxoo  o| xx oooox|o  ooxxox|xoooo xx 
+x    oo  |o x    o |  oo    x| o    x o|  xo    o| o    o x|o    ox  |x o    o 
+ x   oo  |o    x o |  oo   x | o x    o| x o    o| o   xo  |o    o x |  ox   o 
+oxx  oo  |o o  x ox|  oo  xxo|xo x  o o|xxoo    o| ox  xo o|o    ooxx|o ox  xo 
+xox  oo  |o x  o ox|  oo  xox|xo o  x o|xoxo    o| ox  oo x|o    oxox|x oo  xo 
+xxo  oo  |o x  x oo|  oo  oxx|oo x  x o|oxxo    o| oo  xo x|o    oxxo|x ox  oo 
+xx x oo  |oxx  x o |  oo x xx| o x  xxo| xxo x  o| o   xoxx|o  x oxx |xxox   o 
+ox x oo  |oxo  x o |  oo x xo| o x  oxo| xoo x  o| o   xoxo|o  x oox |oxox   o 
+xo x oo  |oxx  o o |  oo x ox| o o  xxo| oxo x  o| o   ooxx|o  x oxo |xxoo   o 
+x xx oo  |oxx    ox|  oo xx x|xo    xxo|x xo x  o| ox   oxx|o  x ox x|xxo   xo 
+o xx oo  |oxo    ox|  oo xx o|xo    oxo|x oo x  o| ox   oxo|o  x oo x|oxo   xo 
+ xxx oo  |ox   x ox|  oo xxx |xo x   xo|xx o x  o| ox  xox |o  x o xx| xox  xo 
+ oxx oo  |ox   o ox|  oo xxo |xo o   xo|xo o x  o| ox  oox |o  x o ox| xoo  xo 
+x ox oo  |oxx    oo|  oo xo x|oo    xxo|o xo x  o| oo   oxx|o  x ox o|xxo   oo 
+ xox oo  |ox   x oo|  oo xox |oo x   xo|ox o x  o| oo  xox |o  x o xo| xox  oo 
+xx o oo  |oox  x o |  oo o xx| o x  xoo| xxo o  o| o   xoox|o  o oxx |xoox   o 
+x xo oo  |oox    ox|  oo ox x|xo    xoo|x xo o  o| ox   oox|o  o ox x|xoo   xo 
+ xxo oo  |oo   x ox|  oo oxx |xo x   oo|xx o o  o| ox  xoo |o  o o xx| oox  xo 
+xx  xoo  |o x xx o |  oox  xx| o xx x o| xxox   o| o  xxo x|o   xoxx |x oxx  o 
+ox  xoo  |o o xx o |  oox  xo| o xx o o| xoox   o| o  xxo o|o   xoox |o oxx  o 
+xo  xoo  |o x xo o |  oox  ox| o ox x o| oxox   o| o  xoo x|o   xoxo |x oox  o 
+x x xoo  |o x x  ox|  oox x x|xo  x x o|x xox   o| ox x o x|o   xox x|x o x xo 
+o x xoo  |o o x  ox|  oox x o|xo  x o o|x oox   o| ox x o o|o   xoo x|o o x xo 
+ xx xoo  |o   xx ox|  oox xx |xo xx   o|xx ox   o| ox xxo  |o   xo xx|  oxx xo 
+ ox xoo  |o   xo ox|  oox xo |xo ox   o|xo ox   o| ox xoo  |o   xo ox|  oox xo 
+x o xoo  |o x x  oo|  oox o x|oo  x x o|o xox   o| oo x o x|o   xox o|x o x oo 
+ xo xoo  |o   xx oo|  oox ox |oo xx   o|ox ox   o| oo xxo  |o   xo xo|  oxx oo 
+x  xxoo  |oxx x  o |  ooxx  x| o  x xxo|  xoxx  o| o  x oxx|o  xxox  |xxo x  o 
+o  xxoo  |oxo x  o |  ooxx  o| o  x oxo|  ooxx  o| o  x oxo|o  xxoo  |oxo x  o 
+ x xxoo  |ox  xx o |  ooxx x | o xx  xo| x oxx  o| o  xxox |o  xxo x | xoxx  o 
+ o xxoo  |ox  xo o |  ooxx o | o ox  xo| o oxx  o| o  xoox |o  xxo o | xoox  o 
+oxxxxoo  |oxo xx ox|  ooxxxxo|xo xx oxo|xxooxx  o| ox xxoxo|o  xxooxx|oxoxx xo 
+xoxxxoo  |oxx xo ox|  ooxxxox|xo ox xxo|xoxoxx  o| ox xooxx|o  xxoxox|xxoox xo 
+ooxxxoo  |oxo xo ox|  ooxxxoo|xo ox oxo|xoooxx  o| ox xooxo|o  xxooox|oxoox xo 
+xxoxxoo  |oxx xx oo|  ooxxoxx|oo xx xxo|oxxoxx  o| oo xxoxx|o  xxoxxo|xxoxx oo 
+oxoxxoo  |oxo xx oo|  ooxxoxo|oo xx oxo|oxooxx  o| oo xxoxo|o  xxooxo|oxoxx oo 
+xooxxoo  |oxx xo oo|  ooxxoox|oo ox xxo|ooxoxx  o| oo xooxx|o  xxoxoo|xxoox oo 
+x  oxoo  |oox x  o |  ooxo  x| o  x xoo|  xoxo  o| o  x oox|o  oxox  |xoo x  o 
+ x oxoo  |oo  xx o |  ooxo x | o xx  oo| x oxo  o| o  xxoo |o  oxo x | ooxx  o 
+xoxoxoo  |oox xo ox|  ooxoxox|xo ox xoo|xoxoxo  o| ox xooox|o  oxoxox|xooox xo 
+xxooxoo  |oox xx oo|  ooxooxx|oo xx xoo|oxxoxo  o| oo xxoox|o  oxoxxo|xooxx oo 
+xx  ooo  |o x ox o |  ooo  xx| o xo x o| xxoo   o| o  oxo x|o   ooxx |x oxo  o 
+x x ooo  |o x o  ox|  ooo x x|xo  o x o|x xoo   o| ox o o x|o   oox x|x o o xo 
+ xx ooo  |o   ox ox|  ooo xx |xo xo   o|xx oo   o| ox oxo  |o   oo xx|  oxo xo 
+x  xooo  |oxx o  o |  ooox  x| o  o xxo|  xoox  o| o  o oxx|o  xoox  |xxo o  o 
+ x xooo  |ox  ox o |  ooox x | o xo  xo| x oox  o| o  oxox |o  xoo x | xoxo  o 
+oxxxooo  |oxo ox ox|  oooxxxo|xo xo oxo|xxooox  o| ox oxoxo|o  xoooxx|oxoxo xo 
+xoxxooo  |oxx oo ox|  oooxxox|xo oo xxo|xoxoox  o| ox oooxx|o  xooxox|xxooo xo 
+ o x   x | x x o   | x   x o |   o x x | o   x x |   x o x | x x   o | x o x   
+ooxx   x | xox o  x| x   xxoo|x  o xox |xoo  x x |  xx o xo| x x  oox|ox o xx  
+oxox   x | xox x  o| x   xoxo|o  x xox |oxo  x x |  ox x xo| x x  oxo|ox x xo  
+xoox   x | xxx o  o| x   xoox|o  o xxx |oox  x x |  ox o xx| x x  xoo|xx o xo  
+ o o   x | o x o   | x   o o |   o x o | o   o x |   x o o | x o   o | o o x   
+oxxo   x | oox x  x| x   oxxo|x  x xoo |xxo  o x |  xx x oo| x o  oxx|oo x xx  
+xoxo   x | oxx o  x| x   oxox|x  o xxo |xox  o x |  xx o ox| x o  xox|xo o xx  
+ooxo   x | oox o  x| x   oxoo|x  o xoo |xoo  o x |  xx o oo| x o  oox|oo o xx  
+xxoo   x | oxx x  o| x   ooxx|o  x xxo |oxx  o x |  ox x ox| x o  xxo|xo x xo  
+oxoo   x | oox x  o| x   ooxo|o  x xoo |oxo  o x |  ox x oo| x o  oxo|oo x xo  
+xooo   x | oxx o  o| x   ooox|o  o xxo |oox  o x |  ox o ox| x o  xoo|xo o xo  
+oo xx  x | xoxxo   | x  xx oo|   oxxox | oo xx x |   xxo xo| x xx oo |ox oxx   
+o oxx  x | xoxx   o| x  xxo o|o   xxox |o o xx x |  oxx  xo| x xx o o|ox  xxo  
+ ooxx  x | x xxo  o| x  xxoo |o  oxx x |oo  xx x |  oxxo x | x xx  oo| x oxxo  
+xo ox  x | oxxxo   | x  xo ox|   oxxxo | ox xo x |   xxo ox| x ox xo |xo oxx   
+oo ox  x | ooxxo   | x  xo oo|   oxxoo | oo xo x |   xxo oo| x ox oo |oo oxx   
+o xox  x | ooxx   x| x  xox o|x   xxoo |x o xo x |  xxx  oo| x ox o x|oo  xxx  
+ oxox  x | o xxo  x| x  xoxo |x  oxx o |xo  xo x |  xxxo o | x ox  ox| o oxxx  
+x oox  x | oxxx   o| x  xoo x|o   xxxo |o x xo x |  oxx  ox| x ox x o|xo  xxo  
+o oox  x | ooxx   o| x  xoo o|o   xxoo |o o xo x |  oxx  oo| x ox o o|oo  xxo  
+ ooox  x | o xxo  o| x  xooo |o  oxx o |oo  xo x |  oxxo o | x ox  oo| o oxxo  
+ox xo  x | xoxox   | x  ox xo|   xoxox | xo ox x |   xox xo| x xo ox |ox xox   
+xo xo  x | xxxoo   | x  ox ox|   ooxxx | ox ox x |   xoo xx| x xo xo |xx oox   
+oo xo  x | xoxoo   | x  ox oo|   ooxox | oo ox x |   xoo xo| x xo oo |ox oox   
+o xxo  x | xoxo   x| x  oxx o|x   oxox |x o ox x |  xxo  xo| x xo o x|ox  oxx  
+ oxxo  x | x xoo  x| x  oxxo |x  oox x |xo  ox x |  xxoo x | x xo  ox| x ooxx  
+x oxo  x | xxxo   o| x  oxo x|o   oxxx |o x ox x |  oxo  xx| x xo x o|xx  oxo  
+o oxo  x | xoxo   o| x  oxo o|o   oxox |o o ox x |  oxo  xo| x xo o o|ox  oxo  
+ xoxo  x | x xox  o| x  oxox |o  xox x |ox  ox x |  oxox x | x xo  xo| x xoxo  
+ ooxo  x | x xoo  o| x  oxoo |o  oox x |oo  ox x |  oxoo x | x xo  oo| x ooxo  
+xx oo  x | oxxox   | x  oo xx|   xoxxo | xx oo x |   xox ox| x oo xx |xo xox   
+ox oo  x | ooxox   | x  oo xo|   xoxoo | xo oo x |   xox oo| x oo ox |oo xox   
+xo oo  x | oxxoo   | x  oo ox|   ooxxo | ox oo x |   xoo ox| x oo xo |xo oox   
+x xoo  x | oxxo   x| x  oox x|x   oxxo |x x oo x |  xxo  ox| x oo x x|xo  oxx  
+o xoo  x | ooxo   x| x  oox o|x   oxoo |x o oo x |  xxo  oo| x oo o x|oo  oxx  
+ xxoo  x | o xox  x| x  ooxx |x  xox o |xx  oo x |  xxox o | x oo  xx| o xoxx  
+ oxoo  x | o xoo  x| x  ooxo |x  oox o |xo  oo x |  xxoo o | x oo  ox| o ooxx  
+x ooo  x | oxxo   o| x  ooo x|o   oxxo |o x oo x |  oxo  ox| x oo x o|xo  oxo  
+ xooo  x | o xox  o| x  ooox |o  xox o |ox  oo x |  oxox o | x oo  xo| o xoxo  
+oo x x x | xox o x | x x x oo| x o xox | oox x x | x x o xo| x x xoo |ox o x x 
+o ox x x | xox   xo| x x xo o|ox   xox |o ox x x | xox   xo| x x xo o|ox   xox 
+ox o x x | oox x x | x x o xo| x x xoo | xox o x | x x x oo| x o xox |oo x x x 
+xo o x x | oxx o x | x x o ox| x o xxo | oxx o x | x x o ox| x o xxo |xo o x x 
+oo o x x | oox o x | x x o oo| x o xoo | oox o x | x x o oo| x o xoo |oo o x x 
+o xo x x | oox   xx| x x ox o|xx   xoo |x ox o x | xxx   oo| x o xo x|oo   xxx 
+ oxo x x | o x o xx| x x oxo |xx o x o |xo x o x | xxx o o | x o x ox| o o xxx 
+x oo x x | oxx   xo| x x oo x|ox   xxo |o xx o x | xox   ox| x o xx o|xo   xox 
+o oo x x | oox   xo| x x oo o|ox   xoo |o ox o x | xox   oo| x o xo o|oo   xox 
+ xoo x x | o x x xo| x x oox |ox x x o |ox x o x | xox x o | x o x xo| o x xox 
+ ooo x x | o x o xo| x x ooo |ox o x o |oo x o x | xox o o | x o x oo| o o xox 
+ o oxx x | o xxo x | x xxo o | x oxx o | o xxo x | x xxo o | x oxx o | o oxx x 
+ooxoxx x | ooxxo xx| x xxoxoo|xx oxxoo |xooxxo x | xxxxo oo| x oxxoox|oo oxxxx 
+xoooxx x | oxxxo xo| x xxooox|ox oxxxo |ooxxxo x | xoxxo ox| x oxxxoo|xo oxxox 
+ o xox x | x xoo x | x xox o | x oox x | o xox x | x xoo x | x xox o | x oox x 
+ooxxox x | xoxoo xx| x xoxxoo|xx ooxox |xooxox x | xxxoo xo| x xoxoox|ox ooxxx 
+oxoxox x | xoxox xo| x xoxoxo|ox xoxox |oxoxox x | xoxox xo| x xoxoxo|ox xoxox 
+ o oox x | o xoo x | x xoo o | x oox o | o xoo x | x xoo o | x oox o | o oox x 
+oxxoox x | ooxox xx| x xooxxo|xx xoxoo |xxoxoo x | xxxox oo| x ooxoxx|oo xoxxx 
+xoxoox x | oxxoo xx| x xooxox|xx ooxxo |xoxxoo x | xxxoo ox| x ooxxox|xo ooxxx 
+ooxoox x | ooxoo xx| x xooxoo|xx ooxoo |xooxoo x | xxxoo oo| x ooxoox|oo ooxxx 
+xxooox x | oxxox xo| x xoooxx|ox xoxxo |oxxxoo x | xoxox ox| x ooxxxo|xo xoxox 
+oxooox x | ooxox xo| x xoooxo|ox xoxoo |oxoxoo x | xoxox oo| x ooxoxo|oo xoxox 
+xoooox x | oxxoo xo| x xoooox|ox ooxxo |ooxxoo x | xoxoo ox| x ooxxoo|xo ooxox 
+xx o o x | oxx x o | x o o xx| o x xxo | xxo o x | o x x ox| x o oxx |xo x x o 
+ox o o x | oox x o | x o o xo| o x xoo | xoo o x | o x x oo| x o oox |oo x x o 
+xo o o x | oxx o o | x o o ox| o o xxo | oxo o x | o x o ox| x o oxo |xo o x o 
+x xo o x | oxx   ox| x o ox x|xo   xxo |x xo o x | oxx   ox| x o ox x|xo   xxo 
+o xo o x | oox   ox| x o ox o|xo   xoo |x oo o x | oxx   oo| x o oo x|oo   xxo 
+o  xxo x | xoxx  o | x oxx  o| o  xxox |  ooxx x | o xx  xo| x xxoo  |ox  xx o 
+x  oxo x | oxxx  o | x oxo  x| o  xxxo |  xoxo x | o xx  ox| x oxox  |xo  xx o 
+o  oxo x | ooxx  o | x oxo  o| o  xxoo |  ooxo x | o xx  oo| x oxoo  |oo  xx o 
+ o oxo x | o xxo o | x oxo o | o oxx o | o oxo x | o xxo o | x oxo o | o oxx o 
+xoxoxo x | oxxxo ox| x oxoxox|xo oxxxo |xoxoxo x | oxxxo ox| x oxoxox|xo oxxxo 
+ooxoxo x | ooxxo ox| x oxoxoo|xo oxxoo |xoooxo x | oxxxo oo| x oxooox|oo oxxxo 
+x  xoo x | xxxo  o | x oox  x| o  oxxx |  xoox x | o xo  xx| x xoox  |xx  ox o 
+o  xoo x | xoxo  o | x oox  o| o  oxox |  ooox x | o xo  xo| x xooo  |ox  ox o 
+ o    xx |x  x o   | xx    o |   o x  x| o     xx|   x ox  |xx     o |  xo x   
+oox   xx |x ox o  x| xx   xoo|x  o xo x|xoo    xx|  xx ox o|xx    oox|o xo xx  
+oxo   xx |x ox x  o| xx   oxo|o  x xo x|oxo    xx|  ox xx o|xx    oxo|o xx xo  
+xoo   xx |x xx o  o| xx   oox|o  o xx x|oox    xx|  ox ox x|xx    xoo|x xo xo  
+oo x  xx |xxox o   | xx  x oo|   o xoxx| oo  x xx|   x oxxo|xx x  oo |oxxo x   
+o ox  xx |xxox    o| xx  xo o|o    xoxx|o o  x xx|  ox  xxo|xx x  o o|oxx  xo  
+ oox  xx |xx x o  o| xx  xoo |o  o x xx|oo   x xx|  ox oxx |xx x   oo| xxo xo  
+ox o  xx |xoox x   | xx  o xo|   x xoox| xo  o xx|   x xxoo|xx o  ox |ooxx x   
+xo o  xx |xoxx o   | xx  o ox|   o xxox| ox  o xx|   x oxox|xx o  xo |xoxo x   
+oo o  xx |xoox o   | xx  o oo|   o xoox| oo  o xx|   x oxoo|xx o  oo |ooxo x   
+o xo  xx |xoox    x| xx  ox o|x    xoox|x o  o xx|  xx  xoo|xx o  o x|oox  xx  
+ oxo  xx |xo x o  x| xx  oxo |x  o x ox|xo   o xx|  xx oxo |xx o   ox| oxo xx  
+x oo  xx |xoxx    o| xx  oo x|o    xxox|o x  o xx|  ox  xox|xx o  x o|xox  xo  
+o oo  xx |xoox    o| xx  oo o|o    xoox|o o  o xx|  ox  xoo|xx o  o o|oox  xo  
+ xoo  xx |xo x x  o| xx  oox |o  x x ox|ox   o xx|  ox xxo |xx o   xo| oxx xo  
+ ooo  xx |xo x o  o| xx  ooo |o  o x ox|oo   o xx|  ox oxo |xx o   oo| oxo xo  
+oo  x xx |x oxxo   | xx x  oo|   oxxo x| oo x  xx|   xxox o|xx  x oo |o xoxx   
+o o x xx |x oxx   o| xx x o o|o   xxo x|o o x  xx|  oxx x o|xx  x o o|o x xxo  
+ oo x xx |x  xxo  o| xx x oo |o  oxx  x|oo  x  xx|  oxxox  |xx  x  oo|  xoxxo  
+ o ox xx |xo xxo   | xx xo o |   oxx ox| o  xo xx|   xxoxo |xx ox  o | oxoxx   
+xooox xx |xoxxxo  o| xx xooox|o  oxxxox|oox xo xx|  oxxoxox|xx ox xoo|xoxoxxo  
+ox  o xx |x oxox   | xx o  xo|   xoxo x| xo o  xx|   xoxx o|xx  o ox |o xxox   
+xo  o xx |x xxoo   | xx o  ox|   ooxx x| ox o  xx|   xoox x|xx  o xo |x xoox   
+oo  o xx |x oxoo   | xx o  oo|   ooxo x| oo o  xx|   xoox o|xx  o oo |o xoox   
+o x o xx |x oxo   x| xx o x o|x   oxo x|x o o  xx|  xxo x o|xx  o o x|o x oxx  
+ ox o xx |x  xoo  x| xx o xo |x  oox  x|xo  o  xx|  xxoox  |xx  o  ox|  xooxx  
+x o o xx |x xxo   o| xx o o x|o   oxx x|o x o  xx|  oxo x x|xx  o x o|x x oxo  
+o o o xx |x oxo   o| xx o o o|o   oxo x|o o o  xx|  oxo x o|xx  o o o|o x oxo  
+ xo o xx |x  xox  o| xx o ox |o  xox  x|ox  o  xx|  oxoxx  |xx  o  xo|  xxoxo  
+ oo o xx |x  xoo  o| xx o oo |o  oox  x|oo  o  xx|  oxoox  |xx  o  oo|  xooxo  
+ o xo xx |xx xoo   | xx ox o |   oox xx| o  ox xx|   xooxx |xx xo  o | xxoox   
+ooxxo xx |xxoxoo  x| xx oxxoo|x  ooxoxx|xoo ox xx|  xxooxxo|xx xo oox|oxxooxx  
+oxoxo xx |xxoxox  o| xx oxoxo|o  xoxoxx|oxo ox xx|  oxoxxxo|xx xo oxo|oxxxoxo  
+ o oo xx |xo xoo   | xx oo o |   oox ox| o  oo xx|   xooxo |xx oo  o | oxoox   
+oxxoo xx |xooxox  x| xx ooxxo|x  xoxoox|xxo oo xx|  xxoxxoo|xx oo oxx|ooxxoxx  
+xoxoo xx |xoxxoo  x| xx ooxox|x  ooxxox|xox oo xx|  xxooxox|xx oo xox|xoxooxx  
+ooxoo xx |xooxoo  x| xx ooxoo|x  ooxoox|xoo oo xx|  xxooxoo|xx oo oox|ooxooxx  
+xxooo xx |xoxxox  o| xx oooxx|o  xoxxox|oxx oo xx|  oxoxxox|xx oo xxo|xoxxoxo  
+oxooo xx |xooxox  o| xx oooxo|o  xoxoox|oxo oo xx|  oxoxxoo|xx oo oxo|ooxxoxo  
+xoooo xx |xoxxoo  o| xx oooox|o  ooxxox|oox oo xx|  oxooxox|xx oo xoo|xoxooxo  
+oo   xxx |x ox o x | xxx   oo| x o xo x| oox   xx| x x ox o|xx   xoo |o xo x x 
+o o  xxx |x ox   xo| xxx  o o|ox   xo x|o ox   xx| xox  x o|xx   xo o|o x  xox 
+ oo  xxx |x  x o xo| xxx  oo |ox o x  x|oo x   xx| xox ox  |xx   x oo|  xo xox 
+ o o xxx |xo x o x | xxx o o | x o x ox| o x o xx| x x oxo |xx o x o | oxo x x 
+ooxo xxx |xoox o xx| xxx oxoo|xx o xoox|xoox o xx| xxx oxoo|xx o xoox|ooxo xxx 
+oxoo xxx |xoox x xo| xxx ooxo|ox x xoox|oxox o xx| xox xxoo|xx o xoxo|ooxx xox 
+xooo xxx |xoxx o xo| xxx ooox|ox o xxox|ooxx o xx| xox oxox|xx o xxoo|xoxo xox 
+oo oxxxx |xooxxo x | xxxxo oo| x oxxoox| ooxxo xx| x xxoxoo|xx oxxoo |ooxoxx x 
+o ooxxxx |xooxx  xo| xxxxoo o|ox  xxoox|o oxxo xx| xoxx xoo|xx oxxo o|oox xxox 
+ oooxxxx |xo xxo xo| xxxxooo |ox oxx ox|oo xxo xx| xoxxoxo |xx oxx oo| oxoxxox 
+oox oxxx |x oxoo xx| xxxo xoo|xx ooxo x|xooxo  xx| xxxoox o|xx  oxoox|o xooxxx 
+oxo oxxx |x oxox xo| xxxo oxo|ox xoxo x|oxoxo  xx| xoxoxx o|xx  oxoxo|o xxoxox 
+xoo oxxx |x xxoo xo| xxxo oox|ox ooxx x|ooxxo  xx| xoxoox x|xx  oxxoo|x xooxox 
+oo xoxxx |xxoxoo x | xxxox oo| x ooxoxx| ooxox xx| x xooxxo|xx xoxoo |oxxoox x 
+o oxoxxx |xxoxo  xo| xxxoxo o|ox  oxoxx|o oxox xx| xoxo xxo|xx xoxo o|oxx oxox 
+ ooxoxxx |xx xoo xo| xxxoxoo |ox oox xx|oo xox xx| xoxooxx |xx xox oo| xxooxox 
+ox ooxxx |xooxox x | xxxoo xo| x xoxoox| xoxoo xx| x xoxxoo|xx ooxox |ooxxox x 
+xo ooxxx |xoxxoo x | xxxoo ox| x ooxxox| oxxoo xx| x xooxox|xx ooxxo |xoxoox x 
+oo ooxxx |xooxoo x | xxxoo oo| x ooxoox| ooxoo xx| x xooxoo|xx ooxoo |ooxoox x 
+o xooxxx |xooxo  xx| xxxoox o|xx  oxoox|x oxoo xx| xxxo xoo|xx ooxo x|oox oxxx 
+ oxooxxx |xo xoo xx| xxxooxo |xx oox ox|xo xoo xx| xxxooxo |xx oox ox| oxooxxx 
+x oooxxx |xoxxo  xo| xxxooo x|ox  oxxox|o xxoo xx| xoxo xox|xx ooxx o|xox oxox 
+o oooxxx |xooxo  xo| xxxooo o|ox  oxoox|o oxoo xx| xoxo xoo|xx ooxo o|oox oxox 
+ xoooxxx |xo xox xo| xxxooox |ox xox ox|ox xoo xx| xoxoxxo |xx oox xo| oxxoxox 
+ ooooxxx |xo xoo xo| xxxoooo |ox oox ox|oo xoo xx| xoxooxo |xx oox oo| oxooxox 
+ox   oxx |x ox x o | xxo   xo| o x xo x| xoo   xx| o x xx o|xx   oox |o xx x o 
+xo   oxx |x xx o o | xxo   ox| o o xx x| oxo   xx| o x ox x|xx   oxo |x xo x o 
+oo   oxx |x ox o o | xxo   oo| o o xo x| ooo   xx| o x ox o|xx   ooo |o xo x o 
+o x  oxx |x ox   ox| xxo  x o|xo   xo x|x oo   xx| oxx  x o|xx   oo x|o x  xxo 
+ ox  oxx |x  x o ox| xxo  xo |xo o x  x|xo o   xx| oxx ox  |xx   o ox|  xo xxo 
+x o  oxx |x xx   oo| xxo  o x|oo   xx x|o xo   xx| oox  x x|xx   ox o|x x  xoo 
+o o  oxx |x ox   oo| xxo  o o|oo   xo x|o oo   xx| oox  x o|xx   oo o|o x  xoo 
+ xo  oxx |x  x x oo| xxo  ox |oo x x  x|ox o   xx| oox xx  |xx   o xo|  xx xoo 
+ oo  oxx |x  x o oo| xxo  oo |oo o x  x|oo o   xx| oox ox  |xx   o oo|  xo xoo 
+o  x oxx |xxox   o | xxo x  o| o   xoxx|  oo x xx| o x  xxo|xx x oo  |oxx  x o 
+ o x oxx |xx x o o | xxo x o | o o x xx| o o x xx| o x oxx |xx x o o | xxo x o 
+ooxx oxx |xxox o ox| xxo xxoo|xo o xoxx|xooo x xx| oxx oxxo|xx x ooox|oxxo xxo 
+oxox oxx |xxox x oo| xxo xoxo|oo x xoxx|oxoo x xx| oox xxxo|xx x ooxo|oxxx xoo 
+x  o oxx |xoxx   o | xxo o  x| o   xxox|  xo o xx| o x  xox|xx o ox  |xox  x o 
+o  o oxx |xoox   o | xxo o  o| o   xoox|  oo o xx| o x  xoo|xx o oo  |oox  x o 
+ x o oxx |xo x x o | xxo o x | o x x ox| x o o xx| o x xxo |xx o o x | oxx x o 
+ o o oxx |xo x o o | xxo o o | o o x ox| o o o xx| o x oxo |xx o o o | oxo x o 
+oxxo oxx |xoox x ox| xxo oxxo|xo x xoox|xxoo o xx| oxx xxoo|xx o ooxx|ooxx xxo 
+xoxo oxx |xoxx o ox| xxo oxox|xo o xxox|xoxo o xx| oxx oxox|xx o oxox|xoxo xxo 
+ooxo oxx |xoox o ox| xxo oxoo|xo o xoox|xooo o xx| oxx oxoo|xx o ooox|ooxo xxo 
+xxoo oxx |xoxx x oo| xxo ooxx|oo x xxox|oxxo o xx| oox xxox|xx o oxxo|xoxx xoo 
+oxoo oxx |xoox x oo| xxo ooxo|oo x xoox|oxoo o xx| oox xxoo|xx o ooxo|ooxx xoo 
+xooo oxx |xoxx o oo| xxo ooox|oo o xxox|ooxo o xx| oox oxox|xx o oxoo|xoxo xoo 
+o   xoxx |x oxx  o | xxox   o| o  xxo x|  oox  xx| o xx x o|xx  xoo  |o x xx o 
+ o  xoxx |x  xxo o | xxox  o | o oxx  x| o ox  xx| o xxox  |xx  xo o |  xoxx o 
+xoo xoxx |x xxxo oo| xxox oox|oo oxxx x|ooxox  xx| ooxxox x|xx  xoxoo|x xoxxoo 
+oo xxoxx |xxoxxo o | xxoxx oo| o oxxoxx| oooxx xx| o xxoxxo|xx xxooo |oxxoxx o 
+o oxxoxx |xxoxx  oo| xxoxxo o|oo  xxoxx|o ooxx xx| ooxx xxo|xx xxoo o|oxx xxoo 
+ ooxxoxx |xx xxo oo| xxoxxoo |oo oxx xx|oo oxx xx| ooxxoxx |xx xxo oo| xxoxxoo 
+   oxoxx |xo xx  o | xxoxo   | o  xx ox|   oxo xx| o xx xo |xx oxo   | ox xx o 
+xo oxoxx |xoxxxo o | xxoxo ox| o oxxxox| oxoxo xx| o xxoxox|xx oxoxo |xoxoxx o 
+oo oxoxx |xooxxo o | xxoxo oo| o oxxoox| oooxo xx| o xxoxoo|xx oxooo |ooxoxx o 
+x ooxoxx |xoxxx  oo| xxoxoo x|oo  xxxox|o xoxo xx| ooxx xox|xx oxox o|xox xxoo 
+o ooxoxx |xooxx  oo| xxoxoo o|oo  xxoox|o ooxo xx| ooxx xoo|xx oxoo o|oox xxoo 
+ oooxoxx |xo xxo oo| xxoxooo |oo oxx ox|oo oxo xx| ooxxoxo |xx oxo oo| oxoxxoo 
+x   ooxx |x xxo  o | xxoo   x| o  oxx x|  xoo  xx| o xo x x|xx  oox  |x x ox o 
+o   ooxx |x oxo  o | xxoo   o| o  oxo x|  ooo  xx| o xo x o|xx  ooo  |o x ox o 
+ o  ooxx |x  xoo o | xxoo  o | o oox  x| o oo  xx| o xoox  |xx  oo o |  xoox o 
+oxx ooxx |x oxox ox| xxoo xxo|xo xoxo x|xxooo  xx| oxxoxx o|xx  oooxx|o xxoxxo 
+xox ooxx |x xxoo ox| xxoo xox|xo ooxx x|xoxoo  xx| oxxoox x|xx  ooxox|x xooxxo 
+oox ooxx |x oxoo ox| xxoo xoo|xo ooxo x|xoooo  xx| oxxoox o|xx  oooox|o xooxxo 
+xxo ooxx |x xxox oo| xxoo oxx|oo xoxx x|oxxoo  xx| ooxoxx x|xx  ooxxo|x xxoxoo 
+oxo ooxx |x oxox oo| xxoo oxo|oo xoxo x|oxooo  xx| ooxoxx o|xx  oooxo|o xxoxoo 
+xoo ooxx |x xxoo oo| xxoo oox|oo ooxx x|ooxoo  xx| ooxoox x|xx  ooxoo|x xooxoo 
+ox xooxx |xxoxox o | xxoox xo| o xoxoxx| xooox xx| o xoxxxo|xx xooox |oxxxox o 
+oo xooxx |xxoxoo o | xxoox oo| o ooxoxx| oooox xx| o xooxxo|xx xoooo |oxxoox o 
+o xxooxx |xxoxo  ox| xxooxx o|xo  oxoxx|x ooox xx| oxxo xxo|xx xooo x|oxx oxxo 
+ oxxooxx |xx xoo ox| xxooxxo |xo oox xx|xo oox xx| oxxooxx |xx xoo ox| xxooxxo 
+o oxooxx |xxoxo  oo| xxooxo o|oo  oxoxx|o ooox xx| ooxo xxo|xx xooo o|oxx oxoo 
+ xoxooxx |xx xox oo| xxooxox |oo xox xx|ox oox xx| ooxoxxx |xx xoo xo| xxxoxoo 
+ ooxooxx |xx xoo oo| xxooxoo |oo oox xx|oo oox xx| ooxooxx |xx xoo oo| xxooxoo 
+ o    ox |o  x o   | xo    o |   o x  o| o     xo|   x oo  |ox     o |  oo x   
+oxx   ox |o ox x  x| xo   xxo|x  x xo o|xxo    xo|  xx xo o|ox    oxx|o ox xx  
+xox   ox |o xx o  x| xo   xox|x  o xx o|xox    xo|  xx oo x|ox    xox|x oo xx  
+oox   ox |o ox o  x| xo   xoo|x  o xo o|xoo    xo|  xx oo o|ox    oox|o oo xx  
+xxo   ox |o xx x  o| xo   oxx|o  x xx o|oxx    xo|  ox xo x|ox    xxo|x ox xo  
+oxo   ox |o ox x  o| xo   oxo|o  x xo o|oxo    xo|  ox xo o|ox    oxo|o ox xo  
+xoo   ox |o xx o  o| xo   oox|o  o xx o|oox    xo|  ox oo x|ox    xoo|x oo xo  
+xo x  ox |oxxx o   | xo  x ox|   o xxxo| ox  x xo|   x ooxx|ox x  xo |xxoo x   
+oo x  ox |oxox o   | xo  x oo|   o xoxo| oo  x xo|   x ooxo|ox x  oo |oxoo x   
+o xx  ox |oxox    x| xo  xx o|x    xoxo|x o  x xo|  xx  oxo|ox x  o x|oxo  xx  
+ oxx  ox |ox x o  x| xo  xxo |x  o x xo|xo   x xo|  xx oox |ox x   ox| xoo xx  
+x ox  ox |oxxx    o| xo  xo x|o    xxxo|o x  x xo|  ox  oxx|ox x  x o|xxo  xo  
+o ox  ox |oxox    o| xo  xo o|o    xoxo|o o  x xo|  ox  oxo|ox x  o o|oxo  xo  
+ xox  ox |ox x x  o| xo  xox |o  x x xo|ox   x xo|  ox xox |ox x   xo| xox xo  
+ oox  ox |ox x o  o| xo  xoo |o  o x xo|oo   x xo|  ox oox |ox x   oo| xoo xo  
+xo o  ox |ooxx o   | xo  o ox|   o xxoo| ox  o xo|   x ooox|ox o  xo |xooo x   
+x xo  ox |ooxx    x| xo  ox x|x    xxoo|x x  o xo|  xx  oox|ox o  x x|xoo  xx  
+ oxo  ox |oo x o  x| xo  oxo |x  o x oo|xo   o xo|  xx ooo |ox o   ox| ooo xx  
+x oo  ox |ooxx    o| xo  oo x|o    xxoo|o x  o xo|  ox  oox|ox o  x o|xoo  xo  
+ xoo  ox |oo x x  o| xo  oox |o  x x oo|ox   o xo|  ox xoo |ox o   xo| oox xo  
+xo  x ox |o xxxo   | xo x  ox|   oxxx o| ox x  xo|   xxoo x|ox  x xo |x ooxx   
+oo  x ox |o oxxo   | xo x  oo|   oxxo o| oo x  xo|   xxoo o|ox  x oo |o ooxx   
+o x x ox |o oxx   x| xo x x o|x   xxo o|x o x  xo|  xxx o o|ox  x o x|o o xxx  
+ ox x ox |o  xxo  x| xo x xo |x  oxx  o|xo  x  xo|  xxxoo  |ox  x  ox|  ooxxx  
+x o x ox |o xxx   o| xo x o x|o   xxx o|o x x  xo|  oxx o x|ox  x x o|x o xxo  
+o o x ox |o oxx   o| xo x o o|o   xxo o|o o x  xo|  oxx o o|ox  x o o|o o xxo  
+ oo x ox |o  xxo  o| xo x oo |o  oxx  o|oo  x  xo|  oxxoo  |ox  x  oo|  ooxxo  
+ o xx ox |ox xxo   | xo xx o |   oxx xo| o  xx xo|   xxoox |ox xx  o | xooxx   
+ooxxx ox |oxoxxo  x| xo xxxoo|x  oxxoxo|xoo xx xo|  xxxooxo|ox xx oox|oxooxxx  
+xooxx ox |oxxxxo  o| xo xxoox|o  oxxxxo|oox xx xo|  oxxooxx|ox xx xoo|xxooxxo  
+ o ox ox |oo xxo   | xo xo o |   oxx oo| o  xo xo|   xxooo |ox ox  o | oooxx   
+xoxox ox |ooxxxo  x| xo xoxox|x  oxxxoo|xox xo xo|  xxxooox|ox ox xox|xoooxxx  
+xooox ox |ooxxxo  o| xo xooox|o  oxxxoo|oox xo xo|  oxxooox|ox ox xoo|xoooxxo  
+xo  o ox |o xxoo   | xo o  ox|   ooxx o| ox o  xo|   xooo x|ox  o xo |x ooox   
+x x o ox |o xxo   x| xo o x x|x   oxx o|x x o  xo|  xxo o x|ox  o x x|x o oxx  
+o x o ox |o oxo   x| xo o x o|x   oxo o|x o o  xo|  xxo o o|ox  o o x|o o oxx  
+ ox o ox |o  xoo  x| xo o xo |x  oox  o|xo  o  xo|  xxooo  |ox  o  ox|  oooxx  
+ o xo ox |ox xoo   | xo ox o |   oox xo| o  ox xo|   xooox |ox xo  o | xooox   
+oxxxo ox |oxoxox  x| xo oxxxo|x  xoxoxo|xxo ox xo|  xxoxoxo|ox xo oxx|oxoxoxx  
+xoxxo ox |oxxxoo  x| xo oxxox|x  ooxxxo|xox ox xo|  xxoooxx|ox xo xox|xxoooxx  
+ooxxo ox |oxoxoo  x| xo oxxoo|x  ooxoxo|xoo ox xo|  xxoooxo|ox xo oox|oxoooxx  
+xoxoo ox |ooxxoo  x| xo ooxox|x  ooxxoo|xox oo xo|  xxoooox|ox oo xox|xooooxx  
+xo   xox |o xx o x | xox   ox| x o xx o| oxx   xo| x x oo x|ox   xxo |x oo x x 
+oo   xox |o ox o x | xox   oo| x o xo o| oox   xo| x x oo o|ox   xoo |o oo x x 
+o x  xox |o ox   xx| xox  x o|xx   xo o|x ox   xo| xxx  o o|ox   xo x|o o  xxx 
+ ox  xox |o  x o xx| xox  xo |xx o x  o|xo x   xo| xxx oo  |ox   x ox|  oo xxx 
+x o  xox |o xx   xo| xox  o x|ox   xx o|o xx   xo| xox  o x|ox   xx o|x o  xox 
+o o  xox |o ox   xo| xox  o o|ox   xo o|o ox   xo| xox  o o|ox   xo o|o o  xox 
+ oo  xox |o  x o xo| xox  oo |ox o x  o|oo x   xo| xox oo  |ox   x oo|  oo xox 
+ o x xox |ox x o x | xox x o | x o x xo| o x x xo| x x oox |ox x x o | xoo x x 
+ooxx xox |oxox o xx| xox xxoo|xx o xoxo|xoox x xo| xxx ooxo|ox x xoox|oxoo xxx 
+oxox xox |oxox x xo| xox xoxo|ox x xoxo|oxox x xo| xox xoxo|ox x xoxo|oxox xox 
+xoox xox |oxxx o xo| xox xoox|ox o xxxo|ooxx x xo| xox ooxx|ox x xxoo|xxoo xox 
+ o o xox |oo x o x | xox o o | x o x oo| o x o xo| x x ooo |ox o x o | ooo x x 
+xoxo xox |ooxx o xx| xox oxox|xx o xxoo|xoxx o xo| xxx ooox|ox o xxox|xooo xxx 
+xxoo xox |ooxx x xo| xox ooxx|ox x xxoo|oxxx o xo| xox xoox|ox o xxxo|xoox xox 
+xooo xox |ooxx o xo| xox ooox|ox o xxoo|ooxx o xo| xox ooox|ox o xxoo|xooo xox 
+oox xxox |o oxxo xx| xoxx xoo|xx oxxo o|xooxx  xo| xxxxoo o|ox  xxoox|o ooxxxx 
+xoo xxox |o xxxo xo| xoxx oox|ox oxxx o|ooxxx  xo| xoxxoo x|ox  xxxoo|x ooxxox 
+xo oxxox |ooxxxo x | xoxxo ox| x oxxxoo| oxxxo xo| x xxooox|ox oxxxo |xoooxx x 
+ oxoxxox |oo xxo xx| xoxxoxo |xx oxx oo|xo xxo xo| xxxxooo |ox oxx ox| oooxxxx 
+x ooxxox |ooxxx  xo| xoxxoo x|ox  xxxoo|o xxxo xo| xoxx oox|ox oxxx o|xoo xxox 
+ oooxxox |oo xxo xo| xoxxooo |ox oxx oo|oo xxo xo| xoxxooo |ox oxx oo| oooxxox 
+oxx oxox |o oxox xx| xoxo xxo|xx xoxo o|xxoxo  xo| xxxoxo o|ox  oxoxx|o oxoxxx 
+xox oxox |o xxoo xx| xoxo xox|xx ooxx o|xoxxo  xo| xxxooo x|ox  oxxox|x oooxxx 
+oox oxox |o oxoo xx| xoxo xoo|xx ooxo o|xooxo  xo| xxxooo o|ox  oxoox|o oooxxx 
+xo xoxox |oxxxoo x | xoxox ox| x ooxxxo| oxxox xo| x xoooxx|ox xoxxo |xxooox x 
+oo xoxox |oxoxoo x | xoxox oo| x ooxoxo| ooxox xo| x xoooxo|ox xoxoo |oxooox x 
+o xxoxox |oxoxo  xx| xoxoxx o|xx  oxoxo|x oxox xo| xxxo oxo|ox xoxo x|oxo oxxx 
+ oxxoxox |ox xoo xx| xoxoxxo |xx oox xo|xo xox xo| xxxooox |ox xox ox| xoooxxx 
+xo ooxox |ooxxoo x | xoxoo ox| x ooxxoo| oxxoo xo| x xoooox|ox ooxxo |xoooox x 
+x xooxox |ooxxo  xx| xoxoox x|xx  oxxoo|x xxoo xo| xxxo oox|ox ooxx x|xoo oxxx 
+ oxooxox |oo xoo xx| xoxooxo |xx oox oo|xo xoo xo| xxxoooo |ox oox ox| ooooxxx 
+xx   oox |o xx x o | xoo   xx| o x xx o| xxo   xo| o x xo x|ox   oxx |x ox x o 
+ox   oox |o ox x o | xoo   xo| o x xo o| xoo   xo| o x xo o|ox   oox |o ox x o 
+xo   oox |o xx o o | xoo   ox| o o xx o| oxo   xo| o x oo x|ox   oxo |x oo x o 
+x x  oox |o xx   ox| xoo  x x|xo   xx o|x xo   xo| oxx  o x|ox   ox x|x o  xxo 
+o x  oox |o ox   ox| xoo  x o|xo   xo o|x oo   xo| oxx  o o|ox   oo x|o o  xxo 
+ ox  oox |o  x o ox| xoo  xo |xo o x  o|xo o   xo| oxx oo  |ox   o ox|  oo xxo 
+x o  oox |o xx   oo| xoo  o x|oo   xx o|o xo   xo| oox  o x|ox   ox o|x o  xoo 
+x  x oox |oxxx   o | xoo x  x| o   xxxo|  xo x xo| o x  oxx|ox x ox  |xxo  x o 
+o  x oox |oxox   o | xoo x  o| o   xoxo|  oo x xo| o x  oxo|ox x oo  |oxo  x o 
+ o x oox |ox x o o | xoo x o | o o x xo| o o x xo| o x oox |ox x o o | xoo x o 
+oxxx oox |oxox x ox| xoo xxxo|xo x xoxo|xxoo x xo| oxx xoxo|ox x ooxx|oxox xxo 
+xoxx oox |oxxx o ox| xoo xxox|xo o xxxo|xoxo x xo| oxx ooxx|ox x oxox|xxoo xxo 
+ooxx oox |oxox o ox| xoo xxoo|xo o xoxo|xooo x xo| oxx ooxo|ox x ooox|oxoo xxo 
+xxox oox |oxxx x oo| xoo xoxx|oo x xxxo|oxxo x xo| oox xoxx|ox x oxxo|xxox xoo 
+oxox oox |oxox x oo| xoo xoxo|oo x xoxo|oxoo x xo| oox xoxo|ox x ooxo|oxox xoo 
+xoox oox |oxxx o oo| xoo xoox|oo o xxxo|ooxo x xo| oox ooxx|ox x oxoo|xxoo xoo 
+x  o oox |ooxx   o | xoo o  x| o   xxoo|  xo o xo| o x  oox|ox o ox  |xoo  x o 
+ x o oox |oo x x o | xoo o x | o x x oo| x o o xo| o x xoo |ox o o x | oox x o 
+xoxo oox |ooxx o ox| xoo oxox|xo o xxoo|xoxo o xo| oxx ooox|ox o oxox|xooo xxo 
+xxoo oox |ooxx x oo| xoo ooxx|oo x xxoo|oxxo o xo| oox xoox|ox o oxxo|xoox xoo 
+x   xoox |o xxx  o | xoox   x| o  xxx o|  xox  xo| o xx o x|ox  xox  |x o xx o 
+o   xoox |o oxx  o | xoox   o| o  xxo o|  oox  xo| o xx o o|ox  xoo  |o o xx o 
+ o  xoox |o  xxo o | xoox  o | o oxx  o| o ox  xo| o xxoo  |ox  xo o |  ooxx o 
+xox xoox |o xxxo ox| xoox xox|xo oxxx o|xoxox  xo| oxxxoo x|ox  xoxox|x ooxxxo 
+oox xoox |o oxxo ox| xoox xoo|xo oxxo o|xooox  xo| oxxxoo o|ox  xooox|o ooxxxo 
+xoo xoox |o xxxo oo| xoox oox|oo oxxx o|ooxox  xo| ooxxoo x|ox  xoxoo|x ooxxoo 
+xo xxoox |oxxxxo o | xooxx ox| o oxxxxo| oxoxx xo| o xxooxx|ox xxoxo |xxooxx o 
+oo xxoox |oxoxxo o | xooxx oo| o oxxoxo| oooxx xo| o xxooxo|ox xxooo |oxooxx o 
+o xxxoox |oxoxx  ox| xooxxx o|xo  xxoxo|x ooxx xo| oxxx oxo|ox xxoo x|oxo xxxo 
+ oxxxoox |ox xxo ox| xooxxxo |xo oxx xo|xo oxx xo| oxxxoox |ox xxo ox| xooxxxo 
+x oxxoox |oxxxx  oo| xooxxo x|oo  xxxxo|o xoxx xo| ooxx oxx|ox xxox o|xxo xxoo 
+o oxxoox |oxoxx  oo| xooxxo o|oo  xxoxo|o ooxx xo| ooxx oxo|ox xxoo o|oxo xxoo 
+ ooxxoox |ox xxo oo| xooxxoo |oo oxx xo|oo oxx xo| ooxxoox |ox xxo oo| xooxxoo 
+   oxoox |oo xx  o | xooxo   | o  xx oo|   oxo xo| o xx oo |ox oxo   | oo xx o 
+xo oxoox |ooxxxo o | xooxo ox| o oxxxoo| oxoxo xo| o xxooox|ox oxoxo |xoooxx o 
+x xoxoox |ooxxx  ox| xooxox x|xo  xxxoo|x xoxo xo| oxxx oox|ox oxox x|xoo xxxo 
+ oxoxoox |oo xxo ox| xooxoxo |xo oxx oo|xo oxo xo| oxxxooo |ox oxo ox| oooxxxo 
+x ooxoox |ooxxx  oo| xooxoo x|oo  xxxoo|o xoxo xo| ooxx oox|ox oxox o|xoo xxoo 
+x   ooox |o xxo  o | xooo   x| o  oxx o|  xoo  xo| o xo o x|ox  oox  |x o ox o 
+oxx ooox |o oxox ox| xooo xxo|xo xoxo o|xxooo  xo| oxxoxo o|ox  oooxx|o oxoxxo 
+xox ooox |o xxoo ox| xooo xox|xo ooxx o|xoxoo  xo| oxxooo x|ox  ooxox|x oooxxo 
+xx xooox |oxxxox o | xooox xx| o xoxxxo| xxoox xo| o xoxoxx|ox xooxx |xxoxox o 
+ox xooox |oxoxox o | xooox xo| o xoxoxo| xooox xo| o xoxoxo|ox xooox |oxoxox o 
+xo xooox |oxxxoo o | xooox ox| o ooxxxo| oxoox xo| o xoooxx|ox xooxo |xxooox o 
+x xxooox |oxxxo  ox| xoooxx x|xo  oxxxo|x xoox xo| oxxo oxx|ox xoox x|xxo oxxo 
+o xxooox |oxoxo  ox| xoooxx o|xo  oxoxo|x ooox xo| oxxo oxo|ox xooo x|oxo oxxo 
+ oxxooox |ox xoo ox| xoooxxo |xo oox xo|xo oox xo| oxxooox |ox xoo ox| xoooxxo 
+oxxo   o | ooo x  x| o   oxxo|x  x ooo |xxo  o o |  xo x oo| o o  oxx|oo x ox  
+xoxo   o | oxo o  x| o   oxox|x  o oxo |xox  o o |  xo o ox| o o  xox|xo o ox  
+xxoo   o | oxo x  o| o   ooxx|o  x oxo |oxx  o o |  oo x ox| o o  xxo|xo x oo  
+xo ox  o | oxoxo   | o  xo ox|   oxoxo | ox xo o |   oxo ox| o ox xo |xo oxo   
+x xox  o | oxox   x| o  xox x|x   xoxo |x x xo o |  xox  ox| o ox x x|xo  xox  
+o xox  o | ooox   x| o  xox o|x   xooo |x o xo o |  xox  oo| o ox o x|oo  xox  
+ oxox  o | o oxo  x| o  xoxo |x  oxo o |xo  xo o |  xoxo o | o ox  ox| o oxox  
+x oox  o | oxox   o| o  xoo x|o   xoxo |o x xo o |  oox  ox| o ox x o|xo  xoo  
+x xoo  o | oxoo   x| o  oox x|x   ooxo |x x oo o |  xoo  ox| o oo x x|xo  oox  
+xo o x o | oxo o x | o x o ox| x o oxo | oxx o o | x o o ox| o o xxo |xo o o x 
+x xo x o | oxo   xx| o x ox x|xx   oxo |x xx o o | xxo   ox| o o xx x|xo   oxx 
+o xo x o | ooo   xx| o x ox o|xx   ooo |x ox o o | xxo   oo| o o xo x|oo   oxx 
+ oxo x o | o o o xx| o x oxo |xx o o o |xo x o o | xxo o o | o o x ox| o o oxx 
+x oo x o | oxo   xo| o x oo x|ox   oxo |o xx o o | xoo   ox| o o xx o|xo   oox 
+oxxoxx o | oooxx xx| o xxoxxo|xx xxooo |xxoxxo o | xxoxx oo| o oxxoxx|oo xxoxx 
+xoxoxx o | oxoxo xx| o xxoxox|xx oxoxo |xoxxxo o | xxoxo ox| o oxxxox|xo oxoxx 
+ooxoxx o | oooxo xx| o xxoxoo|xx oxooo |xooxxo o | xxoxo oo| o oxxoox|oo oxoxx 
+xxooxx o | oxoxx xo| o xxooxx|ox xxoxo |oxxxxo o | xooxx ox| o oxxxxo|xo xxoox 
+oxooxx o | oooxx xo| o xxooxo|ox xxooo |oxoxxo o | xooxx oo| o oxxoxo|oo xxoox 
+xoooxx o | oxoxo xo| o xxooox|ox oxoxo |ooxxxo o | xooxo ox| o oxxxoo|xo oxoox 
+oxxoox o | oooox xx| o xooxxo|xx xoooo |xxoxoo o | xxoox oo| o ooxoxx|oo xooxx 
+xxooox o | oxoox xo| o xoooxx|ox xooxo |oxxxoo o | xooox ox| o ooxxxo|xo xooox 
+x xo o o | oxo   ox| o o ox x|xo   oxo |x xo o o | oxo   ox| o o ox x|xo   oxo 
+oxxoxo o | oooxx ox| o oxoxxo|xo xxooo |xxooxo o | oxoxx oo| o oxooxx|oo xxoxo 
+xoxoxo o | oxoxo ox| o oxoxox|xo oxoxo |xoxoxo o | oxoxo ox| o oxoxox|xo oxoxo 
+oxx   xo |x oo x  x| ox   xxo|x  x oo x|xxo    ox|  xo xx o|xo    oxx|o xx ox  
+xox   xo |x xo o  x| ox   xox|x  o ox x|xox    ox|  xo ox x|xo    xox|x xo ox  
+oox   xo |x oo o  x| ox   xoo|x  o oo x|xoo    ox|  xo ox o|xo    oox|o xo ox  
+xxo   xo |x xo x  o| ox   oxx|o  x ox x|oxx    ox|  oo xx x|xo    xxo|x xx oo  
+oxo   xo |x oo x  o| ox   oxo|o  x oo x|oxo    ox|  oo xx o|xo    oxo|o xx oo  
+xoo   xo |x xo o  o| ox   oox|o  o ox x|oox    ox|  oo ox x|xo    xoo|x xo oo  
+oo x  xo |xxoo o   | ox  x oo|   o ooxx| oo  x ox|   o oxxo|xo x  oo |oxxo o   
+o xx  xo |xxoo    x| ox  xx o|x    ooxx|x o  x ox|  xo  xxo|xo x  o x|oxx  ox  
+ oxx  xo |xx o o  x| ox  xxo |x  o o xx|xo   x ox|  xo oxx |xo x   ox| xxo ox  
+o ox  xo |xxoo    o| ox  xo o|o    ooxx|o o  x ox|  oo  xxo|xo x  o o|oxx  oo  
+ oox  xo |xx o o  o| ox  xoo |o  o o xx|oo   x ox|  oo oxx |xo x   oo| xxo oo  
+x xo  xo |xoxo    x| ox  ox x|x    oxox|x x  o ox|  xo  xox|xo o  x x|xox  ox  
+o xo  xo |xooo    x| ox  ox o|x    ooox|x o  o ox|  xo  xoo|xo o  o x|oox  ox  
+ oxo  xo |xo o o  x| ox  oxo |x  o o ox|xo   o ox|  xo oxo |xo o   ox| oxo ox  
+x oo  xo |xoxo    o| ox  oo x|o    oxox|o x  o ox|  oo  xox|xo o  x o|xox  oo  
+oo  x xo |x ooxo   | ox x  oo|   oxoo x| oo x  ox|   oxox o|xo  x oo |o xoxo   
+x o x xo |x xox   o| ox x o x|o   xox x|o x x  ox|  oox x x|xo  x x o|x x xoo  
+o o x xo |x oox   o| ox x o o|o   xoo x|o o x  ox|  oox x o|xo  x o o|o x xoo  
+ oo x xo |x  oxo  o| ox x oo |o  oxo  x|oo  x  ox|  ooxox  |xo  x  oo|  xoxoo  
+oxoxx xo |xxooxx  o| ox xxoxo|o  xxooxx|oxo xx ox|  ooxxxxo|xo xx oxo|oxxxxoo  
+xxoox xo |xoxoxx  o| ox xooxx|o  xxoxox|oxx xo ox|  ooxxxox|xo ox xxo|xoxxxoo  
+oxoox xo |xoooxx  o| ox xooxo|o  xxooox|oxo xo ox|  ooxxxoo|xo ox oxo|ooxxxoo  
+xooox xo |xoxoxo  o| ox xooox|o  oxoxox|oox xo ox|  ooxoxox|xo ox xoo|xoxoxoo  
+x x o xo |x xoo   x| ox o x x|x   oox x|x x o  ox|  xoo x x|xo  o x x|x x oox  
+o x o xo |x ooo   x| ox o x o|x   ooo x|x o o  ox|  xoo x o|xo  o o x|o x oox  
+x o o xo |x xoo   o| ox o o x|o   oox x|o x o  ox|  ooo x x|xo  o x o|x x ooo  
+oxxxo xo |xxooox  x| ox oxxxo|x  xoooxx|xxo ox ox|  xooxxxo|xo xo oxx|oxxxoox  
+oxoxo xo |xxooox  o| ox oxoxo|o  xoooxx|oxo ox ox|  oooxxxo|xo xo oxo|oxxxooo  
+oxxoo xo |xoooox  x| ox ooxxo|x  xoooox|xxo oo ox|  xooxxoo|xo oo oxx|ooxxoox  
+xxooo xo |xoxoox  o| ox oooxx|o  xooxox|oxx oo ox|  oooxxox|xo oo xxo|xoxxooo  
+oo   xxo |x oo o x | oxx   oo| x o oo x| oox   ox| x o ox o|xo   xoo |o xo o x 
+o x  xxo |x oo   xx| oxx  x o|xx   oo x|x ox   ox| xxo  x o|xo   xo x|o x  oxx 
+x o  xxo |x xo   xo| oxx  o x|ox   ox x|o xx   ox| xoo  x x|xo   xx o|x x  oox 
+o o  xxo |x oo   xo| oxx  o o|ox   oo x|o ox   ox| xoo  x o|xo   xo o|o x  oox 
+ oo  xxo |x  o o xo| oxx  oo |ox o o  x|oo x   ox| xoo ox  |xo   x oo|  xo oox 
+ooxx xxo |xxoo o xx| oxx xxoo|xx o ooxx|xoox x ox| xxo oxxo|xo x xoox|oxxo oxx 
+oxox xxo |xxoo x xo| oxx xoxo|ox x ooxx|oxox x ox| xoo xxxo|xo x xoxo|oxxx oox 
+oxxo xxo |xooo x xx| oxx oxxo|xx x ooox|xxox o ox| xxo xxoo|xo o xoxx|ooxx oxx 
+xoxo xxo |xoxo o xx| oxx oxox|xx o oxox|xoxx o ox| xxo oxox|xo o xxox|xoxo oxx 
+ooxo xxo |xooo o xx| oxx oxoo|xx o ooox|xoox o ox| xxo oxoo|xo o xoox|ooxo oxx 
+xxoo xxo |xoxo x xo| oxx ooxx|ox x oxox|oxxx o ox| xoo xxox|xo o xxxo|xoxx oox 
+oxoo xxo |xooo x xo| oxx ooxo|ox x ooox|oxox o ox| xoo xxoo|xo o xoxo|ooxx oox 
+xooo xxo |xoxo o xo| oxx ooox|ox o oxox|ooxx o ox| xoo oxox|xo o xxoo|xoxo oox 
+oxo xxxo |x ooxx xo| oxxx oxo|ox xxoo x|oxoxx  ox| xooxxx o|xo  xxoxo|o xxxoox 
+xoo xxxo |x xoxo xo| oxxx oox|ox oxox x|ooxxx  ox| xooxox x|xo  xxxoo|x xoxoox 
+oo oxxxo |xoooxo x | oxxxo oo| x oxooox| ooxxo ox| x oxoxoo|xo oxxoo |ooxoxo x 
+x ooxxxo |xoxox  xo| oxxxoo x|ox  xoxox|o xxxo ox| xoox xox|xo oxxx o|xox xoox 
+o ooxxxo |xooox  xo| oxxxoo o|ox  xooox|o oxxo ox| xoox xoo|xo oxxo o|oox xoox 
+ oooxxxo |xo oxo xo| oxxxooo |ox oxo ox|oo xxo ox| xooxoxo |xo oxx oo| oxoxoox 
+oxx oxxo |x ooox xx| oxxo xxo|xx xooo x|xxoxo  ox| xxooxx o|xo  oxoxx|o xxooxx 
+xxo oxxo |x xoox xo| oxxo oxx|ox xoox x|oxxxo  ox| xoooxx x|xo  oxxxo|x xxooox 
+oxo oxxo |x ooox xo| oxxo oxo|ox xooo x|oxoxo  ox| xoooxx o|xo  oxoxo|o xxooox 
+o xxoxxo |xxooo  xx| oxxoxx o|xx  oooxx|x oxox ox| xxoo xxo|xo xoxo x|oxx ooxx 
+o oxoxxo |xxooo  xo| oxxoxo o|ox  oooxx|o oxox ox| xooo xxo|xo xoxo o|oxx ooox 
+x xooxxo |xoxoo  xx| oxxoox x|xx  ooxox|x xxoo ox| xxoo xox|xo ooxx x|xox ooxx 
+o xooxxo |xoooo  xx| oxxoox o|xx  oooox|x oxoo ox| xxoo xoo|xo ooxo x|oox ooxx 
+x oooxxo |xoxoo  xo| oxxooo x|ox  ooxox|o xxoo ox| xooo xox|xo ooxx o|xox ooox 
+x x  oxo |x xo   ox| oxo  x x|xo   ox x|x xo   ox| oxo  x x|xo   ox x|x x  oxo 
+o x  oxo |x oo   ox| oxo  x o|xo   oo x|x oo   ox| oxo  x o|xo   oo x|o x  oxo 
+x o  oxo |x xo   oo| oxo  o x|oo   ox x|o xo   ox| ooo  x x|xo   ox o|x x  ooo 
+oxxx oxo |xxoo x ox| oxo xxxo|xo x ooxx|xxoo x ox| oxo xxxo|xo x ooxx|oxxx oxo 
+ooxx oxo |xxoo o ox| oxo xxoo|xo o ooxx|xooo x ox| oxo oxxo|xo x ooox|oxxo oxo 
+oxox oxo |xxoo x oo| oxo xoxo|oo x ooxx|oxoo x ox| ooo xxxo|xo x ooxo|oxxx ooo 
+oxxo oxo |xooo x ox| oxo oxxo|xo x ooox|xxoo o ox| oxo xxoo|xo o ooxx|ooxx oxo 
+xoxo oxo |xoxo o ox| oxo oxox|xo o oxox|xoxo o ox| oxo oxox|xo o oxox|xoxo oxo 
+xxoo oxo |xoxo x oo| oxo ooxx|oo x oxox|oxxo o ox| ooo xxox|xo o oxxo|xoxx ooo 
+xxo xoxo |x xoxx oo| oxox oxx|oo xxox x|oxxox  ox| oooxxx x|xo  xoxxo|x xxxooo 
+oxo xoxo |x ooxx oo| oxox oxo|oo xxoo x|oxoox  ox| oooxxx o|xo  xooxo|o xxxooo 
+xoo xoxo |x xoxo oo| oxox oox|oo oxox x|ooxox  ox| oooxox x|xo  xoxoo|x xoxooo 
+oo xxoxo |xxooxo o | oxoxx oo| o oxooxx| oooxx ox| o oxoxxo|xo xxooo |oxxoxo o 
+o oxxoxo |xxoox  oo| oxoxxo o|oo  xooxx|o ooxx ox| ooox xxo|xo xxoo o|oxx xooo 
+ ooxxoxo |xx oxo oo| oxoxxoo |oo oxo xx|oo oxx ox| oooxoxx |xo xxo oo| xxoxooo 
+x ooxoxo |xoxox  oo| oxoxoo x|oo  xoxox|o xoxo ox| ooox xox|xo oxox o|xox xooo 
+oxx ooxo |x ooox ox| oxoo xxo|xo xooo x|xxooo  ox| oxooxx o|xo  oooxx|o xxooxo 
+xxo ooxo |x xoox oo| oxoo oxx|oo xoox x|oxxoo  ox| ooooxx x|xo  ooxxo|x xxoooo 
+o xxooxo |xxooo  ox| oxooxx o|xo  oooxx|x ooox ox| oxoo xxo|xo xooo x|oxx ooxo 
+oxx   oo |o oo x  x| oo   xxo|x  x oo o|xxo    oo|  xo xo o|oo    oxx|o ox ox  
+xox   oo |o xo o  x| oo   xox|x  o ox o|xox    oo|  xo oo x|oo    xox|x oo ox  
+xxo   oo |o xo x  o| oo   oxx|o  x ox o|oxx    oo|  oo xo x|oo    xxo|x ox oo  
+x xx  oo |oxxo    x| oo  xx x|x    oxxo|x x  x oo|  xo  oxx|oo x  x x|xxo  ox  
+o xx  oo |oxoo    x| oo  xx o|x    ooxo|x o  x oo|  xo  oxo|oo x  o x|oxo  ox  
+x ox  oo |oxxo    o| oo  xo x|o    oxxo|o x  x oo|  oo  oxx|oo x  x o|xxo  oo  
+x xo  oo |ooxo    x| oo  ox x|x    oxoo|x x  o oo|  xo  oox|oo o  x x|xoo  ox  
+x x x oo |o xox   x| oo x x x|x   xox o|x x x  oo|  xox o x|oo  x x x|x o xox  
+o x x oo |o oox   x| oo x x o|x   xoo o|x o x  oo|  xox o o|oo  x o x|o o xox  
+x o x oo |o xox   o| oo x o x|o   xox o|o x x  oo|  oox o x|oo  x x o|x o xoo  
+oxxxx oo |oxooxx  x| oo xxxxo|x  xxooxo|xxo xx oo|  xoxxoxo|oo xx oxx|oxoxxox  
+xoxxx oo |oxxoxo  x| oo xxxox|x  oxoxxo|xox xx oo|  xoxooxx|oo xx xox|xxooxox  
+ooxxx oo |oxooxo  x| oo xxxoo|x  oxooxo|xoo xx oo|  xoxooxo|oo xx oox|oxooxox  
+xxoxx oo |oxxoxx  o| oo xxoxx|o  xxoxxo|oxx xx oo|  ooxxoxx|oo xx xxo|xxoxxoo  
+oxoxx oo |oxooxx  o| oo xxoxo|o  xxooxo|oxo xx oo|  ooxxoxo|oo xx oxo|oxoxxoo  
+xooxx oo |oxxoxo  o| oo xxoox|o  oxoxxo|oox xx oo|  ooxooxx|oo xx xoo|xxooxoo  
+xoxox oo |ooxoxo  x| oo xoxox|x  oxoxoo|xox xo oo|  xoxooox|oo ox xox|xoooxox  
+xxoox oo |ooxoxx  o| oo xooxx|o  xxoxoo|oxx xo oo|  ooxxoox|oo ox xxo|xooxxoo  
+x x o oo |o xoo   x| oo o x x|x   oox o|x x o  oo|  xoo o x|oo  o x x|x o oox  
+oxxxo oo |oxooox  x| oo oxxxo|x  xoooxo|xxo ox oo|  xooxoxo|oo xo oxx|oxoxoox  
+x x  xoo |o xo   xx| oox  x x|xx   ox o|x xx   oo| xxo  o x|oo   xx x|x o  oxx 
+o x  xoo |o oo   xx| oox  x o|xx   oo o|x ox   oo| xxo  o o|oo   xo x|o o  oxx 
+x o  xoo |o xo   xo| oox  o x|ox   ox o|o xx   oo| xoo  o x|oo   xx o|x o  oox 
+oxxx xoo |oxoo x xx| oox xxxo|xx x ooxo|xxox x oo| xxo xoxo|oo x xoxx|oxox oxx 
+xoxx xoo |oxxo o xx| oox xxox|xx o oxxo|xoxx x oo| xxo ooxx|oo x xxox|xxoo oxx 
+ooxx xoo |oxoo o xx| oox xxoo|xx o ooxo|xoox x oo| xxo ooxo|oo x xoox|oxoo oxx 
+xxox xoo |oxxo x xo| oox xoxx|ox x oxxo|oxxx x oo| xoo xoxx|oo x xxxo|xxox oox 
+oxox xoo |oxoo x xo| oox xoxo|ox x ooxo|oxox x oo| xoo xoxo|oo x xoxo|oxox oox 
+xoox xoo |oxxo o xo| oox xoox|ox o oxxo|ooxx x oo| xoo ooxx|oo x xxoo|xxoo oox 
+xoxo xoo |ooxo o xx| oox oxox|xx o oxoo|xoxx o oo| xxo ooox|oo o xxox|xooo oxx 
+xxoo xoo |ooxo x xo| oox ooxx|ox x oxoo|oxxx o oo| xoo xoox|oo o xxxo|xoox oox 
+oxx xxoo |o ooxx xx| ooxx xxo|xx xxoo o|xxoxx  oo| xxoxxo o|oo  xxoxx|o oxxoxx 
+xox xxoo |o xoxo xx| ooxx xox|xx oxox o|xoxxx  oo| xxoxoo x|oo  xxxox|x ooxoxx 
+oox xxoo |o ooxo xx| ooxx xoo|xx oxoo o|xooxx  oo| xxoxoo o|oo  xxoox|o ooxoxx 
+xxo xxoo |o xoxx xo| ooxx oxx|ox xxox o|oxxxx  oo| xooxxo x|oo  xxxxo|x oxxoox 
+oxo xxoo |o ooxx xo| ooxx oxo|ox xxoo o|oxoxx  oo| xooxxo o|oo  xxoxo|o oxxoox 
+xoo xxoo |o xoxo xo| ooxx oox|ox oxox o|ooxxx  oo| xooxoo x|oo  xxxoo|x ooxoox 
+x xoxxoo |ooxox  xx| ooxxox x|xx  xoxoo|x xxxo oo| xxox oox|oo oxxx x|xoo xoxx 
+x ooxxoo |ooxox  xo| ooxxoo x|ox  xoxoo|o xxxo oo| xoox oox|oo oxxx o|xoo xoox 
+oxx oxoo |o ooox xx| ooxo xxo|xx xooo o|xxoxo  oo| xxooxo o|oo  oxoxx|o oxooxx 
+x xxoxoo |oxxoo  xx| ooxoxx x|xx  ooxxo|x xxox oo| xxoo oxx|oo xoxx x|xxo ooxx 
+o xxoxoo |oxooo  xx| ooxoxx o|xx  oooxo|x oxox oo| xxoo oxo|oo xoxo x|oxo ooxx 
+x xooxoo |ooxoo  xx| ooxoox x|xx  ooxoo|x xxoo oo| xxoo oox|oo ooxx x|xoo ooxx 
+x x  ooo |o xo   ox| ooo  x x|xo   ox o|x xo   oo| oxo  o x|oo   ox x|x o  oxo 
+oxxx ooo |oxoo x ox| ooo xxxo|xo x ooxo|xxoo x oo| oxo xoxo|oo x ooxx|oxox oxo 
+xoxx ooo |oxxo o ox| ooo xxox|xo o oxxo|xoxo x oo| oxo ooxx|oo x oxox|xxoo oxo 
+xxox ooo |oxxo x oo| ooo xoxx|oo x oxxo|oxxo x oo| ooo xoxx|oo x oxxo|xxox ooo 
+oxx xooo |o ooxx ox| ooox xxo|xo xxoo o|xxoox  oo| oxoxxo o|oo  xooxx|o oxxoxo 
+xox xooo |o xoxo ox| ooox xox|xo oxox o|xoxox  oo| oxoxoo x|oo  xoxox|x ooxoxo 
+xxo xooo |o xoxx oo| ooox oxx|oo xxox o|oxxox  oo| oooxxo x|oo  xoxxo|x oxxooo 
+x xxxooo |oxxox  ox| oooxxx x|xo  xoxxo|x xoxx oo| oxox oxx|oo xxox x|xxo xoxo 
+o xxxooo |oxoox  ox| oooxxx o|xo  xooxo|x ooxx oo| oxox oxo|oo xxoo x|oxo xoxo 
+x oxxooo |oxxox  oo| oooxxo x|oo  xoxxo|o xoxx oo| ooox oxx|oo xxox o|xxo xooo 
+x xoxooo |ooxox  ox| oooxox x|xo  xoxoo|x xoxo oo| oxox oox|oo oxox x|xoo xoxo 
+x xxoooo |oxxoo  ox| ooooxx x|xo  ooxxo|x xoox oo| oxoo oxx|oo xoox x|xxo ooxo 
+oox   x x|x o  ox x|x x   xoo|x xo  o x|xoo   x x|x x  ox o|x x   oox|o xo  x x
+oxo   x x|x o  xx o|x x   oxo|o xx  o x|oxo   x x|x o  xx o|x x   oxo|o xx  o x
+o ox  x x|xxo   x o|x x  xo o|o x   oxx|o o  xx x|x o   xxo|x xx  o o|oxx   o x
+o xo  x x|xoo   x x|x x  ox o|x x   oox|x o  ox x|x x   xoo|x xo  o x|oox   x x
+x oo  x x|xox   x o|x x  oo x|o x   xox|o x  ox x|x o   xox|x xo  x o|xox   o x
+o oo  x x|xoo   x o|x x  oo o|o x   oox|o o  ox x|x o   xoo|x xo  o o|oox   o x
+o o x x x|x o x x o|x x x o o|o x x o x|o o x x x|x o x x o|x x x o o|o x x o x
+oxoox x x|xoo xxx o|x x xooxo|o xxx oox|oxo xox x|x o xxxoo|x xox oxo|ooxxx o x
+o x o x x|x o o x x|x x o x o|x x o o x|x o o x x|x x o x o|x x o o x|o x o x x
+o o o x x|x o o x o|x x o o o|o x o o x|o o o x x|x o o x o|x x o o o|o x o o x
+ooxxo x x|xxo oox x|x x oxxoo|x xoo oxx|xoo oxx x|x x ooxxo|x xxo oox|oxxoo x x
+oxoxo x x|xxo oxx o|x x oxoxo|o xxo oxx|oxo oxx x|x o oxxxo|x xxo oxo|oxxxo o x
+oxxoo x x|xoo oxx x|x x ooxxo|x xxo oox|xxo oox x|x x oxxoo|x xoo oxx|ooxxo x x
+xoxoo x x|xox oox x|x x ooxox|x xoo xox|xox oox x|x x ooxox|x xoo xox|xoxoo x x
+ooxoo x x|xoo oox x|x x ooxoo|x xoo oox|xoo oox x|x x ooxoo|x xoo oox|ooxoo x x
+xxooo x x|xox oxx o|x x oooxx|o xxo xox|oxx oox x|x o oxxox|x xoo xxo|xoxxo o x
+oxooo x x|xoo oxx o|x x oooxo|o xxo oox|oxo oox x|x o oxxoo|x xoo oxo|ooxxo o x
+xoooo x x|xox oox o|x x oooox|o xoo xox|oox oox x|x o ooxox|x xoo xoo|xoxoo o x
+oxoo xx x|xoo  xxxo|x xx ooxo|oxxx  oox|oxox ox x|xxo  xxoo|x xo xoxo|ooxx  oxx
+xooo xx x|xox  oxxo|x xx ooox|oxxo  xox|ooxx ox x|xxo  oxox|x xo xxoo|xoxo  oxx
+o ooxxx x|xoo x xxo|x xxxoo o|oxx x oox|o oxxox x|xxo x xoo|x xoxxo o|oox x oxx
+o oxoxx x|xxo o xxo|x xxoxo o|oxx o oxx|o oxoxx x|xxo o xxo|x xxoxo o|oxx o oxx
+x oooxx x|xox o xxo|x xxooo x|oxx o xox|o xxoox x|xxo o xox|x xooxx o|xox o oxx
+o oooxx x|xoo o xxo|x xxooo o|oxx o oox|o oxoox x|xxo o xoo|x xooxo o|oox o oxx
+oxxo ox x|xoo  xxox|x xo oxxo|xoxx  oox|xxoo ox x|xox  xxoo|x xo ooxx|ooxx  xox
+xoxo ox x|xox  oxox|x xo oxox|xoxo  xox|xoxo ox x|xox  oxox|x xo oxox|xoxo  xox
+ooxo ox x|xoo  oxox|x xo oxoo|xoxo  oox|xooo ox x|xox  oxoo|x xo ooox|ooxo  xox
+oxoo ox x|xoo  xxoo|x xo ooxo|ooxx  oox|oxoo ox x|xoo  xxoo|x xoÙ°iÊ“é`,©£‰ºüÉüyñ“ù¦6™áüSG
+³¸-sd¤óGS^9
+°“ H#Y,õ3Ÿ63€,»á¢o|oox x oox
+oxx   o x|o o  xx x|x o   xxo|x xx  o o|xxo   x o|x x  xo o|o x   oxx|o ox  x x
+xox   o x|o x  ox x|x o   xox|x xo  x o|xox   x o|x x  oo x|o x   xox|x oo  x x
+oox   o x|o o  ox x|x o   xoo|x xo  o o|xoo   x o|x x  oo o|o x   oox|o oo  x x
+xxo   o x|o x  xx o|x o   oxx|o xx  x o|oxx   x o|x o  xo x|o x   xxo|x ox  o x
+oxo   o x|o o  xx o|x o   oxo|o xx  o o|oxo   x o|x o  xo o|o x   oxo|o ox  o x
+xoo   o x|o x  ox o|x o   oox|o xo  x o|oox   x o|x o  oo x|o x   xoo|x oo  o x
+x ox  o x|oxx   x o|x o  xo x|o x   xxo|o x  xx o|x o   oxx|o xx  x o|xxo   o x
+o ox  o x|oxo   x o|x o  xo o|o x   oxo|o o  xx o|x o   oxo|o xx  o o|oxo   o x
+x oo  o x|oox   x o|x o  oo x|o x   xoo|o x  ox o|x o   oox|o xo  x o|xoo   o x
+o o x o x|o o x x o|x o x o o|o x x o o|o o x x o|x o x o o|o x x o o|o o x o x
+ooxxx o x|oxo xox x|x o xxxoo|x xox oxo|xoo xxx o|x x xooxo|o xxx oox|oxoox x x
+oxoxx o x|oxo xxx o|x o xxoxo|o xxx oxo|oxo xxx o|x o xxoxo|o xxx oxo|oxoxx o x
+oxxxo o x|oxo oxx x|x o oxxxo|x xxo oxo|xxo oxx o|x x oxoxo|o xxo oxx|oxoxo x x
+xoxxo o x|oxx oox x|x o oxxox|x xoo xxo|xox oxx o|x x oooxx|o xxo xox|xxooo x x
+ooxxo o x|oxo oox x|x o oxxoo|x xoo oxo|xoo oxx o|x x oooxo|o xxo oox|oxooo x x
+xoxoo o x|oox oox x|x o ooxox|x xoo xoo|xox oox o|x x oooox|o xoo xox|xoooo x x
+o o  xo x|o o   xxo|x ox  o o|oxx   o o|o ox  x o|xxo   o o|o x  xo o|o o   oxx
+oxox xo x|oxo  xxxo|x ox xoxo|oxxx  oxo|oxox xx o|xxo  xoxo|o xx xoxo|oxox  oxx
+xoox xo x|oxx  oxxo|x ox xoox|oxxo  xxo|ooxx xx o|xxo  ooxx|o xx xxoo|xxoo  oxx
+xxoo xo x|oox  xxxo|x ox ooxx|oxxx  xoo|oxxx ox o|xxo  xoox|o xo xxxo|xoox  oxx
+xooo xo x|oox  oxxo|x ox ooox|oxxo  xoo|ooxx ox o|xxo  ooox|o xo xxoo|xooo  oxx
+oxo xxo x|o o xxxxo|x oxx oxo|oxxxx o o|oxoxx x o|xxo xxo o|o x xxoxo|o oxx oxx
+o x  oo x|o o   xox|x oo  x o|xox   o o|x oo  x o|xox   o o|o x  oo x|o o   xox
+oxxx oo x|oxo  xxox|x oo xxxo|xoxx  oxo|xxoo xx o|xox  xoxo|o xx ooxx|oxox  xox
+xoxx oo x|oxx  oxox|x oo xxox|xoxo  xxo|xoxo xx o|xox  ooxx|o xx oxox|xxoo  xox
+ooxx oo x|oxo  oxox|x oo xxoo|xoxo  oxo|xooo xx o|xox  ooxo|o xx ooox|oxoo  xox
+xxox oo x|oxx  xxoo|x oo xoxx|ooxx  xxo|oxxo xx o|xoo  xoxx|o xx oxxo|xxox  oox
+oxox oo x|oxo  xxoo|x oo xoxo|ooxx  oxo|oxoo xx o|xoo  xoxo|o xx ooxo|oxox  oox
+xoox oo x|oxx  oxoo|x oo xoox|ooxo  xxo|ooxo xx o|xoo  ooxx|o xx oxoo|xxoo  oox
+xoxo oo x|oox  oxox|x oo oxox|xoxo  xoo|xoxo ox o|xox  ooox|o xo oxox|xooo  xox
+xxoo oo x|oox  xxoo|x oo ooxx|ooxx  xoo|oxxo ox o|xoo  xoox|o xo oxxo|xoox  oox
+oxx xoo x|o o xxxox|x oox xxo|xoxxx o o|xxoox x o|xox xxo o|o x xooxx|o oxx xox
+oox xoo x|o o xoxox|x oox xoo|xoxox o o|xooox x o|xox xoo o|o x xooox|o oox xox
+oxo xoo x|o o xxxoo|x oox oxo|ooxxx o o|oxoox x o|xoo xxo o|o x xooxo|o oxx oox
+o xxxoo x|oxo x xox|x ooxxx o|xox x oxo|x ooxxx o|xox x oxo|o xxxoo x|oxo x xox
+o oxxoo x|oxo x xoo|x ooxxo o|oox x oxo|o ooxxx o|xoo x oxo|o xxxoo o|oxo x oox
+oxx ooo x|o o oxxox|x ooo xxo|xoxxo o o|xxooo x o|xox oxo o|o x oooxx|o oxo xox
+xox ooo x|o x ooxox|x ooo xox|xoxoo x o|xoxoo x o|xox ooo x|o x ooxox|x ooo xox
+o xxooo x|oxo o xox|x oooxx o|xox o oxo|x oooxx o|xox o oxo|o xxooo x|oxo o xox
+o o   oxx|o ox  x o|xxo   o o|o x  xo o|o o   xxo|x ox  o o|oxx   o o|o o  xo x
+ooxx  oxx|oxox ox x|xxo  xxoo|x xo xoxo|xoo  xxxo|x xx ooxo|oxxx  oox|oxoo xx x
+oxox  oxx|oxox xx o|xxo  xoxo|o xx xoxo|oxo  xxxo|x ox xoxo|oxxx  oxo|oxox xo x
+xoox  oxx|oxxx ox o|xxo  xoox|o xo xxxo|oox  xxxo|x ox ooxx|oxxx  xoo|xxoo xo x
+xoxo  oxx|ooxx ox x|xxo  oxox|x xo xxoo|xox  oxxo|x xx ooox|oxxo  xox|xooo xx x
+xxoo  oxx|ooxx xx o|xxo  ooxx|o xx xxoo|oxx  oxxo|x ox xoox|oxxo  xxo|xoox xo x
+xooo  oxx|ooxx ox o|xxo  ooox|o xo xxoo|oox  oxxo|x ox ooox|oxxo  xoo|xooo xo x
+oox x oxx|o oxxox x|xxo x xoo|x xoxxo o|xoo x xxo|x xxxoo o|oxx x oox|o ooxxx x
+o oxx oxx|oxoxx x o|xxo xxo o|o x xxoxo|o o xxxxo|x oxx oxo|oxxxx o o|oxo xxo x
+xox o oxx|o xxoox x|xxo o xox|x xooxx o|xox o xxo|x xxooo x|oxx o xox|x oooxx x
+oox o oxx|o oxoox x|xxo o xoo|x xooxo o|xoo o xxo|x xxooo o|oxx o oox|o oooxx x
+oxo  xoxx|o ox xxxo|xxox  oxo|oxxx xo o|oxox  xxo|xxox xo o|oxx  xoxo|o ox xoxx
+xoo  xoxÛÑKr
+c£“ãX6ã9,£­£å¢#›Eƒ“üÃÕ#9c{ó3û3v
+[ûù>/¹ê¥9 H‰£I{™J­™+£YÁ!Xñq
+™
+I­}ƒ®}d¤ýGí£õÅ ­Åá¢åÑUr
+­­Êü¬ºß-z‹¤Z…9&•Rh¤Â'­B\‚žRƒ¼ ­<5x xxo|xxoxx o o|oxx xxo o|o o xxoxx
+oxx  ooxx|o ox xxox|xxoo  xxo|xoxx xo o|xxoo  xxo|xoxx xo o|oxx  ooxx|o ox xxox
+xox  ooxx|o xx oxox|xxoo  xox|xoxo xx o|xoxo  xxo|xoxx oo x|oxx  oxox|x oo xxox
+oox  ooxx|o ox oxox|xxoo  xoo|xoxo xo o|xooo  xxo|xoxx oo o|oxx  ooox|o oo xxox
+xxo  ooxx|o xx xxoo|xxoo  oxx|ooxx xx o|oxxo  xxo|xoox xo x|oxx  oxxo|x ox xoox
+oxo  ooxx|o ox xxoo|xxoo  oxo|ooxx xo o|oxoo  xxo|xoox xo o|oxx  ooxo|o ox xoox
+xoo  ooxx|o xx oxoo|xxoo  oox|ooxo xx o|ooxo  xxo|xoox oo x|oxx  oxoo|x oo xoox
+o xx ooxx|oxox  xox|xxoo xx o|xox  xoxo|x oo xxxo|xoxx  oxo|oxxx oo x|oxo  xxox
+o ox ooxx|oxox  xoo|xxoo xo o|oox  xoxo|o oo xxxo|xoox  oxo|oxxx oo o|oxo  xoox
+x xo ooxx|ooxx  xox|xxoo ox x|xox  xxoo|x xo oxxo|xoxx  oox|oxxo ox x|xoo  xxox
+x oo ooxx|ooxx  xoo|xxoo oo x|oox  xxoo|o xo oxxo|xoox  oox|oxxo ox o|xoo  xoox
+o x xooxx|o oxx xox|xxoox x o|xox xxo o|x oox xxo|xoxxx o o|oxx xoo x|o o xxxox
+o o xooxx|o oxx xoo|xxoox o o|oox xxo o|o oox xxo|xooxx o o|oxx xoo o|o o xxoox
+o x oooxx|o oxo xox|xxooo x o|xox oxo o|x ooo xxo|xoxxo o o|oxx ooo x|o o oxxox
+ooxo  xox|xooo ox x|xox  oxoo|x xo ooox|xoo  oxox|x xo oxoo|xoxo  oox|ooxo ox x
+oxoo  xox|xooo xx o|xox  ooxo|o xx ooox|oxo  oxox|x oo xxoo|xoxo  oxo|ooxx oo x
+xooo  xox|xoxo ox o|xox  ooox|o xo oxox|oox  oxox|x oo oxox|xoxo  xoo|xoxo oo x
+oxo x xox|x ooxxx o|xox x oxo|o xxxoo x|oxo x xox|x ooxxx o|xox x oxo|o xxxoo x
+o oox xox|xooox x o|xox xoo o|o x xooox|o o xoxox|x oox xoo|xoxox o o|oox xoo x
+xxo o xox|x xooxx o|xox o oxx|o xxoox x|oxx o xox|x oooxx x|xox o xxo|x xxooo x
+oxo o xox|x oooxx o|xox o oxo|o xxooo x|oxo o xox|x oooxx o|xox o oxo|o xxooo x
+x ooo xox|xoxoo x o|xox ooo x|o x ooxox|o x ooxox|x ooo xox|xoxoo x o|xox ooo x
+o oo xxox|xooo  xxo|xoxx oo o|oxx  ooox|o ox oxox|xxoo  xoo|xoxo xo o|oox  ooxx
+o o xxxox|x oox xxo|xoxxx o o|oxx xoo x|o oxx xox|xxoox x o|xox xxo o|o x xooxx
+o o oxxox|x ooo xxo|xoxxo o o|oxx ooo x|o oxo xox|xxooo x o|xox oxo o|o x oooxx
+xxo  oxox|x xo xxoo|xoxo  oxx|ooxx ox x|oxxo  xox|xooo xx x|xox  oxxo|x xx ooox
+xxox  oox|oxxo xx o|xoo  xoxx|o xx oxxo|oxx  xxoo|x oo xoxx|ooxx  xxo|xxox oo x
+oxox  oox|oxoo xx o|xoo  xoxo|o xx ooxo|oxo  xxoo|x oo xoxo|ooxx  oxo|oxox oo x
+xoox  oox|oxxo ox o|xoo  xoox|o xo oxxo|oox  xxoo|x oo ooxx|ooxx  xoo|xxoo oo x
+oxo x oox|o ooxxx o|xoo x oxo|o xxxoo o|oxo x xoo|x ooxxo o|oox x oxo|o oxxoo x
+o oxx oox|oxoox x o|xoo xxo o|o x xooxo|o o xxxoo|x oox oxo|ooxxx o o|oxo xoo x
+xxo  xoox|o xo xxxo|xoox  oxx|oxxx ox o|oxxx  xoo|xxoo xo x|oox  xxxo|x ox ooxx
+oxo  xoox|o oo xxxo|xoox  oxo|oxxx oo o|oxox  xoo|xxoo xo o|oox  xoxo|o ox ooxx
+o ox xoox|oxoo  xxo|xoox xo o|oxx  ooxo|o ox xxoo|xxoo  oxo|ooxx xo o|oxo  ooxx
+o o xxoox|o oox xxo|xooxx o o|oxx xoo o|o oxx xoo|xxoox o o|oox xxo o|o o xooxx
+xxo  ooox|o xo xxoo|xooo  oxx|ooxx ox o|oxxo  xoo|xooo xo x|oox  oxxo|x ox ooox
+xxo   o o|o x  xo o|o o   oxx|o ox  x o|oxx   o o|o o  xo x|o o   xxo|x ox  o o
+ooxxx o o|oxo xoo x|o o xxxoo|x oox oxo|xoo xxo o|o x xooxo|o oxx oox|oxoox x o
+oxoxx o o|oxo xxo o|o o xxoxo|o oxx oxo|oxo xxo o|o o xxoxo|o oxx oxo|oxoxx o o
+xoxox o o|oox xoo x|o o xoxox|x oox xoo|xox xoo o|o x xooox|o oox xox|xooox x o
+oxxx xo o|oxo  xoxx|o ox xxxo|xxox  oxo|xxox xo o|oxx  xoxo|o ox xoxx|oxox  xxo
+oxox xo o|oxo  xoxo|o ox xoxo|oxox  oxo|oxox xo o|oxo  xoxo|o ox xoxo|oxox  oxo
+xxo xxo o|o x xxoxo|o oxx oxx|oxoxx x o|oxxxx o o|oxo xxo x|o o xxxxo|x oxx oxo
+x xoxxo o|oox x oxx|o oxxox x|xxo x xoo|x xxxoo o|oxx x oox|o ooxxx x|xoo x xxo
+x ooxxo o|oox x oxo|o oxxoo x|oxo x xoo|o xxxoo o|oxo x oox|o ooxxx o|xoo x oxo
+x xooxo o|oox o oxx|o oxoox x|xxo o xoo|x xxooo o|oxx o oox|o oooxx x|xoo o xxo
+xxo  xoxo|o xx xoxo|oxox  oxx|oxox xx o|oxxx  oxo|oxox xo x|oxo  xxxo|x ox xoxo
+x xo xoxo|ooxx  oxx|oxox ox x|xxo  xxoo|x xx ooxo|oxxx  oox|oxoo xx x|xoo  xxxo

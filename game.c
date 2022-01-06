@@ -122,18 +122,39 @@ void generateNewGame(FILE * file)
 
     print_all_transformations_1d(g, file);
     _Bool is_config;
+    uint32_t while_counter;
+    uint32_t i;
     while(next_configuration(g)==0)
     {
         if (isValid(g))
         {
-            for (uint32_t i = 0; i < counter; i++)
+            while_counter = counter;
+            i = 0;
+            // Check each stored matchbox for configuration
+            while(while_counter!=0)
+            {
+                if (isConfiguration(tableTo3(g), matchboxes[i]))
+                {
+                    while_counter = 0;
+                    is_config = 1;
+                }
+                else
+                {
+                    is_config = 0;
+                    i++;
+                    while_counter--;
+                }
+            }
+            /*for (uint32_t i = 0; i < counter; i++)
             {
                 if (isConfiguration(tableTo3(g), matchboxes[i]))
                 {
                     is_config = 1;
                     break;
                 }
-            }
+            }*/
+
+            // If a new matchbox (is not a configuration)
             if (!is_config)
             {
                 matchboxes[counter] = tableTo3(g);
