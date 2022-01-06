@@ -9,9 +9,16 @@ CMakeFiles/Projet.dir/aide_projet.c.obj: \
 CMakeFiles/Projet.dir/arraylist.c.obj: \
  ../arraylist.c \
  ../arraylist.h
+CMakeFiles/Projet.dir/game.c.obj: \
+ ../aide_projet.h \
+ ../arraylist.h \
+ ../game.c \
+ ../game.h \
+ ../matchboxes.h
 CMakeFiles/Projet.dir/main.c.obj: \
  ../aide_projet.h \
  ../arraylist.h \
+ ../game.h \
  ../main.c \
  ../matchboxes.h
 CMakeFiles/Projet.dir/matchboxes.c.obj: \

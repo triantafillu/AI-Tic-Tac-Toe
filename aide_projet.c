@@ -158,6 +158,175 @@ uint8_t next_configuration(uint8_t grille[3][3])
     return CONTINUE;
 }
 
+_Bool isSameArray(uint8_t table1[3][3], uint8_t table2[3][3])
+{
+    uint32_t sum = 0;
+    for (uint32_t i = 0; i<3; i++)
+    {
+        for (uint32_t j = 0; j<3; j++)
+        {
+            if(table1[i][j] == table2[i][j])
+            {
+                sum++;
+            }
+        }
+    }
+    return (sum == 9);
+}
+
+_Bool isConfiguration(uint32_t t1, uint32_t t2)
+{
+    uint8_t **table1 = threeToTable(t1);
+    uint8_t **table2 = threeToTable(t2);
+
+    uint32_t t3 = t1;
+    uint8_t copy[3][3];
+    for (uint32_t i = 0; i<3; i++)
+    {
+        for (uint32_t j = 0; j<3; j++)
+        {
+            copy[i][j] = table1[i][j];
+        }
+    }
+
+    appliquer_transformation_base(copy, ROT_90);
+    t3 = tableTo3(copy);
+    if (t3 == t2)
+    {
+        return 1;
+    }
+    else
+    {
+        appliquer_transformation_base(copy, ROT_90);
+        t3 = tableTo3(copy);
+        if (t3 == t2)
+        {
+            return 1;
+        }
+        else
+        {
+            appliquer_transformation_base(copy, ROT_90);
+            t3 = tableTo3(copy);
+            if (t3 == t2)
+            {
+                return 1;
+            }
+            else
+            {
+                appliquer_transformation_base(copy, ROT_90);
+                t3 = tableTo3(copy);
+                if (t3 == t2)
+                {
+                    return 1;
+                }
+                else
+                {
+                    appliquer_transformation_base(copy, MIROIR_VERT);
+                    t3 = tableTo3(copy);
+                    if (t3 == t2)
+                    {
+                        return 1;
+                    }
+                    else
+                    {
+                        appliquer_transformation_base(copy, MIROIR_VERT);
+                        t3 = tableTo3(copy);
+                        if (t3 == t2)
+                        {
+                            return 1;
+                        }
+                        else
+                        {
+                            appliquer_transformation_base(copy, MIROIR_VERT);
+                            t3 = tableTo3(copy);
+                            if (t3 == t2)
+                            {
+                                return 1;
+                            }
+                            else
+                            {
+                                appliquer_transformation_base(copy, MIROIR_VERT);
+                                t3 = tableTo3(copy);
+                                if (t3 == t2)
+                                {
+                                    return 1;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+//    appliquer_transformation_base(copy, ROT_90);
+//    if (isSameArray(copy, table2))
+//    {
+//        return 1;
+//    }
+//    else
+//    {
+//        appliquer_transformation_base(copy, ROT_90);
+//        if (isSameArray(copy, table2))
+//        {
+//            return 1;
+//        }
+//        else
+//        {
+//            appliquer_transformation_base(copy, ROT_90);
+//            if (isSameArray(copy, table2))
+//            {
+//                return 1;
+//            }
+//            else
+//            {
+//                appliquer_transformation_base(copy, ROT_90);
+//                if (isSameArray(copy, table2))
+//                {
+//                    return 1;
+//                }
+//                else
+//                {
+//                    appliquer_transformation_base(copy, MIROIR_VERT);
+//                    if (isSameArray(copy, table2))
+//                    {
+//                        return 1;
+//                    }
+//                    else
+//                    {
+//                        appliquer_transformation_base(copy, MIROIR_VERT);
+//                        if (isSameArray(copy, table2))
+//                        {
+//                            return 1;
+//                        }
+//                        else
+//                        {
+//                            appliquer_transformation_base(copy, MIROIR_VERT);
+//                            if (isSameArray(copy, table2))
+//                            {
+//                                return 1;
+//                            }
+//                            else
+//                            {
+//                                appliquer_transformation_base(copy, MIROIR_VERT);
+//                                if (isSameArray(copy, table2))
+//                                {
+//                                    return 1;
+//                                }
+//                            }
+//                        }
+//                    }
+//
+//                }
+//            }
+//        }
+//    }
+
+    return 0;
+
+}
+
 
 /*int main() {
     FILE *out = fopen("sortie.txt", "w");

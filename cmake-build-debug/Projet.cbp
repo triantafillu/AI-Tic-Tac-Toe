@@ -86,6 +86,12 @@
 		<Unit filename="C:/Users/alexa/Desktop/Uni/Structures/Projet/arraylist.h">
 			<Option target="Projet"/>
 		</Unit>
+		<Unit filename="C:/Users/alexa/Desktop/Uni/Structures/Projet/game.c">
+			<Option target="Projet"/>
+		</Unit>
+		<Unit filename="C:/Users/alexa/Desktop/Uni/Structures/Projet/game.h">
+			<Option target="Projet"/>
+		</Unit>
 		<Unit filename="C:/Users/alexa/Desktop/Uni/Structures/Projet/main.c">
 			<Option target="Projet"/>
 		</Unit>

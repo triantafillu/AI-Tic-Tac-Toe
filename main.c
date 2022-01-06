@@ -1,11 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
-#include<string.h>
+#include <string.h>
 #include <time.h>
 #include "matchboxes.h"
 #include "arraylist.h"
 #include "aide_projet.h"
+#include "game.h"
 
 
 
@@ -13,7 +14,7 @@
 //Fonction qui initialise un boite:
 //Une boite se compose de 9 boules de couleurs différentes
 //Et on a un nombre en base 3 correspondant au jeu de la carte
-matchbox* init_box(uint32_t g)
+/*matchbox* init_box(uint32_t g)
 {
     matchbox* res= malloc(sizeof(matchbox));
     res->config=g;
@@ -64,7 +65,7 @@ enum billes rand_bille(matchbox* boite){
     }
     else
         return -1;
-}
+}*/
 
 int main() {
    /* uint8_t table[3][3] = {{2, 1, 1},
@@ -73,12 +74,26 @@ int main() {
 
     uint32_t w = isWin(table);*/
 
-    FILE* in = fopen("C:\\Users\\alexa\\Desktop\\Uni\\Structures\\Projet\\game_state.csv", "r");
-    FILE* out = fopen("C:\\Users\\alexa\\Desktop\\Uni\\Structures\\Projet\\gs_out.csv", "w");
-    matchbox** mb = readGameState(in);
+    FILE* in = fopen("C:\\Users\\alexa\\Desktop\\Uni\\Structures\\Projet\\sortie1.txt", "w");
+    /*FILE* out = fopen("C:\\Users\\alexa\\Desktop\\Uni\\Structures\\Projet\\gs_out.csv", "w");
+    matchbox** mb = initializeMatchboxes();
     writeGameState(out, mb);
     fclose(out);
 
-    // 210122020
+    // 210122020*/
+
+
+//    uint8_t g[3][3] = {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}};
+//
+//    print_all_transformations_1d(g, in);
+//    while(next_configuration(g)==0)
+//    {
+//        if (isValid(g))
+//        {
+//            print_all_transformations_1d(g, in);
+//        }
+//    }
+
+    generateNewGame(in);
     return 0;
 }

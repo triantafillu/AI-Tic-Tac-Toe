@@ -85,16 +85,55 @@ matchbox *newMatchbox(uint32_t config)
     return mb;
 }
 
-void addBilles(list *l, enum billes *b)
+// Get the bille by index
+enum billes getBille(uint32_t ind)
 {
-    maillon *p = l->head;
+    switch (ind)
+    {
+        case 1:
+            return yellow;
+        case 2:
+            return red;
+        case 3:
+            return green;
+        case 4:
+            return blue;
+        case 5:
+            return orange;
+        case 6:
+            return purple;
+        case 7:
+            return white;
+        case 8:
+            return black;
+        case 9:
+            return pink;
+        default:
+            break;
+    }
+    return -1;
+}
+
+void addBilles(list *l, uint8_t table[3][3])
+{
+    for (uint32_t i = 0; i < 3; i++)
+    {
+        for (uint32_t j = 0; j < 3; j++)
+        {
+            if (table[i][j] == 0)
+            {
+                addHead(l, getBille(i+j+1));
+            }
+        }
+    }
+    /*maillon *p = l->head;
     uint32_t c = 0;
     while(p != NULL)
     {
         p->bille = b[c];
         c++;
         p = p->next;
-    }
+    }*/
 }
 
 uint32_t countBilles(list *l, enum billes b)

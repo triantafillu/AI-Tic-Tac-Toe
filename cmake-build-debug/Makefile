@@ -176,6 +176,30 @@ arraylist.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projet.dir\build.make CMakeFiles/Projet.dir/arraylist.c.s
 .PHONY : arraylist.c.s
 
+game.obj: game.c.obj
+.PHONY : game.obj
+
+# target to build an object file
+game.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projet.dir\build.make CMakeFiles/Projet.dir/game.c.obj
+.PHONY : game.c.obj
+
+game.i: game.c.i
+.PHONY : game.i
+
+# target to preprocess a source file
+game.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projet.dir\build.make CMakeFiles/Projet.dir/game.c.i
+.PHONY : game.c.i
+
+game.s: game.c.s
+.PHONY : game.s
+
+# target to generate assembly for a file
+game.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projet.dir\build.make CMakeFiles/Projet.dir/game.c.s
+.PHONY : game.c.s
+
 main.obj: main.c.obj
 .PHONY : main.obj
 
@@ -239,6 +263,9 @@ help:
 	@echo ... arraylist.obj
 	@echo ... arraylist.i
 	@echo ... arraylist.s
+	@echo ... game.obj
+	@echo ... game.i
+	@echo ... game.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

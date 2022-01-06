@@ -33,9 +33,13 @@ uint32_t tableTo3(uint8_t table[3][3])
 }
 
 
-/*uint32_t[3][3] * threeToTable(uint32_t three)
+uint8_t** threeToTable(uint32_t three)
 {
-    uint32_t res[3][3];
+    uint8_t **res = malloc(3 * sizeof(uint8_t*));
+    for(uint32_t j = 0; j < 3; j++)
+    {
+        res[j] = malloc(3 * sizeof(uint8_t));
+    }
     for (int i = 2; i > -1 ; i--)
     {
         for (int j = 2; j > -1 ; j--)
@@ -46,7 +50,7 @@ uint32_t tableTo3(uint8_t table[3][3])
     }
 
     return res;
-}*/
+}
 
 // Translate the table represented by a number of base 3 to the base 10
 uint32_t translate10 (uint32_t table)
@@ -99,34 +103,7 @@ uint32_t translate3(uint32_t number)
     return res;
 }
 
-// Get the bille by index
-enum billes getBille(uint32_t ind)
-{
-    switch (ind)
-    {
-        case 1:
-            return yellow;
-        case 2:
-            return red;
-        case 3:
-            return green;
-        case 4:
-            return blue;
-        case 5:
-            return orange;
-        case 6:
-            return purple;
-        case 7:
-            return white;
-        case 8:
-            return black;
-        case 9:
-            return pink;
-        default:
-            break;
-    }
-    return -1;
-}
+
 
 // Get a list of free billes for the configuration
 enum billes *tableToBilles(uint8_t table[3][3], uint32_t size)
@@ -165,44 +142,42 @@ uint32_t freePlaces(uint8_t table[3][3])
 }
 
 // Initialize matchboxes for the start of learning
-/*void initializeMatchboxes()
+matchbox ** initializeMatchboxes()
 {
     // Table of matchboxes
-    matchbox mb[304];
+    matchbox** mb= malloc(1000 * sizeof(matchbox));
     uint32_t num_of_billes;
     uint32_t c = 1;
 
     // Empty board
     uint8_t g[3][3] = {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}};
     // Matchbox with 9 free beads
-    mb[0] = *newMatchbox(9, 000000000);
+    mb[0] = newMatchbox(000000000);
     // Fill up the names of free beads
-    addBilles(mb[0].free, tableToBilles(g, 9));
+    addBilles(mb[0]->free, g);
 
     // Repeat for each configuration
     while(next_configuration(g)==CONTINUE)
     {
-        num_of_billes = freePlaces(g);
-        mb[c] = *newMatchbox(num_of_billes, tableTo3(g));
-        addBilles(mb[c].free, tableToBilles(g, num_of_billes));
+        if (c>300)
+        {
+            mb[c] = newMatchbox(tableTo3(g));
+            addBilles(mb[c]->free, g);
+        }
+        else
+        {
+            mb[c] = newMatchbox(tableTo3(g));
+            addBilles(mb[c]->free, g);
+        }//num_of_billes = freePlaces(g);
+
         c++;
     }
 
-}*/
-
-const char* getCaseCSV(char* line, int num)
-{
-    const char* tok;
-    for (tok = strtok(line, ",");
-         tok && *tok;
-         tok = strtok(NULL, ",\n"))
-    {
-        if (!--num)
-            return tok;
-    }
-    return NULL;
+    return mb;
 }
 
+
+// Intialize buffer to 0 (used in readGameState)
 void emptyBuffer(char *buf, uint32_t length)
 {
     for (uint32_t i = 0; i < length; i++)
@@ -210,16 +185,17 @@ void emptyBuffer(char *buf, uint32_t length)
         buf[i] = 0;
     }
 }
+
 // Read the matchboxes from file
 // File structure:
 // config, yellow, red, green, blue, orange, purple, white, black, pink
 matchbox ** readGameState(FILE* file)
 {
     // Table of matchboxes
-    matchbox** mb= malloc(3 * sizeof(matchbox));
+    matchbox** mb= malloc(304 * sizeof(matchbox));
 
     // Initialize empty matchboxes
-    for (int l = 0; l<3; l++)
+    for (int l = 0; l<304; l++)
     {
         mb[l] = newMatchbox(0);
     }
@@ -304,7 +280,7 @@ matchbox ** readGameState(FILE* file)
 // Write game state to the csv file
 void writeGameState(FILE * file, matchbox **mb)
 {
-    for (uint32_t i = 0; i < 3; i++)
+    for (uint32_t i = 0; i < 304; i++)
     {
         // Print configuration
         fprintf(file, "%d,", mb[i]->config);
@@ -332,6 +308,8 @@ void writeGameState(FILE * file, matchbox **mb)
         }
     }
 }
+
+
 
 
 

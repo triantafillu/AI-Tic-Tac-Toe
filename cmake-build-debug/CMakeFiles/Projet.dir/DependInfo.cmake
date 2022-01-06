@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "C:/Users/alexa/Desktop/Uni/Structures/Projet/aide_projet.c" "C:/Users/alexa/Desktop/Uni/Structures/Projet/cmake-build-debug/CMakeFiles/Projet.dir/aide_projet.c.obj"
   "C:/Users/alexa/Desktop/Uni/Structures/Projet/arraylist.c" "C:/Users/alexa/Desktop/Uni/Structures/Projet/cmake-build-debug/CMakeFiles/Projet.dir/arraylist.c.obj"
+  "C:/Users/alexa/Desktop/Uni/Structures/Projet/game.c" "C:/Users/alexa/Desktop/Uni/Structures/Projet/cmake-build-debug/CMakeFiles/Projet.dir/game.c.obj"
   "C:/Users/alexa/Desktop/Uni/Structures/Projet/main.c" "C:/Users/alexa/Desktop/Uni/Structures/Projet/cmake-build-debug/CMakeFiles/Projet.dir/main.c.obj"
   "C:/Users/alexa/Desktop/Uni/Structures/Projet/matchboxes.c" "C:/Users/alexa/Desktop/Uni/Structures/Projet/cmake-build-debug/CMakeFiles/Projet.dir/matchboxes.c.obj"
   )
