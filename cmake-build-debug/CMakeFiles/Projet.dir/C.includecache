@@ -6,27 +6,23 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/alexa/Desktop/Uni/Structures/Projet/aide_projet.h
-
-C:/Users/alexa/Desktop/Uni/Structures/Projet/arraylist.h
-
-C:/Users/alexa/Desktop/Uni/Structures/Projet/game.c
+C:/Users/alexa/Desktop/Uni/Structures/Projet/aide_projet.c
 stdio.h
--
-stdlib.h
 -
 stdint.h
 -
-string.h
+assert.h
+-
+stdlib.h
 -
 matchboxes.h
 C:/Users/alexa/Desktop/Uni/Structures/Projet/matchboxes.h
-game.h
-C:/Users/alexa/Desktop/Uni/Structures/Projet/game.h
+aide_projet.h
+C:/Users/alexa/Desktop/Uni/Structures/Projet/aide_projet.h
 
-C:/Users/alexa/Desktop/Uni/Structures/Projet/game.h
-matchboxes.h
-C:/Users/alexa/Desktop/Uni/Structures/Projet/matchboxes.h
+C:/Users/alexa/Desktop/Uni/Structures/Projet/aide_projet.h
+
+C:/Users/alexa/Desktop/Uni/Structures/Projet/arraylist.h
 
 C:/Users/alexa/Desktop/Uni/Structures/Projet/matchboxes.h
 arraylist.h

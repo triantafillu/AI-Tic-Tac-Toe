@@ -214,6 +214,7 @@ _Bool isConfiguration(uint32_t t1, uint32_t t2)
             else
             {
                 appliquer_transformation_base(copy, ROT_90);
+                appliquer_transformation_base(copy, MIROIR_VERT);
                 t3 = tableTo3(copy);
                 if (t3 == t2)
                 {
@@ -221,7 +222,7 @@ _Bool isConfiguration(uint32_t t1, uint32_t t2)
                 }
                 else
                 {
-                    appliquer_transformation_base(copy, MIROIR_VERT);
+                    appliquer_transformation_base(copy, ROT_90);
                     t3 = tableTo3(copy);
                     if (t3 == t2)
                     {
@@ -229,7 +230,7 @@ _Bool isConfiguration(uint32_t t1, uint32_t t2)
                     }
                     else
                     {
-                        appliquer_transformation_base(copy, MIROIR_VERT);
+                        appliquer_transformation_base(copy, ROT_90);
                         t3 = tableTo3(copy);
                         if (t3 == t2)
                         {
@@ -237,21 +238,13 @@ _Bool isConfiguration(uint32_t t1, uint32_t t2)
                         }
                         else
                         {
-                            appliquer_transformation_base(copy, MIROIR_VERT);
+                            appliquer_transformation_base(copy, ROT_90);
                             t3 = tableTo3(copy);
                             if (t3 == t2)
                             {
                                 return 1;
                             }
-                            else
-                            {
-                                appliquer_transformation_base(copy, MIROIR_VERT);
-                                t3 = tableTo3(copy);
-                                if (t3 == t2)
-                                {
-                                    return 1;
-                                }
-                            }
+
                         }
                     }
                 }

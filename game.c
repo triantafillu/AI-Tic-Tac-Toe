@@ -18,9 +18,6 @@ _Bool isColumn(uint8_t table[3][3], uint32_t val)
     {
         if ((table[0][i] == table[1][i]) & (table[0][i] == table[2][i]) & (table[0][i] == val))
         {
-//            printf("%d", table[0][i]);
-//            printf("%d", table[1][i]);
-//            printf("%d", table[2][i]);
             return 1;
         }
     }
@@ -76,9 +73,10 @@ uint32_t isWin(uint8_t table[3][3])
     }
 }
 
-// Check if table is a valid game
+// Check if table is a valid matchbox (for 304 version)
 _Bool isValid(uint8_t table[3][3])
 {
+    // Calculate the sum of x and o
     uint32_t sum_x = 0;
     uint32_t sum_o = 0;
     for (uint32_t i = 0; i < 3; i++)
@@ -95,41 +93,53 @@ _Bool isValid(uint8_t table[3][3])
             }
         }
     }
-    if ((abs(sum_x - sum_o) == 1) && (freePlaces(table)>=1))
+
+    // The matchbox is valid if
+    // 1) sum of x is equal to sum of 0
+    // 2) there is at least one empty field
+    // 3) sum of x/o is less or equal to 3
+    if ((sum_o == sum_x) && (freePlaces(table)>=1))
     {
-        if (isWin(table) == 0)
+        if(sum_x <= 3)
         {
-            return 1;
+            if (isWin(table) == 0)
+            {
+                return 1;
+            }
         }
     }
     return 0;
 }
 
+// Generate a new file with 304 matchboxes
 void generateNewGame(FILE * file)
 {
+    // The first empty configuration
+    uint32_t *matchboxes = malloc(304 * sizeof(uint32_t));
     uint8_t g[3][3] = {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}};
-    uint32_t *matchboxes = malloc(1000 * sizeof(uint32_t));
-    /*for (uint32_t i = 0; i < 1000; i++)
-    {
-        matchboxes[i] = malloc(3*sizeof(uint32_t*));
-        for (uint32_t j = 0; j<3; j++)
-        {
-            matchboxes[i][j] = malloc(3*sizeof(uint32_t));
-        }
-    }*/
     matchboxes[0] = tableTo3(g);
+    print_all_transformations_1d(g, file);
+
+    // Number of configurations which are already added
     uint32_t counter = 1;
 
-    print_all_transformations_1d(g, file);
+    // Flag of whether current config is a config of already existing matchboxes
     _Bool is_config;
+
+    // Flag to break the while if is configuration / indicate the end of array with matchboxes
     uint32_t while_counter;
+
+    // Index of array with matchboxes
     uint32_t i;
+
+    // Go through all the configurations
     while(next_configuration(g)==0)
     {
         if (isValid(g))
         {
             while_counter = counter;
             i = 0;
+
             // Check each stored matchbox for configuration
             while(while_counter!=0)
             {
@@ -145,14 +155,6 @@ void generateNewGame(FILE * file)
                     while_counter--;
                 }
             }
-            /*for (uint32_t i = 0; i < counter; i++)
-            {
-                if (isConfiguration(tableTo3(g), matchboxes[i]))
-                {
-                    is_config = 1;
-                    break;
-                }
-            }*/
 
             // If a new matchbox (is not a configuration)
             if (!is_config)
@@ -161,8 +163,8 @@ void generateNewGame(FILE * file)
                 counter++;
                 print_all_transformations_1d(g, file);
             }
-
         }
     }
 
+    free(matchboxes);
 }
