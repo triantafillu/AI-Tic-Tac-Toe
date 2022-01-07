@@ -114,11 +114,14 @@ _Bool isValid(uint8_t table[3][3])
 // Generate a new file with 304 matchboxes
 void generateNewGame(FILE * file)
 {
+    uint32_t config;
     // The first empty configuration
     uint32_t *matchboxes = malloc(304 * sizeof(uint32_t));
     uint8_t g[3][3] = {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}};
-    matchboxes[0] = tableTo3(g);
-    print_all_transformations_1d(g, file);
+    config = tableTo3(g);
+    matchboxes[0] = config;
+    fprintf(file, "%d,", config);
+    printConfigToBilles(file, g);
 
     // Number of configurations which are already added
     uint32_t counter = 1;
@@ -159,12 +162,48 @@ void generateNewGame(FILE * file)
             // If a new matchbox (is not a configuration)
             if (!is_config)
             {
-                matchboxes[counter] = tableTo3(g);
+                config = tableTo3(g);
+                matchboxes[counter] = config;
+                fprintf(file, "%d,", config);
+                printConfigToBilles(file, g);
                 counter++;
-                print_all_transformations_1d(g, file);
             }
         }
     }
 
     free(matchboxes);
+}
+
+
+void newGame()
+{
+    // Load file with matchboxes
+
+    // Print empty board
+
+    // While the game is on
+
+        // If user - machine
+
+            // If it' a turn of user
+
+                // Get the choice of user
+
+            // If it' a turn of machine
+
+                // Get a random bead
+
+        // If machine - machine
+
+            // Get a random bead
+
+        // Modify configuration
+
+        // If end of the game
+
+        // Break
+
+    // Modify matchboxes
+
+    // Write the result to file
 }

@@ -18,5 +18,6 @@ uint8_t** threeToTable(uint32_t three);
 const char* getCaseCSV(char* line, int num);
 matchbox ** readGameState(FILE* file);
 void writeGameState(FILE * file, matchbox **mb);
+void printConfigToBilles(FILE * file, uint8_t config[3][3]);
 
 #endif //PROJET_MATCHBOXES_H

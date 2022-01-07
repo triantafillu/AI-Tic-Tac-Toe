@@ -176,6 +176,38 @@ matchbox ** initializeMatchboxes()
     return mb;
 }
 
+void printConfigToBilles(FILE * file, uint8_t config[3][3])
+{
+    for (uint32_t i = 0; i < 3; i++)
+    {
+        for (uint32_t j = 0; j < 3; j++)
+        {
+            if (config[i][j] == 0)
+            {
+                if ((i == 2) && (j == 2))
+                {
+                    fprintf(file, "%d\n", 0);
+                }
+                else
+                {
+                    fprintf(file, "%d,", 0);
+                }
+            }
+            else
+            {
+                if ((i == 2) && (j == 2))
+                {
+                    fprintf(file, "%d\n", 1);
+                }
+                else
+                {
+                    fprintf(file, "%d,", 1);
+                }
+            }
+        }
+    }
+}
+
 
 // Intialize buffer to 0 (used in readGameState)
 void emptyBuffer(char *buf, uint32_t length)

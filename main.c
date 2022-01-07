@@ -74,7 +74,7 @@ int main() {
 
     uint32_t w = isWin(table);*/
 
-    FILE* in = fopen("C:\\Users\\alexa\\Desktop\\Uni\\Structures\\Projet\\sortie1.txt", "w");
+    FILE* in = fopen("C:\\Users\\alexa\\Desktop\\Uni\\Structures\\Projet\\new_game.txt", "w");
     /*FILE* out = fopen("C:\\Users\\alexa\\Desktop\\Uni\\Structures\\Projet\\gs_out.csv", "w");
     matchbox** mb = initializeMatchboxes();
     writeGameState(out, mb);

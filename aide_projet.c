@@ -177,9 +177,8 @@ _Bool isSameArray(uint8_t table1[3][3], uint8_t table2[3][3])
 _Bool isConfiguration(uint32_t t1, uint32_t t2)
 {
     uint8_t **table1 = threeToTable(t1);
-    uint8_t **table2 = threeToTable(t2);
+    uint32_t t3;
 
-    uint32_t t3 = t1;
     uint8_t copy[3][3];
     for (uint32_t i = 0; i<3; i++)
     {
@@ -251,70 +250,6 @@ _Bool isConfiguration(uint32_t t1, uint32_t t2)
             }
         }
     }
-
-
-//    appliquer_transformation_base(copy, ROT_90);
-//    if (isSameArray(copy, table2))
-//    {
-//        return 1;
-//    }
-//    else
-//    {
-//        appliquer_transformation_base(copy, ROT_90);
-//        if (isSameArray(copy, table2))
-//        {
-//            return 1;
-//        }
-//        else
-//        {
-//            appliquer_transformation_base(copy, ROT_90);
-//            if (isSameArray(copy, table2))
-//            {
-//                return 1;
-//            }
-//            else
-//            {
-//                appliquer_transformation_base(copy, ROT_90);
-//                if (isSameArray(copy, table2))
-//                {
-//                    return 1;
-//                }
-//                else
-//                {
-//                    appliquer_transformation_base(copy, MIROIR_VERT);
-//                    if (isSameArray(copy, table2))
-//                    {
-//                        return 1;
-//                    }
-//                    else
-//                    {
-//                        appliquer_transformation_base(copy, MIROIR_VERT);
-//                        if (isSameArray(copy, table2))
-//                        {
-//                            return 1;
-//                        }
-//                        else
-//                        {
-//                            appliquer_transformation_base(copy, MIROIR_VERT);
-//                            if (isSameArray(copy, table2))
-//                            {
-//                                return 1;
-//                            }
-//                            else
-//                            {
-//                                appliquer_transformation_base(copy, MIROIR_VERT);
-//                                if (isSameArray(copy, table2))
-//                                {
-//                                    return 1;
-//                                }
-//                            }
-//                        }
-//                    }
-//
-//                }
-//            }
-//        }
-//    }
 
     return 0;
 
