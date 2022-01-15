@@ -108,14 +108,14 @@ void appliquer_transformation_base_pointer(uint8_t **grille, transformation tr)
             break;
 
         case(ROT_180):
-            appliquer_transformation_base(grille, ROT_90);
-            appliquer_transformation_base(grille, ROT_90);
+            appliquer_transformation_base_pointer(grille, ROT_90);
+            appliquer_transformation_base_pointer(grille, ROT_90);
             break;
 
         case(ROT_270):
-            appliquer_transformation_base(grille, ROT_90);
-            appliquer_transformation_base(grille, ROT_90);
-            appliquer_transformation_base(grille, ROT_90);
+            appliquer_transformation_base_pointer(grille, ROT_90);
+            appliquer_transformation_base_pointer(grille, ROT_90);
+            appliquer_transformation_base_pointer(grille, ROT_90);
             break;
 
         case(MIROIR_VERT):
@@ -133,9 +133,9 @@ void appliquer_transformation_base_pointer(uint8_t **grille, transformation tr)
             break;
 
         case(MIROIR_HORIZ):
-            appliquer_transformation_base(grille, ROT_90);
-            appliquer_transformation_base(grille, MIROIR_VERT);
-            appliquer_transformation_base(grille, ROT_270);
+            appliquer_transformation_base_pointer(grille, ROT_90);
+            appliquer_transformation_base_pointer(grille, MIROIR_VERT);
+            appliquer_transformation_base_pointer(grille, ROT_270);
     }
 }
 

@@ -3,6 +3,7 @@
 #include <stdint.h>
 #include <assert.h>
 
+#include "matchboxes.h"
 #include "hashtable.h"
 #include "aide_projet.h"
 
@@ -263,15 +264,16 @@ uint32_t hashing(matchboxes *mb, uint32_t config)
 {
     uint32_t sum=0;
     uint32_t m;
+    uint32_t tmp = translate10(config)%100+freePlacesPointer(threeToTable(config));
 
-    while(config > 0)
+    while(tmp > 0)
     {
-        m = config % 10;
+        m = tmp % 10;
         sum = sum + m;
-        config = config / 10;
+        tmp = tmp / 10;
     }
 
-    return sum % mb->size;
+    return sum % 10;
 }
 
 void addHeadHash(matchboxes *mb, uint32_t config)
@@ -300,23 +302,39 @@ void freeHashTable(matchboxes *th)
     free(th);
 }
 
+maillon_mb *findMb(matchboxes *th, uint32_t config)
+{
+    maillon_mb *mb;
+    uint32_t p = hashing(th, config);
+    mb = th->tab[p]->head;
+
+    while(mb != NULL)
+    {
+        if (mb->config == config)
+        {
+            return mb;
+        }
+        mb = mb->next;
+    }
+    return NULL;
+}
 // -----------------------Operations------------------------------
-//uint32_t countBilles(list *l, enum billes b)
-//{
-//    maillon *p = l->head;
-//    uint32_t c = 0;
-//    uint32_t res = 0;
-//    while(p != NULL)
-//    {
-//        if (p->bille == b)
-//        {
-//            res++;
-//        }
-//        c++;
-//        p = p->next;
-//    }
-//    return res;
-//}
+uint32_t countBilles(list_billes *l, enum billes b)
+{
+    maillon_billes *p = l->head;
+    uint32_t c = 0;
+    uint32_t res = 0;
+    while(p != NULL)
+    {
+        if (p->bille == b)
+        {
+            res++;
+        }
+        c++;
+        p = p->next;
+    }
+    return res;
+}
 
 // Get the bille by index
 enum billes getBille(uint32_t ind)

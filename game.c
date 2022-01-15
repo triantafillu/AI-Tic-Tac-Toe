@@ -123,7 +123,11 @@ void generateNewGame(FILE * file)
     fprintf(file, "%d,", config);
     printConfigToBilles(file, g);
 
-    printf("%d\n", translate10(config)%304);
+    uint32_t tab[20];
+    for (int k = 0; k<20; k++)
+    {
+        tab[k]=0;
+    }
 
     // Number of configurations which are already added
     uint32_t counter = 1;
@@ -167,13 +171,38 @@ void generateNewGame(FILE * file)
                 config = tableTo3(g);
                 matchboxes[counter] = config;
                 fprintf(file, "%d,", config);
+
+                //---------------------------------------
+                uint32_t sum=0;
+                uint32_t m;
+                uint32_t tmp = translate10(config)%100+freePlacesPointer(threeToTable(config));
+
+                while(tmp > 0)
+                {
+                    m = tmp % 10;
+                    sum = sum + m;
+                    tmp = tmp / 10;
+                }
+
+                int r = sum%10;
+                tab[r-1]++;
+
+
+
+                //printf("%d\n", sum%10);
+
+                //----------------------------------------------------------
                 printConfigToBilles(file, g);
-                printf("%d\n", translate10(config)%304);
+                //printf("%d\n", translate10(config)%304);
                 counter++;
             }
         }
     }
 
+    for (int k = 0; k<20; k++)
+    {
+        printf("%d\n", tab[k]);
+    }
     free(matchboxes);
 }
 

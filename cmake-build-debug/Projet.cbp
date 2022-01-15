@@ -80,12 +80,6 @@
 		<Unit filename="C:/Users/alexa/Desktop/Uni/Structures/Projet/aide_projet.h">
 			<Option target="Projet"/>
 		</Unit>
-		<Unit filename="C:/Users/alexa/Desktop/Uni/Structures/Projet/arraylist.c">
-			<Option target="Projet"/>
-		</Unit>
-		<Unit filename="C:/Users/alexa/Desktop/Uni/Structures/Projet/arraylist.h">
-			<Option target="Projet"/>
-		</Unit>
 		<Unit filename="C:/Users/alexa/Desktop/Uni/Structures/Projet/game.c">
 			<Option target="Projet"/>
 		</Unit>
@@ -93,6 +87,9 @@
 			<Option target="Projet"/>
 		</Unit>
 		<Unit filename="C:/Users/alexa/Desktop/Uni/Structures/Projet/hashtable.c">
+			<Option target="Projet"/>
+		</Unit>
+		<Unit filename="C:/Users/alexa/Desktop/Uni/Structures/Projet/hashtable.h">
 			<Option target="Projet"/>
 		</Unit>
 		<Unit filename="C:/Users/alexa/Desktop/Uni/Structures/Projet/main.c">

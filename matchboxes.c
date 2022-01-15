@@ -5,7 +5,7 @@
 #include "aide_projet.h"
 #include "math.h"
 #include "matchboxes.h"
-#include "arraylist.h"
+#include "hashtable.h"
 #define CONTINUE 0
 
 /*
@@ -157,40 +157,63 @@ uint32_t freePlaces(uint8_t table[3][3])
     return res;
 }
 
-// Initialize matchboxes for the start of learning
-matchbox ** initializeMatchboxes()
+uint32_t freePlacesPointer(uint8_t **table)
 {
-    // Table of matchboxes
-    matchbox** mb= malloc(1000 * sizeof(matchbox));
-    uint32_t num_of_billes;
-    uint32_t c = 1;
-
-    // Empty board
-    uint8_t g[3][3] = {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}};
-    // Matchbox with 9 free beads
-    mb[0] = newMatchbox(000000000);
-    // Fill up the names of free beads
-    addBilles(mb[0]->free, g);
-
-    // Repeat for each configuration
-    while(next_configuration(g)==CONTINUE)
+    uint32_t res = 0;
+    for (uint32_t i = 0; i<3; i++)
     {
-        if (c>300)
+        for (uint32_t j = 0; j<3; j++)
         {
-            mb[c] = newMatchbox(tableTo3(g));
-            addBilles(mb[c]->free, g);
+            if (table[i][j] == 0)
+            {
+                res++;
+            }
         }
-        else
-        {
-            mb[c] = newMatchbox(tableTo3(g));
-            addBilles(mb[c]->free, g);
-        }//num_of_billes = freePlaces(g);
-
-        c++;
     }
-
-    return mb;
+    return res;
 }
+
+// Initialize matchboxes for the start of learning
+
+//matchboxes *initializeMatchboxes()
+//{
+//    //TODO: change the size of hash table according to the hashing function
+//    matchboxes *th = newMatchboxes(8);
+//
+//}
+//matchbox ** initializeMatchboxes()
+//{
+//    // Table of matchboxes
+//    matchbox** mb= malloc(1000 * sizeof(matchbox));
+//    uint32_t num_of_billes;
+//    uint32_t c = 1;
+//
+//    // Empty board
+//    uint8_t g[3][3] = {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}};
+//    // Matchbox with 9 free beads
+//    mb[0] = newMatchbox(000000000);
+//    // Fill up the names of free beads
+//    addBilles(mb[0]->free, g);
+//
+//    // Repeat for each configuration
+//    while(next_configuration(g)==CONTINUE)
+//    {
+//        if (c>300)
+//        {
+//            mb[c] = newMatchbox(tableTo3(g));
+//            addBilles(mb[c]->free, g);
+//        }
+//        else
+//        {
+//            mb[c] = newMatchbox(tableTo3(g));
+//            addBilles(mb[c]->free, g);
+//        }//num_of_billes = freePlaces(g);
+//
+//        c++;
+//    }
+//
+//    return mb;
+//}
 
 void printConfigToBilles(FILE * file, uint8_t config[3][3])
 {
@@ -237,7 +260,91 @@ void emptyBuffer(char *buf, uint32_t length)
 // Read the matchboxes from file
 // File structure:
 // config, yellow, red, green, blue, orange, purple, white, black, pink
-matchbox ** readGameState(FILE* file)
+
+matchboxes *readGameState(FILE* file)
+{
+    matchboxes *th = newMatchboxes(10);
+    maillon_mb *mb;
+
+    // Index of matchbox
+    uint32_t c = 0;
+    // Variable used to read next character
+    uint32_t tmp;
+    // Buffer index
+    uint32_t i;
+    // The character read from file
+    uint8_t r=0;
+    // Buffer to stock characters and transform them to int
+    uint8_t buffer[9];
+    // Number of beads of specific colour
+    uint32_t num_of_billes;
+    // Current case of csv file
+    uint32_t case_c;
+
+    // For each line in file
+    while (fscanf(file,"%c",&r) != EOF)
+    {
+        // First cell - configuration
+        i=0;
+        while( r != ',' )
+        {
+            buffer[i]=r;
+            i++;
+            tmp = fscanf(file,"%c",&r);
+
+        }
+        addHeadHash(th, atoi(buffer));
+        mb = findMb(th, atoi(buffer));
+        emptyBuffer(buffer, 9);
+
+        // For each cell after 2 (quantities of beads)
+        case_c = 2;
+        for (int j=0; j<9; j++)
+        {
+            i = 0;
+            // Read the next character after ","
+            tmp = fscanf(file,"%c",&r);
+
+            // Read till ",", if the last cell - read till "\n"
+            if (case_c != 10)
+            {
+                while( r != ',' )
+                {
+                    buffer[i]=r;
+                    i++;
+                    tmp = fscanf(file,"%c",&r);
+                }
+            }
+            else
+            {
+                while( r != '\n')
+                {
+                    buffer[i]=r;
+                    i++;
+
+                    // If the "\n" is EOF
+                    if (fscanf(file,"%c",&r) == EOF)
+                    {
+                        break;
+                    }
+                }
+            }
+            num_of_billes = atoi(buffer);
+            emptyBuffer(buffer, 9);
+
+            // Add beads of this colour
+            for(int k = 0; k < num_of_billes; k++)
+            {
+                addHeadMb(mb, getBille(case_c - 1)); // Beads correspond to cell in csv file - 1
+            }
+            case_c++;
+        }
+        c++;
+    }
+    return th;
+}
+
+/*matchbox ** readGameState(FILE* file)
 {
     // Table of matchboxes
     matchbox** mb= malloc(304 * sizeof(matchbox));
@@ -323,10 +430,48 @@ matchbox ** readGameState(FILE* file)
         c++;
     }
     return mb;
-}
+}*/
 
 // Write game state to the csv file
-void writeGameState(FILE * file, matchbox **mb)
+void writeGameState(FILE * file, matchboxes *mb)
+{
+    for (uint32_t i = 0; i < mb->size; i++)
+    {
+        maillon_mb *p = mb->tab[i]->head;
+
+        while(p!=NULL)
+        {
+            // Print configuration
+            fprintf(file, "%d,", p->config);
+
+            // For each bead colour: count beads, print the number
+            for (uint32_t j = 1; j<10; j++)
+            {
+                // If the last line and the last cell
+                if ((j == 9) & (i == 304))
+                {
+                    fprintf(file, "%d", countBilles(p->taken, getBille(j)));
+                }
+
+                // If the last cell
+                else if (j == 9)
+                {
+                    fprintf(file, "%d\n", countBilles(p->taken, getBille(j)));
+                }
+
+
+                else
+                {
+                    fprintf(file, "%d,", countBilles(p->taken, getBille(j)));
+                }
+            }
+
+            p = p->next;
+        }
+    }
+}
+
+/*void writeGameState(FILE * file, matchbox **mb)
 {
     for (uint32_t i = 0; i < 304; i++)
     {
@@ -342,7 +487,7 @@ void writeGameState(FILE * file, matchbox **mb)
                 fprintf(file, "%d", countBilles(mb[i]->free, getBille(j)));
             }
 
-            // If the last cell
+                // If the last cell
             else if (j == 9)
             {
                 fprintf(file, "%d\n", countBilles(mb[i]->free, getBille(j)));
@@ -355,8 +500,7 @@ void writeGameState(FILE * file, matchbox **mb)
             }
         }
     }
-}
-
+}*/
 
 
 

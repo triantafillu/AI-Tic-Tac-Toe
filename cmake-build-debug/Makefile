@@ -152,30 +152,6 @@ aide_projet.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projet.dir\build.make CMakeFiles/Projet.dir/aide_projet.c.s
 .PHONY : aide_projet.c.s
 
-arraylist.obj: arraylist.c.obj
-.PHONY : arraylist.obj
-
-# target to build an object file
-arraylist.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projet.dir\build.make CMakeFiles/Projet.dir/arraylist.c.obj
-.PHONY : arraylist.c.obj
-
-arraylist.i: arraylist.c.i
-.PHONY : arraylist.i
-
-# target to preprocess a source file
-arraylist.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projet.dir\build.make CMakeFiles/Projet.dir/arraylist.c.i
-.PHONY : arraylist.c.i
-
-arraylist.s: arraylist.c.s
-.PHONY : arraylist.s
-
-# target to generate assembly for a file
-arraylist.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projet.dir\build.make CMakeFiles/Projet.dir/arraylist.c.s
-.PHONY : arraylist.c.s
-
 game.obj: game.c.obj
 .PHONY : game.obj
 
@@ -284,9 +260,6 @@ help:
 	@echo ... aide_projet.obj
 	@echo ... aide_projet.i
 	@echo ... aide_projet.s
-	@echo ... arraylist.obj
-	@echo ... arraylist.i
-	@echo ... arraylist.s
 	@echo ... game.obj
 	@echo ... game.i
 	@echo ... game.s

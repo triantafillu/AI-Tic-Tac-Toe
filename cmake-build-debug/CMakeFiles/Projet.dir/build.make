@@ -91,22 +91,9 @@ CMakeFiles/Projet.dir/matchboxes.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Projet.dir/matchboxes.c.s"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\alexa\Desktop\Uni\Structures\Projet\matchboxes.c -o CMakeFiles\Projet.dir\matchboxes.c.s
 
-CMakeFiles/Projet.dir/arraylist.c.obj: CMakeFiles/Projet.dir/flags.make
-CMakeFiles/Projet.dir/arraylist.c.obj: ../arraylist.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\alexa\Desktop\Uni\Structures\Projet\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/Projet.dir/arraylist.c.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Projet.dir\arraylist.c.obj -c C:\Users\alexa\Desktop\Uni\Structures\Projet\arraylist.c
-
-CMakeFiles/Projet.dir/arraylist.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Projet.dir/arraylist.c.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\alexa\Desktop\Uni\Structures\Projet\arraylist.c > CMakeFiles\Projet.dir\arraylist.c.i
-
-CMakeFiles/Projet.dir/arraylist.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Projet.dir/arraylist.c.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\alexa\Desktop\Uni\Structures\Projet\arraylist.c -o CMakeFiles\Projet.dir\arraylist.c.s
-
 CMakeFiles/Projet.dir/aide_projet.c.obj: CMakeFiles/Projet.dir/flags.make
 CMakeFiles/Projet.dir/aide_projet.c.obj: ../aide_projet.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\alexa\Desktop\Uni\Structures\Projet\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/Projet.dir/aide_projet.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\alexa\Desktop\Uni\Structures\Projet\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/Projet.dir/aide_projet.c.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Projet.dir\aide_projet.c.obj -c C:\Users\alexa\Desktop\Uni\Structures\Projet\aide_projet.c
 
 CMakeFiles/Projet.dir/aide_projet.c.i: cmake_force
@@ -119,7 +106,7 @@ CMakeFiles/Projet.dir/aide_projet.c.s: cmake_force
 
 CMakeFiles/Projet.dir/game.c.obj: CMakeFiles/Projet.dir/flags.make
 CMakeFiles/Projet.dir/game.c.obj: ../game.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\alexa\Desktop\Uni\Structures\Projet\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/Projet.dir/game.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\alexa\Desktop\Uni\Structures\Projet\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/Projet.dir/game.c.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Projet.dir\game.c.obj -c C:\Users\alexa\Desktop\Uni\Structures\Projet\game.c
 
 CMakeFiles/Projet.dir/game.c.i: cmake_force
@@ -132,7 +119,7 @@ CMakeFiles/Projet.dir/game.c.s: cmake_force
 
 CMakeFiles/Projet.dir/hashtable.c.obj: CMakeFiles/Projet.dir/flags.make
 CMakeFiles/Projet.dir/hashtable.c.obj: ../hashtable.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\alexa\Desktop\Uni\Structures\Projet\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/Projet.dir/hashtable.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\alexa\Desktop\Uni\Structures\Projet\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/Projet.dir/hashtable.c.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Projet.dir\hashtable.c.obj -c C:\Users\alexa\Desktop\Uni\Structures\Projet\hashtable.c
 
 CMakeFiles/Projet.dir/hashtable.c.i: cmake_force
@@ -147,7 +134,6 @@ CMakeFiles/Projet.dir/hashtable.c.s: cmake_force
 Projet_OBJECTS = \
 "CMakeFiles/Projet.dir/main.c.obj" \
 "CMakeFiles/Projet.dir/matchboxes.c.obj" \
-"CMakeFiles/Projet.dir/arraylist.c.obj" \
 "CMakeFiles/Projet.dir/aide_projet.c.obj" \
 "CMakeFiles/Projet.dir/game.c.obj" \
 "CMakeFiles/Projet.dir/hashtable.c.obj"
@@ -157,7 +143,6 @@ Projet_EXTERNAL_OBJECTS =
 
 Projet.exe: CMakeFiles/Projet.dir/main.c.obj
 Projet.exe: CMakeFiles/Projet.dir/matchboxes.c.obj
-Projet.exe: CMakeFiles/Projet.dir/arraylist.c.obj
 Projet.exe: CMakeFiles/Projet.dir/aide_projet.c.obj
 Projet.exe: CMakeFiles/Projet.dir/game.c.obj
 Projet.exe: CMakeFiles/Projet.dir/hashtable.c.obj
@@ -165,7 +150,7 @@ Projet.exe: CMakeFiles/Projet.dir/build.make
 Projet.exe: CMakeFiles/Projet.dir/linklibs.rsp
 Projet.exe: CMakeFiles/Projet.dir/objects1.rsp
 Projet.exe: CMakeFiles/Projet.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\alexa\Desktop\Uni\Structures\Projet\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C executable Projet.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\alexa\Desktop\Uni\Structures\Projet\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable Projet.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Projet.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
