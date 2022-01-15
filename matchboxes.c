@@ -32,6 +32,22 @@ uint32_t tableTo3(uint8_t table[3][3])
     return res;
 }
 
+uint32_t tableTo3Pointer(uint8_t **table)
+{
+    uint32_t res = 0;
+    uint32_t mult = 100000000;
+    for (uint32_t i = 0; i < 3; i++)
+    {
+        for (uint32_t j = 0; j < 3; j++)
+        {
+            res += table[i][j] * mult;
+            mult /= 10;
+        }
+    }
+
+    return res;
+}
+
 
 uint8_t** threeToTable(uint32_t three)
 {

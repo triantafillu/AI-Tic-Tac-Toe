@@ -82,8 +82,7 @@ int main() {
 
     // 210122020*/
 
-
-//    uint8_t g[3][3] = {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}};
+    uint8_t g[3][3] = {{1, 2, 1}, {0, 0, 2}, {2, 0, 1}};
 //
 //    print_all_transformations_1d(g, in);
 //    while(next_configuration(g)==0)
@@ -95,5 +94,7 @@ int main() {
 //    }
 
     generateNewGame(in);
+
+    //print_all_transformations_1d(g, in);
     return 0;
 }

@@ -200,6 +200,30 @@ game.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projet.dir\build.make CMakeFiles/Projet.dir/game.c.s
 .PHONY : game.c.s
 
+hashtable.obj: hashtable.c.obj
+.PHONY : hashtable.obj
+
+# target to build an object file
+hashtable.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projet.dir\build.make CMakeFiles/Projet.dir/hashtable.c.obj
+.PHONY : hashtable.c.obj
+
+hashtable.i: hashtable.c.i
+.PHONY : hashtable.i
+
+# target to preprocess a source file
+hashtable.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projet.dir\build.make CMakeFiles/Projet.dir/hashtable.c.i
+.PHONY : hashtable.c.i
+
+hashtable.s: hashtable.c.s
+.PHONY : hashtable.s
+
+# target to generate assembly for a file
+hashtable.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projet.dir\build.make CMakeFiles/Projet.dir/hashtable.c.s
+.PHONY : hashtable.c.s
+
 main.obj: main.c.obj
 .PHONY : main.obj
 
@@ -266,6 +290,9 @@ help:
 	@echo ... game.obj
 	@echo ... game.i
 	@echo ... game.s
+	@echo ... hashtable.obj
+	@echo ... hashtable.i
+	@echo ... hashtable.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

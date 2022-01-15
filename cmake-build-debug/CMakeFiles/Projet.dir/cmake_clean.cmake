@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Projet.dir/aide_projet.c.obj"
   "CMakeFiles/Projet.dir/arraylist.c.obj"
   "CMakeFiles/Projet.dir/game.c.obj"
+  "CMakeFiles/Projet.dir/hashtable.c.obj"
   "CMakeFiles/Projet.dir/main.c.obj"
   "CMakeFiles/Projet.dir/matchboxes.c.obj"
   "Projet.exe"

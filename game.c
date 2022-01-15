@@ -123,6 +123,8 @@ void generateNewGame(FILE * file)
     fprintf(file, "%d,", config);
     printConfigToBilles(file, g);
 
+    printf("%d\n", translate10(config)%304);
+
     // Number of configurations which are already added
     uint32_t counter = 1;
 
@@ -166,6 +168,7 @@ void generateNewGame(FILE * file)
                 matchboxes[counter] = config;
                 fprintf(file, "%d,", config);
                 printConfigToBilles(file, g);
+                printf("%d\n", translate10(config)%304);
                 counter++;
             }
         }

@@ -85,6 +85,60 @@ void appliquer_transformation_base(uint8_t grille[3][3], transformation tr)
     }
 }
 
+void appliquer_transformation_base_pointer(uint8_t **grille, transformation tr)
+{
+    uint8_t t;
+    switch(tr)
+    {
+        case(ID):
+            break;
+
+        case(ROT_90):
+            t = grille[0][0];
+            grille[0][0] = grille[2][0];
+            grille[2][0]=grille[2][2];
+            grille[2][2]=grille[0][2];
+            grille[0][2]=t;
+
+            t = grille[0][1];
+            grille[0][1] = grille[1][0];
+            grille[1][0]=grille[2][1];
+            grille[2][1]=grille[1][2];
+            grille[1][2]=t;
+            break;
+
+        case(ROT_180):
+            appliquer_transformation_base(grille, ROT_90);
+            appliquer_transformation_base(grille, ROT_90);
+            break;
+
+        case(ROT_270):
+            appliquer_transformation_base(grille, ROT_90);
+            appliquer_transformation_base(grille, ROT_90);
+            appliquer_transformation_base(grille, ROT_90);
+            break;
+
+        case(MIROIR_VERT):
+            t = grille[0][0];
+            grille[0][0] = grille[0][2];
+            grille[0][2] = t;
+
+            t = grille[1][0];
+            grille[1][0] = grille[1][2];
+            grille[1][2] = t;
+
+            t = grille[2][0];
+            grille[2][0] = grille[2][2];
+            grille[2][2] = t;
+            break;
+
+        case(MIROIR_HORIZ):
+            appliquer_transformation_base(grille, ROT_90);
+            appliquer_transformation_base(grille, MIROIR_VERT);
+            appliquer_transformation_base(grille, ROT_270);
+    }
+}
+
 void print_grille_2d(uint8_t grille[3][3], FILE *f)
 {
     fprintf(f, "|%c|%c|%c|\n", print_value(grille[0][0]), print_value(grille[0][1]), print_value(grille[0][2]));
@@ -99,41 +153,79 @@ void print_grille_1d(uint8_t grille[3][3], FILE *f)
 
 void print_all_transformations_1d(uint8_t g[3][3], FILE *f)
 {
-    print_grille_1d(g,f);
-    fprintf(f, "|");
+//    print_grille_1d(g,f);
+//    fprintf(f, "|");
+    uint32_t n = tableTo3(g);
+    printf("%d, ", n);
+    printf("%d\n", translate10(n));
 
     appliquer_transformation_base(g, ROT_90);
-    print_grille_1d(g,f);
-    fprintf(f, "|");
+    n = tableTo3(g);
+    printf("%d, ", n);
+    printf("%d\n", translate10(n));
+//    print_grille_1d(g,f);
+//    fprintf(f, "|");
 
     appliquer_transformation_base(g, ROT_90);
-    print_grille_1d(g,f);
-    fprintf(f, "|");
+//    print_grille_1d(g,f);
+//    fprintf(f, "|");
 
     appliquer_transformation_base(g, ROT_90);
-    print_grille_1d(g,f);
-    fprintf(f, "|");
+    n = tableTo3(g);
+    printf("%d, ", n);
+    printf("%d\n", translate10(n));
+//    print_grille_1d(g,f);
+//    fprintf(f, "|");
 
     appliquer_transformation_base(g, ROT_90);
     appliquer_transformation_base(g, MIROIR_VERT);
-    print_grille_1d(g,f);
-    fprintf(f, "|");
+    n = tableTo3(g);
+    printf("%d, ", n);
+    printf("%d\n", translate10(n));
+//    print_grille_1d(g,f);
+//    fprintf(f, "|");
 
     appliquer_transformation_base(g, ROT_90);
-    print_grille_1d(g,f);
-    fprintf(f, "|");
+    n = tableTo3(g);
+    printf("%d, ", n);
+    printf("%d\n", translate10(n));
+//    print_grille_1d(g,f);
+//    fprintf(f, "|");
 
     appliquer_transformation_base(g, ROT_90);
-    print_grille_1d(g,f);
-    fprintf(f, "|");
+    n = tableTo3(g);
+    printf("%d, ", n);
+    printf("%d\n", translate10(n));
+//    print_grille_1d(g,f);
+//    fprintf(f, "|");
 
     appliquer_transformation_base(g, ROT_90);
-    print_grille_1d(g,f);
+    n = tableTo3(g);
+    printf("%d, ", n);
+    printf("%d\n", translate10(n));
+//    print_grille_1d(g,f);
 
     //On fait une derniere transformation pour remettre la grille dans son état initial
     appliquer_transformation_base(g, ROT_90);
     appliquer_transformation_base(g, MIROIR_VERT);
     fprintf(f, "\n");
+}
+
+// Store all the configurations of board in the tab[7]
+void getConfigurations(uint32_t config, uint32_t tab[7])
+{
+    uint8_t **g;
+    g = threeToTable(config);
+
+    for(uint32_t i = 0; i < 7; i++)
+    {
+        appliquer_transformation_base_pointer(g, ROT_90);
+        if ( i == 3)
+        {
+            appliquer_transformation_base_pointer(g, MIROIR_VERT);
+        }
+        tab[i] = tableTo3Pointer(g);
+    }
 }
 
 uint8_t next_configuration(uint8_t grille[3][3])
