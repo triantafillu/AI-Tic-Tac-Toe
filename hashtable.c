@@ -230,7 +230,7 @@ void addHeadMbHash(list_mb *l, uint32_t config)
     }
     l->size += 1;
 }
-
+//Nouvelle liste d'allumettes 
 list_mb *newListMB()
 {
     list_mb *r = malloc(sizeof (list_mb));
@@ -261,7 +261,9 @@ matchboxes* newMatchboxes(uint32_t size)
     mb->size = size;
     return mb;
 }
-
+//Fcontion de hachage 
+//On fait la somme de toutes les configuration correspondantes à la configuration config 
+//puis on somme les chiffres de ces derniers dans la variable sum2
 uint32_t hashing(matchboxes *mb, uint32_t config)
 {
     // Sum of 7 configurations

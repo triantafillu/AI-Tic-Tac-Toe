@@ -44,6 +44,11 @@ typedef struct
 } list_tab_maillons;
 
 // Maillon de matchbox
+//Une boite d'allumettes est une arraylist 
+//free->est vide au début on y ajoute les billes quand on joue 
+//takes sont les billes qui sont disponible pour jouer 
+//config-> nb en base 3 qui définit la configuration de la boite d'allumettes 
+//modifications-> tableau des nombres en base 3 des configurations possible de la boite d'allumettes 
 typedef struct _maillon_mb
 {
     uint32_t config;
@@ -56,14 +61,16 @@ typedef struct _maillon_mb
 
     struct _maillon_mb *next;
 }maillon_mb;
-
+//Liste de boites d'allumettes 
+//Servira dans le tableau de hachage 
 typedef struct
 {
     uint32_t size;
     maillon_mb *head;
     maillon_mb *tail;
 } list_mb;
-
+//Tableau de hachage 
+//Servira à stocker les différentes boites d'allumettes selon leur hachecode 
 typedef struct
 {
     list_mb **tab;
