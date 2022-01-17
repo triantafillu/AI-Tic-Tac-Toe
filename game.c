@@ -18,7 +18,19 @@ _Bool isColumn(uint8_t table[3][3], uint32_t val)
 {
     for (uint32_t i = 0; i < 3; i++)
     {
-        if ((table[0][i] == table[1][i]) & (table[0][i] == table[2][i]) & (table[0][i] == val))
+        if ((table[0][i] == table[1][i]) && (table[0][i] == table[2][i]) && (table[0][i] == val))
+        {
+            return 1;
+        }
+    }
+
+    return 0;
+}
+_Bool isColumnPointer(uint8_t **table, uint32_t val)
+{
+    for (uint32_t i = 0; i < 3; i++)
+    {
+        if ((table[0][i] == table[1][i]) && (table[0][i] == table[2][i]) && (table[0][i] == val))
         {
             return 1;
         }
@@ -32,7 +44,20 @@ _Bool isRow(uint8_t table[3][3], uint32_t val)
 {
     for (uint32_t i = 0; i < 3; i++)
     {
-        if ((table[i][0] == table[i][1]) & (table[i][0] == table[i][2]) & (table[i][0] == val))
+        if ((table[i][0] == table[i][1]) && (table[i][0] == table[i][2]) && (table[i][0] == val))
+        {
+            return 1;
+        }
+    }
+
+    return 0;
+}
+
+_Bool isRowPointer(uint8_t **table, uint32_t val)
+{
+    for (uint32_t i = 0; i < 3; i++)
+    {
+        if ((table[i][0] == table[i][1]) && (table[i][0] == table[i][2]) && (table[i][0] == val))
         {
             return 1;
         }
@@ -44,11 +69,25 @@ _Bool isRow(uint8_t table[3][3], uint32_t val)
 // Returns 1 if 3 in a diagonal of value "val"
 _Bool isDiagonal(uint8_t table[3][3], uint32_t val)
 {
-    if ((table[0][0] == table[1][1]) & (table[0][0] == table[2][2]) & (table[0][0] == val))
+    if ((table[0][0] == table[1][1]) && (table[0][0] == table[2][2]) && (table[0][0] == val))
     {
         return 1;
     }
-    else if ((table[0][2] == table[1][1]) & (table[0][2] == table[2][0]) & (table[0][2] == val))
+    else if ((table[0][2] == table[1][1]) && (table[0][2] == table[2][0]) && (table[0][2] == val))
+    {
+        return 1;
+    }
+
+    return 0;
+}
+
+_Bool isDiagonalPointer(uint8_t **table, uint32_t val)
+{
+    if ((table[0][0] == table[1][1]) && (table[0][0] == table[2][2]) && (table[0][0] == val))
+    {
+        return 1;
+    }
+    else if ((table[0][2] == table[1][1]) && (table[0][2] == table[2][0]) && (table[0][2] == val))
     {
         return 1;
     }
@@ -61,11 +100,11 @@ _Bool isDiagonal(uint8_t table[3][3], uint32_t val)
 // 0 - draw
 uint32_t isWin(uint8_t table[3][3])
 {
-    if (isColumn(table, 1) | isRow(table,1) | isDiagonal(table, 1))
+    if (isColumn(table, 1) || isRow(table,1) || isDiagonal(table, 1))
     {
         return 1;
     }
-    if (isColumn(table, 2) | isRow(table,2) | isDiagonal(table, 2))
+    if (isColumn(table, 2) || isRow(table,2) || isDiagonal(table, 2))
     {
         return 2;
     }
@@ -77,11 +116,11 @@ uint32_t isWin(uint8_t table[3][3])
 
 uint32_t isWinPointer(uint8_t **table)
 {
-    if (isColumn(table, 1) | isRow(table,1) | isDiagonal(table, 1))
+    if (isColumnPointer(table, 1) || isRowPointer(table,1) || isDiagonalPointer(table, 1))
     {
         return 1;
     }
-    if (isColumn(table, 2) | isRow(table,2) | isDiagonal(table, 2))
+    if (isColumnPointer(table, 2) || isRowPointer(table,2) || isDiagonalPointer(table, 2))
     {
         return 2;
     }
@@ -296,7 +335,7 @@ uint32_t choiceToConfig(uint32_t choice, uint32_t player)
     return res;
 }
 
-uint32_t getBillesTransormation(maillon_mb *mb, uint32_t config, uint32_t choice, uint32_t player)
+uint32_t getBillesTransormation(maillon_mb *mb, uint32_t config, uint32_t choice)
 {
     uint8_t billes_indexes[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
     uint8_t base[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
@@ -334,7 +373,7 @@ uint32_t getBillesTransormation(maillon_mb *mb, uint32_t config, uint32_t choice
         }
     }
 
-    return choiceToConfig(choice, player);
+    return choice;
 }
 
 // Change the board according to user's choice
@@ -416,11 +455,14 @@ void printBoard(uint32_t config)
 
     // Fill in x and o
     uint32_t tmp;
-    for (i = 0; i < 3; i++)
+    uint32_t power = 100000000;
+
+    for (i = 0; i <3; i++)
     {
-        for (j = 1; j < 7; j = j+2)
+        for (j = 1; j < 7; j = j + 2)
         {
-            tmp = config % 10;
+            tmp = config / power;
+
             if (tmp == 2)
             {
                 grille[i][j] = 'x';
@@ -433,7 +475,11 @@ void printBoard(uint32_t config)
             {
                 grille[i][j] = ' ';
             }
-            config = config / 10;
+
+            if(tmp!=0)
+                config=config-tmp*power;
+            if(power!=1)
+                power/=10;
         }
     }
 
@@ -478,6 +524,7 @@ void modifyMbLoss(maillon_mb *mb, enum billes b)
 // mode: 1 - user/machine; 2 - machine/machine
 void newGame(FILE *file, uint32_t mode)
 {
+    setbuf(stdout, 0);
     // Load file with matchboxes
     matchboxes *th = readGameState(file);
 
@@ -498,17 +545,22 @@ void newGame(FILE *file, uint32_t mode)
     {
         // turn: 1 - machine; 2 - user
         // Machine always plays first
-        uint32_t turn = 1;
+        uint32_t turn = 2;
 
         // While the game is on
         while(1)
         {
             // If it' a turn of machine
-            if (turn == 1)
+            if (turn == 2)
             {
                 // Get a random bead
-                curr_bille = randomBille(curr_state);
-                choice = getBilleIndex(curr_bille);
+                do
+                {
+                    curr_bille = randomBille(curr_state);
+                    choice = getBilleIndex(curr_bille);
+                }
+                while(!checkFreePosition(curr_config, choice));
+
 
                 // Update the list of used maillons and billes
                 mb_tab[used_counter] = *curr_state;
@@ -516,24 +568,37 @@ void newGame(FILE *file, uint32_t mode)
                 used_counter++;
 
                 // Change the state of board
-                curr_config = changeBoard(curr_config, turn, choice);
+                if (curr_config != curr_state->config)
+                {
+                    curr_config = changeBoard(curr_config, turn, getBillesTransormation(curr_state, curr_config, choice));
+                }
+                else
+                {
+                    curr_config = changeBoard(curr_config, turn, choice);
+                }
 
                 // Change the turn to player
-                turn = 2;
+                turn = 1;
+
+                printf("Machine's move:\n");
             }
 
             // If it' a turn of user
             else
             {
                 // Get the choice of user
-                printf("Choose the next move (1-9):\n");
-                scanf("%d", &choice);
+                do
+                {
+                    printf("Choose the next move (1-9):\n");
+                    scanf("%d", &choice);
+                } while (!checkFreePosition(curr_config, choice));
+
 
                 // Change the state of board
                 curr_config = changeBoard(curr_config, turn, choice);
 
                 // Change the turn to machine
-                turn = 1;
+                turn = 2;
             }
 
             // Print the current state of board
@@ -578,94 +643,110 @@ void newGame(FILE *file, uint32_t mode)
                 }
 
                 // Change the matchbox
-                else if(turn == 1)
+                else if(turn == 2)
                 {
                     curr_state = findMb(th, curr_config);
-                }
-            }
-        }
-    }
 
-    // If machine - machine
-    else if (mode == 2)
-    {
-        uint32_t turn = 1;
-
-        // While the game is on
-        while(1)
-        {
-            // If it' a turn of machine (tracked)
-            if (turn == 1) {
-                // Get a random bead
-                curr_bille = randomBille(curr_state);
-                choice = getBilleIndex(curr_bille);
-
-                // Update the list of used maillons and billes
-                mb_tab[used_counter] = *curr_state;
-                billes_tab[used_counter] = curr_bille;
-                used_counter++;
-
-                // Change the state of board
-                curr_config = changeBoard(curr_config, turn, choice);
-
-                // Change the turn to player
-                turn = 2;
-            }
-
-                // If it' a turn of user
-            else {
-                // Get the choice of user
-                printf("Choose the next move (1-9):\n");
-                scanf("%d", &choice);
-
-                // Change the state of board
-                curr_config = changeBoard(curr_config, turn, choice);
-
-                // Change the turn to machine
-                turn = 1;
-            }
-
-            // Print the current state of board
-            printBoard(curr_config);
-
-            // If the machine won
-            if (isWinPointer(threeToTable(curr_config)) == 1) {
-                printf("The machine won!\n");
-
-                for (uint32_t i = 0; i < 9; i++) {
-                    modifyMbVictory(&mb_tab[i], billes_tab[i]);
-                }
-                break;
-            }
-
-                // If the player won
-            else if (isWinPointer(threeToTable(curr_config)) == 2) {
-                printf("The player won!\n");
-
-                for (uint32_t i = 0; i < 9; i++) {
-                    modifyMbLoss(&mb_tab[i], billes_tab[i]);
-                }
-                break;
-            } else {
-                // There's no more places - draw
-                if (freePlacesPointer(threeToTable(curr_config)) == 0) {
-                    printf("Draw!\n");
-
-                    for (uint32_t i = 0; i < 9; i++) {
-                        modifyMbDraw(&mb_tab[i], billes_tab[i]);
+                    if (curr_state == NULL)
+                    {
+                        curr_state = findBaseConfiguration(th, curr_config);
                     }
-                    break;
-                }
-
-                    // Change the matchbox
-                else if (turn == 1) {
-                    curr_state = findMb(th, curr_config);
                 }
             }
-
         }
-
     }
+
+
+
+
+
+
+
+
+
+
+//    // If machine - machine
+//    else if (mode == 2)
+//    {
+//        uint32_t turn = 1;
+//
+//        // While the game is on
+//        while(1)
+//        {
+//            // If it' a turn of machine (tracked)
+//            if (turn == 1)
+//            {
+//                // Get a random bead
+//                curr_bille = randomBille(curr_state);
+//                choice = getBilleIndex(curr_bille);
+//
+//                // Update the list of used maillons and billes
+//                mb_tab[used_counter] = *curr_state;
+//                billes_tab[used_counter] = curr_bille;
+//                used_counter++;
+//
+//                // Change the state of board
+//                curr_config = changeBoard(curr_config, turn, choice);
+//
+//                // Change the turn to player
+//                turn = 2;
+//            }
+//
+//            // If it' a turn of user
+//            else
+//            {
+//                // Get the choice of user
+//                printf("Choose the next move (1-9):\n");
+//                scanf("%d", &choice);
+//
+//                // Change the state of board
+//                curr_config = changeBoard(curr_config, turn, choice);
+//
+//                // Change the turn to machine
+//                turn = 1;
+//            }
+//
+//            // Print the current state of board
+//            printBoard(curr_config);
+//
+//            // If the machine won
+//            if (isWinPointer(threeToTable(curr_config)) == 1) {
+//                printf("The machine won!\n");
+//
+//                for (uint32_t i = 0; i < 9; i++) {
+//                    modifyMbVictory(&mb_tab[i], billes_tab[i]);
+//                }
+//                break;
+//            }
+//
+//                // If the player won
+//            else if (isWinPointer(threeToTable(curr_config)) == 2) {
+//                printf("The player won!\n");
+//
+//                for (uint32_t i = 0; i < 9; i++) {
+//                    modifyMbLoss(&mb_tab[i], billes_tab[i]);
+//                }
+//                break;
+//            } else {
+//                // There's no more places - draw
+//                if (freePlacesPointer(threeToTable(curr_config)) == 0) {
+//                    printf("Draw!\n");
+//
+//                    for (uint32_t i = 0; i < 9; i++) {
+//                        modifyMbDraw(&mb_tab[i], billes_tab[i]);
+//                    }
+//                    break;
+//                }
+//
+//                    // Change the matchbox
+//                else if (turn == 1) {
+//                    curr_state = findMb(th, curr_config);
+//                }
+//            }
+//
+//        }
+//
+//    }
 
 
 

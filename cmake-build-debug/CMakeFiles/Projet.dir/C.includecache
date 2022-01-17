@@ -8,6 +8,26 @@
 
 C:/Users/alexa/Desktop/Uni/Structures/Projet/aide_projet.h
 
+C:/Users/alexa/Desktop/Uni/Structures/Projet/game.c
+stdio.h
+-
+stdlib.h
+-
+stdint.h
+-
+string.h
+-
+time.h
+C:/Users/alexa/Desktop/Uni/Structures/Projet/time.h
+matchboxes.h
+C:/Users/alexa/Desktop/Uni/Structures/Projet/matchboxes.h
+game.h
+C:/Users/alexa/Desktop/Uni/Structures/Projet/game.h
+
+C:/Users/alexa/Desktop/Uni/Structures/Projet/game.h
+matchboxes.h
+C:/Users/alexa/Desktop/Uni/Structures/Projet/matchboxes.h
+
 C:/Users/alexa/Desktop/Uni/Structures/Projet/hashtable.h
 stdio.h
 -
@@ -19,24 +39,6 @@ assert.h
 -
 aide_projet.h
 C:/Users/alexa/Desktop/Uni/Structures/Projet/aide_projet.h
-
-C:/Users/alexa/Desktop/Uni/Structures/Projet/matchboxes.c
-stdio.h
--
-stdlib.h
--
-stdint.h
--
-string.h
--
-aide_projet.h
-C:/Users/alexa/Desktop/Uni/Structures/Projet/aide_projet.h
-math.h
-C:/Users/alexa/Desktop/Uni/Structures/Projet/math.h
-matchboxes.h
-C:/Users/alexa/Desktop/Uni/Structures/Projet/matchboxes.h
-hashtable.h
-C:/Users/alexa/Desktop/Uni/Structures/Projet/hashtable.h
 
 C:/Users/alexa/Desktop/Uni/Structures/Projet/matchboxes.h
 hashtable.h
