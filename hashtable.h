@@ -57,7 +57,7 @@ typedef struct _maillon_mb
     list_billes *taken;
     list_tab_maillons *ltm;
 
-    uint32_t modifications[7];
+    uint32_t modifications[8];
 
     struct _maillon_mb *next;
 }maillon_mb;

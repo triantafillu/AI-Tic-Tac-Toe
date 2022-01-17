@@ -163,7 +163,7 @@ maillon_mb *newMaillonMb(uint32_t config)
     m->ltm = newListTabMaillon();
 
     enlargeFree(m, 9);
-    tableToBilles(m);
+    //tableToBilles(m);
 
     return m;
 }
@@ -272,9 +272,9 @@ uint32_t hashing(matchboxes *mb, uint32_t config)
     // Sum of digits of sum1
     uint32_t sum2=0;
 
-    uint32_t conf[7];
+    uint32_t conf[8];
     getConfigurations(config, conf);
-    for (uint32_t p = 0; p < 7; p++)
+    for (uint32_t p = 0; p < 8; p++)
     {
         sum1+=conf[p];
     }
@@ -348,7 +348,7 @@ maillon_mb *findBaseConfiguration(matchboxes *th, uint32_t config)
 
     while(mb != NULL)
     {
-        for (uint32_t i = 0; i < 7; i++)
+        for (uint32_t i = 0; i < 8; i++)
         {
             if (mb->modifications[i] == config)
             {

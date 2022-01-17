@@ -215,15 +215,15 @@ void print_all_transformations_1d(uint8_t g[3][3], FILE *f)
 }
 
 // Store all the configurations of board in the tab[7]
-void getConfigurations(uint32_t config, uint32_t tab[7])
+void getConfigurations(uint32_t config, uint32_t tab[8])
 {
     uint8_t **g;
     g = threeToTable(config);
 
-    for(uint32_t i = 0; i < 7; i++)
+    for(uint32_t i = 0; i < 8; i++)
     {
         appliquer_transformation_base_pointer(g, ROT_90);
-        if ( i == 3)
+        if ( i == 3 || i == 7)
         {
             appliquer_transformation_base_pointer(g, MIROIR_VERT);
         }
