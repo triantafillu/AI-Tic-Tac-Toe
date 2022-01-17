@@ -11,7 +11,7 @@ uint32_t tableTo3(uint8_t table[3][3]);
 uint32_t translate10 (uint32_t table);
 uint32_t translate3(uint32_t number);
 enum billes getBille(uint32_t ind);
-enum billes *tableToBilles(uint8_t table[3][3], uint32_t size);
+void tableToBilles(maillon_mb *mb);
 uint32_t freePlaces(uint8_t table[3][3]);
 uint32_t freePlacesPointer(uint8_t **table);
 //matchbox ** initializeMatchboxes();

@@ -122,22 +122,22 @@ uint32_t translate3(uint32_t number)
 
 
 // Get a list of free billes for the configuration
-enum billes *tableToBilles(uint8_t table[3][3], uint32_t size)
+void tableToBilles(maillon_mb *mb)
 {
-    enum billes *b = malloc(size * sizeof (enum billes));
+    uint8_t base[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
     uint32_t counter = 0;
     for (uint32_t i = 0; i<3; i++)
     {
         for (uint32_t j = 0; j<3; j++)
         {
-            if (table[i][j] != 0)
+            if (threeToTable(mb->config)[i][j] == 0)
             {
-                b[counter] = getBille(i+j+1);
+                addHeadMb(mb, getBille(base[i][j]));
                 counter++;
             }
         }
     }
-    return b;
+
 }
 
 // Get a number of emply places on the board
@@ -156,6 +156,7 @@ uint32_t freePlaces(uint8_t table[3][3])
     }
     return res;
 }
+
 
 uint32_t freePlacesPointer(uint8_t **table)
 {
@@ -501,6 +502,7 @@ void writeGameState(FILE * file, matchboxes *mb)
         }
     }
 }*/
+
 
 
 

@@ -163,6 +163,8 @@ maillon_mb *newMaillonMb(uint32_t config)
     m->ltm = newListTabMaillon();
 
     enlargeFree(m, 9);
+    tableToBilles(m);
+
     return m;
 }
 
@@ -262,18 +264,35 @@ matchboxes* newMatchboxes(uint32_t size)
 
 uint32_t hashing(matchboxes *mb, uint32_t config)
 {
-    uint32_t sum=0;
+    // Sum of 7 configurations
+    uint32_t sum1=0;
+
+    // Sum of digits of sum1
+    uint32_t sum2=0;
+
+    uint32_t conf[7];
+    getConfigurations(config, conf);
+    for (uint32_t p = 0; p < 7; p++)
+    {
+        sum1+=conf[p];
+    }
+
+    uint32_t tmp = sum1;
     uint32_t m;
-    uint32_t tmp = translate10(config)%100+freePlacesPointer(threeToTable(config));
 
     while(tmp > 0)
     {
         m = tmp % 10;
-        sum = sum + m;
+        sum2 = sum2 + m;
         tmp = tmp / 10;
     }
 
-    return sum % 10;
+    if(sum2 == 0)
+    {
+        sum2=1;
+    }
+
+    return (sum1/sum2)%mb->size;
 }
 
 void addHeadHash(matchboxes *mb, uint32_t config)
@@ -314,6 +333,27 @@ maillon_mb *findMb(matchboxes *th, uint32_t config)
         {
             return mb;
         }
+        mb = mb->next;
+    }
+    return NULL;
+}
+
+maillon_mb *findBaseConfiguration(matchboxes *th, uint32_t config)
+{
+    maillon_mb *mb;
+    uint32_t p = hashing(th, config);
+    mb = th->tab[p]->head;
+
+    while(mb != NULL)
+    {
+        for (uint32_t i = 0; i < 7; i++)
+        {
+            if (mb->modifications[i] == config)
+            {
+                return mb;
+            }
+        }
+
         mb = mb->next;
     }
     return NULL;
@@ -363,6 +403,34 @@ enum billes getBille(uint32_t ind)
             break;
     }
     return -1;
+}
+
+// Get the index by bille
+uint32_t getBilleIndex(enum billes b)
+{
+    switch(b)
+    {
+        case yellow:
+            return 1;
+        case red:
+            return 2;
+        case green:
+            return 3;
+        case blue:
+            return 4;
+        case orange:
+            return 5;
+        case purple:
+            return 6;
+        case white:
+            return 7;
+        case black:
+            return 8;
+        case pink:
+            return 9;
+        default:
+            break;
+    }
 }
 
 

@@ -92,5 +92,7 @@ void freeHashTable(matchboxes *th);
 enum billes getBille(uint32_t ind);
 maillon_mb *findMb(matchboxes *th, uint32_t config);
 uint32_t countBilles(list_billes *l, enum billes b);
+uint32_t getBilleIndex(enum billes b);
+maillon_mb *findBaseConfiguration(matchboxes *th, uint32_t config);
 
 #endif //PROJET_HASHTABLE_H

@@ -167,6 +167,9 @@ void print_all_transformations_1d(uint8_t g[3][3], FILE *f)
 //    fprintf(f, "|");
 
     appliquer_transformation_base(g, ROT_90);
+    n = tableTo3(g);
+    printf("%d, ", n);
+    printf("%d\n", translate10(n));
 //    print_grille_1d(g,f);
 //    fprintf(f, "|");
 
@@ -348,6 +351,8 @@ _Bool isConfiguration(uint32_t t1, uint32_t t2)
 }
 
 
+
+
 /*int main() {
     FILE *out = fopen("sortie.txt", "w");
 
@@ -363,3 +368,4 @@ _Bool isConfiguration(uint32_t t1, uint32_t t2)
 
     return EXIT_SUCCESS;
 }*/
+
