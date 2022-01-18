@@ -229,6 +229,12 @@ void getConfigurations(uint32_t config, uint32_t tab[8])
         }
         tab[i] = tableTo3Pointer(g);
     }
+
+    for(uint32_t k = 0; k < 3; k++)
+    {
+        free(g[k]);
+    }
+    free(g);
 }
 
 uint8_t next_configuration(uint8_t grille[3][3])
@@ -345,6 +351,12 @@ _Bool isConfiguration(uint32_t t1, uint32_t t2)
             }
         }
     }
+
+    for(uint32_t k = 0; k < 3; k++)
+    {
+        free(table1[k]);
+    }
+    free(table1);
 
     return 0;
 

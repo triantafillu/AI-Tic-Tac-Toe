@@ -339,8 +339,9 @@ uint32_t getBillesTransormation(maillon_mb *mb, uint32_t config, uint32_t choice
 {
     uint8_t billes_indexes[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
     uint8_t base[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
-    uint32_t transformation;
+    uint32_t transformation = 0;
     uint32_t i, j;
+    uint32_t new_choice = 0;
 
     // Find the transformation for configuration
     for (j = 0; j < 8; j++)
@@ -348,11 +349,12 @@ uint32_t getBillesTransormation(maillon_mb *mb, uint32_t config, uint32_t choice
         if (config == mb->modifications[j])
         {
             transformation = j;
+            break;
         }
     }
 
     // Rotate indexes of billes
-    for (i = 0; i < transformation; i++)
+    for (i = 0; i < transformation + 1; i++)
     {
         appliquer_transformation_base(billes_indexes, ROT_90);
         if(i == 3 || i == 7)
@@ -369,12 +371,13 @@ uint32_t getBillesTransormation(maillon_mb *mb, uint32_t config, uint32_t choice
         {
             if (choice == billes_indexes[i][j])
             {
-                choice = base[i][j];
+                new_choice = base[i][j];
+                break;
             }
         }
     }
 
-    return choice;
+    return new_choice;
 }
 
 // Change the board according to user's choice
@@ -404,13 +407,13 @@ _Bool checkFreePosition(uint32_t config, uint32_t choice)
 }
 
 // Choose a random bead from matchbox
-enum billes randomBille(maillon_mb *mb, uint32_t curr_config)
+enum billes randomBille(maillon_mb *mb)
 {
-    uint32_t choice;
+    //uint32_t choice;
     maillon_billes *m;
     maillon_billes *prev;
-    do
-    {
+    //do
+    //{
         srand(time(NULL));
         uint32_t nb = rand() % (mb->taken->size);
         uint32_t i = 0;
@@ -424,14 +427,18 @@ enum billes randomBille(maillon_mb *mb, uint32_t curr_config)
             i++;
         }
 
-        choice = getBilleIndex(m->bille);
-
-    } while (!checkFreePosition(curr_config, choice));
-
 
     if(m!=NULL)
     {
-        prev->next = m->next;
+        if (nb == 0)
+        {
+            mb->taken->head = m->next;
+        }
+        else
+        {
+            prev->next = m->next;
+        }
+
         mb->taken->size -= 1;
 
         if(mb->taken->size == 0)
@@ -482,9 +489,13 @@ void printBoard(uint32_t config)
             {
                 grille[i][j] = 'o';
             }
-            else
+            else if (tmp == 0)
             {
                 grille[i][j] = ' ';
+            }
+            else
+            {
+                grille[i][j] = '!';
             }
 
             if(tmp!=0)
@@ -572,6 +583,7 @@ void newGame(FILE *file, FILE *out, uint32_t mode)
     enum billes billes_tab[5] = {0};
     enum billes curr_bille;
     uint32_t used_counter = 0;
+    uint8_t **table = threeToTable(curr_config);
 
     // If user - machine
     if (mode == 1)
@@ -587,16 +599,16 @@ void newGame(FILE *file, FILE *out, uint32_t mode)
             if (turn == 2)
             {
                 // If there's only one place left on board (the case is not included into 304 matchboxes
-                if (freePlacesPointer(threeToTable(curr_config)) == 1)
+                if (freePlacesPointer(table) == 1)
                 {
                     // Put cross into the last free case
                     printf("Machine's move:\n");
-                    curr_config = changeBoard(curr_config, turn, findLastEmpty(threeToTable(curr_config)));
+                    curr_config = changeBoard(curr_config, turn, findLastEmpty(table));
                 }
                 else if(curr_state != NULL)
                 {
                     // Get a random bead
-                    curr_bille = randomBille(curr_state, curr_config); // The function includes a check for empty place
+                    curr_bille = randomBille(curr_state);
                     choice = getBilleIndex(curr_bille);
 
                     // Update the list of used maillons and billes
@@ -642,25 +654,31 @@ void newGame(FILE *file, FILE *out, uint32_t mode)
                 turn = 2;
             }
 
+            table = threeToTable(curr_config);
+
             // Print the current state of board
             printBoard(curr_config);
 
-            // If the machine won
-            if (isWinPointer(threeToTable(curr_config)) == 1)
+            // If the player won
+            if (isWinPointer(table) == 1)
             {
                 printf("The player won!\n");
 
-                // Update beads in matchboxes
+//              Update beads in matchboxes
                 for (uint32_t i = 0; i < 5; i++)
                 {
-                    if (billes_tab[i]!=0)
-                        modifyMbLoss(mb_tab[i], billes_tab[i]);
+                    if (mb_tab[i]->taken->size == 0)
+                    {
+                        tableToBilles(mb_tab[i]);
+                    }
+//                    if (billes_tab[i]!=0)
+//                        modifyMbLoss(mb_tab[i], billes_tab[i]);
                 }
                 break;
             }
 
-            // If the player won
-            else if (isWinPointer(threeToTable(curr_config)) == 2)
+            // If the machine won
+            else if (isWinPointer(table) == 2)
             {
                 printf("The machine won!\n");
 
@@ -676,7 +694,7 @@ void newGame(FILE *file, FILE *out, uint32_t mode)
             else
             {
                 // There's no more places - draw
-                if (freePlacesPointer(threeToTable(curr_config)) == 0)
+                if (freePlacesPointer(table) == 0)
                 {
                     printf("Draw!\n");
 
@@ -701,11 +719,18 @@ void newGame(FILE *file, FILE *out, uint32_t mode)
                     }
                 }
             }
+
+
         }
+        for(uint32_t k = 0; k < 3; k++)
+        {
+            free(table[k]);
+        }
+        free(table);
     }
 
     writeGameState(out, th);
-    //freeHashTable(th);
+    freeHashTable(th);
 
 
 

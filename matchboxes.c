@@ -126,15 +126,23 @@ void tableToBilles(maillon_mb *mb)
 {
     uint8_t base[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
     uint32_t counter = 0;
+    uint8_t **table;
+
     for (uint32_t i = 0; i<3; i++)
     {
         for (uint32_t j = 0; j<3; j++)
         {
-            if (threeToTable(mb->config)[i][j] == 0)
+            table = threeToTable(mb->config);
+            if (table[i][j] == 0)
             {
                 addHeadMb(mb, getBille(base[i][j]));
                 counter++;
             }
+            for(uint32_t k = 0; k < 3; k++)
+            {
+                free(table[k]);
+            }
+            free(table);
         }
     }
 

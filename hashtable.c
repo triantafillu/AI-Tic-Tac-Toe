@@ -313,8 +313,12 @@ void freeHashTable(matchboxes *th)
         while(th->tab[i]->size != 0)
         {
             mb = th->tab[i]->head;
+
             th->tab[i]->head = th->tab[i]->head->next;
+
             freeMb(mb);
+
+            th->tab[i]->size--;
         }
         free(th->tab[i]);
     }
