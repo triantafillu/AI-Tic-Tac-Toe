@@ -15,5 +15,5 @@ void generateNewGame(FILE * file);
 uint32_t changeBoard(uint32_t curr_state, uint32_t player, uint32_t choice);
 void printBoard(uint32_t config);
 _Bool checkFreePosition(uint32_t config, uint32_t choice);
-void newGame(FILE *file, FILE *out, uint32_t mode);
+void newGame(char *filename, uint32_t mode);
 #endif //PROJET_GAME_H

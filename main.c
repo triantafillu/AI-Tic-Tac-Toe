@@ -14,8 +14,8 @@ int main() {
 
     uint32_t w = isWin(table);*/
 
-    FILE* in = fopen("C:\\Users\\alexa\\Desktop\\Uni\\Structures\\Projet\\new_game.txt", "rb");
-    FILE* out = fopen("C:\\Users\\alexa\\Desktop\\Uni\\Structures\\Projet\\write.txt", "w");
+//    FILE* in = fopen("C:\\Users\\alexa\\Desktop\\Uni\\Structures\\Projet\\new_game.txt", "rb");
+//    FILE* out = fopen("C:\\Users\\alexa\\Desktop\\Uni\\Structures\\Projet\\write.txt", "w");
     /*FILE* out = fopen("C:\\Users\\alexa\\Desktop\\Uni\\Structures\\Projet\\gs_out.csv", "w");
     matchbox** mb = initializeMatchboxes();
     writeGameState(out, mb);
@@ -46,6 +46,12 @@ int main() {
     //print_all_transformations_1d(g, in);
 
 
-    newGame(in, out, 1);
+    for (int i = 0; i < 50; i++)
+    {
+        printf("Game #%d\n", i+1);
+        newGame("C:\\Users\\alexa\\Desktop\\Uni\\Structures\\Projet\\new_game.txt", 2);
+        printf("\n\n");
+    }
+
     return 0;
 }
