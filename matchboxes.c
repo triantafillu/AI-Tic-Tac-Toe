@@ -119,8 +119,6 @@ uint32_t translate3(uint32_t number)
     return res;
 }
 
-
-
 // Get a list of free billes for the configuration
 void tableToBilles(maillon_mb *mb)
 {

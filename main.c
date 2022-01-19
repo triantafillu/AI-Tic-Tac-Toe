@@ -6,51 +6,75 @@
 #include "aide_projet.h"
 #include "game.h"
 
+void printMenu()
+{
+    printf("\nChoose an option!\n");
+    printf("1. Play against the machine.\n");
+    printf("2. Make the machine \"smarter\".\n");
+    printf("3. Start the learning from scratch.\n");
+    printf("4. Exit.\n");
+    printf("\n");
+}
 
-int main() {
-   /* uint8_t table[3][3] = {{2, 1, 1},
-                            {1, 2, 1},
-                            {0, 1, 2}};
+int main()
+{
 
-    uint32_t w = isWin(table);*/
+    setbuf(stdout, 0);
+    uint32_t option;
+    uint32_t n;
 
-//    FILE* in = fopen("C:\\Users\\alexa\\Desktop\\Uni\\Structures\\Projet\\new_game.txt", "rb");
-//    FILE* out = fopen("C:\\Users\\alexa\\Desktop\\Uni\\Structures\\Projet\\write.txt", "w");
-    /*FILE* out = fopen("C:\\Users\\alexa\\Desktop\\Uni\\Structures\\Projet\\gs_out.csv", "w");
-    matchbox** mb = initializeMatchboxes();
-    writeGameState(out, mb);
-    fclose(out);
-
-    // 210122020*/
-
-    //uint8_t g[3][3] = {{2, 1, 0}, {1, 2, 2}, {0, 2, 0}};
-    //checkFreePosition(tableTo3(g), 3);
-    //uint32_t res = changeBoard(tableTo3(g), 3);
-//
-    //print_all_transformations_1d(g, in);
-//    while(next_configuration(g)==0)
-//    {
-//        if (isValid(g))
-//        {
-//            print_all_transformations_1d(g, in);
-//        }
-//    }
-
-//    matchboxes *th = readGameState(in);
-//    writeGameState(out, th);
-    //generateNewGame(in);
-
-
-
-
-    //print_all_transformations_1d(g, in);
-
-
-    for (int i = 0; i < 50; i++)
+    while(1)
     {
-        printf("Game #%d\n", i+1);
-        newGame("C:\\Users\\alexa\\Desktop\\Uni\\Structures\\Projet\\new_game.txt", 2);
-        printf("\n\n");
+        printMenu();
+        scanf("%d", &option);
+
+        switch(option)
+        {
+            case 1:
+            {
+                newGame("C:\\Users\\alexa\\Desktop\\Uni\\Structures\\Projet\\new_game.txt", 1);
+                break;
+            }
+
+            case 2:
+            {
+                printf("How many games against itself you want the machine to play?\n");
+                scanf("%d", &n);
+
+                for (uint32_t i = 0; i < n; i++)
+                {
+                    printf("Game #%d\n", i+1);
+                    newGame("C:\\Users\\alexa\\Desktop\\Uni\\Structures\\Projet\\new_game.txt", 2);
+                    printf("\n");
+                }
+                break;
+            }
+
+            case 3:
+            {
+                FILE *new_file = fopen("C:\\Users\\alexa\\Desktop\\Uni\\Structures\\Projet\\new_game.txt", "w");
+                generateNewGame(new_file);
+                fclose(new_file);
+                printf("The new file is created.\n");
+
+                break;
+            }
+
+            case 4:
+            {
+                break;
+            }
+
+            default:
+            {
+                printf("There is no such option!\n");
+            }
+        }
+
+        if (option == 4)
+        {
+            break;
+        }
     }
 
     return 0;

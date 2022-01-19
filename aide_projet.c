@@ -2,19 +2,10 @@
 #include <stdint.h>
 #include <assert.h>
 #include <stdlib.h>
+#include "aide_projet.h"
 #include "matchboxes.h"
 #define CONTINUE 0
 #define FINISHED 1
-#include "aide_projet.h"
-
-/*typedef enum transformation{ID, ROT_90, ROT_180, ROT_270, MIROIR_VERT, MIROIR_HORIZ} transformation;
-
-char print_value(uint8_t value);
-void appliquer_transformation_base(uint8_t grille[3][3], transformation t);
-void print_grille_2d(uint8_t grille[3][3], FILE *f);
-void print_grille_1d(uint8_t grille[3][3], FILE *f);
-uint8_t next_configuration(uint8_t grille[3][3]);*/
-
 
 char print_value(uint8_t value)
 {
@@ -153,60 +144,36 @@ void print_grille_1d(uint8_t grille[3][3], FILE *f)
 
 void print_all_transformations_1d(uint8_t g[3][3], FILE *f)
 {
-//    print_grille_1d(g,f);
-//    fprintf(f, "|");
-    uint32_t n = tableTo3(g);
-    printf("%d, ", n);
-    printf("%d\n", translate10(n));
+    print_grille_1d(g,f);
+    fprintf(f, "|");
 
     appliquer_transformation_base(g, ROT_90);
-    n = tableTo3(g);
-    printf("%d, ", n);
-    printf("%d\n", translate10(n));
-//    print_grille_1d(g,f);
-//    fprintf(f, "|");
+    print_grille_1d(g,f);
+    fprintf(f, "|");
 
     appliquer_transformation_base(g, ROT_90);
-    n = tableTo3(g);
-    printf("%d, ", n);
-    printf("%d\n", translate10(n));
-//    print_grille_1d(g,f);
-//    fprintf(f, "|");
+    print_grille_1d(g,f);
+    fprintf(f, "|");
 
     appliquer_transformation_base(g, ROT_90);
-    n = tableTo3(g);
-    printf("%d, ", n);
-    printf("%d\n", translate10(n));
-//    print_grille_1d(g,f);
-//    fprintf(f, "|");
+    print_grille_1d(g,f);
+    fprintf(f, "|");
 
     appliquer_transformation_base(g, ROT_90);
     appliquer_transformation_base(g, MIROIR_VERT);
-    n = tableTo3(g);
-    printf("%d, ", n);
-    printf("%d\n", translate10(n));
-//    print_grille_1d(g,f);
-//    fprintf(f, "|");
+    print_grille_1d(g,f);
+    fprintf(f, "|");
 
     appliquer_transformation_base(g, ROT_90);
-    n = tableTo3(g);
-    printf("%d, ", n);
-    printf("%d\n", translate10(n));
-//    print_grille_1d(g,f);
-//    fprintf(f, "|");
+    print_grille_1d(g,f);
+    fprintf(f, "|");
 
     appliquer_transformation_base(g, ROT_90);
-    n = tableTo3(g);
-    printf("%d, ", n);
-    printf("%d\n", translate10(n));
-//    print_grille_1d(g,f);
-//    fprintf(f, "|");
+    print_grille_1d(g,f);
+    fprintf(f, "|");
 
     appliquer_transformation_base(g, ROT_90);
-    n = tableTo3(g);
-    printf("%d, ", n);
-    printf("%d\n", translate10(n));
-//    print_grille_1d(g,f);
+    print_grille_1d(g,f);
 
     //On fait une derniere transformation pour remettre la grille dans son état initial
     appliquer_transformation_base(g, ROT_90);
@@ -362,22 +329,4 @@ _Bool isConfiguration(uint32_t t1, uint32_t t2)
 
 }
 
-
-
-
-/*int main() {
-    FILE *out = fopen("sortie.txt", "w");
-
-    uint8_t g[3][3] = {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}};
-    int i=0;
-
-    print_all_transformations_1d(g, out);
-    while(next_configuration(g)==CONTINUE)
-    {
-        print_all_transformations_1d(g, out);
-    }
-
-
-    return EXIT_SUCCESS;
-}*/
 
