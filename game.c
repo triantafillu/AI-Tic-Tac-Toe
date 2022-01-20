@@ -675,6 +675,10 @@ void newGame(char *filename, uint32_t mode)
                 //Update beads in matchboxes
                 for (uint32_t i = 0; i < 5; i++)
                 {
+                    if (billes_tab[i] == 0)
+                    {
+                        break;
+                    }
                     if (mb_tab[i]->taken->size == 0)
                     {
                         tableToBilles(mb_tab[i]);
@@ -802,10 +806,10 @@ void newGame(char *filename, uint32_t mode)
                 printf("Second machine's move:\n");
             }
             for(uint32_t k = 0; k < 3; k++)
-                {
-                    free(table[k]);
-                }
-                free(table);
+            {
+                free(table[k]);
+            }
+            free(table);
 
             table = threeToTable(curr_config);
 
@@ -828,11 +832,6 @@ void newGame(char *filename, uint32_t mode)
                         }
                     }
                 }
-                // for(uint32_t k = 0; k < 3; k++)
-                // {
-                //     free(table[k]);
-                // }
-                // free(table);
                 break;
             }
 
