@@ -229,7 +229,6 @@ void generateNewGame(FILE * file)
             }
         }
     }
-
     free(matchboxes);
 }
 
@@ -406,6 +405,7 @@ _Bool checkFreePosition(uint32_t config, uint32_t choice)
     }
 }
 
+
 // Choose a random bead from matchbox
 enum billes randomBille(maillon_mb *mb)
 {
@@ -557,6 +557,30 @@ uint32_t findLastEmpty(uint8_t **tab)
     return 0;
 }
 
+// Get free index for random game  
+uint32_t getRandIndex(uint8_t** table)
+{
+    srand(time(NULL)); 
+    uint32_t free=freePlacesPointer(table);
+    uint32_t base[3][3]={{1,2,3},{4,5,6},{7,8,9}};
+    //printf("%d\n",free);
+    uint32_t r[free]; 
+    int tmp=0; 
+
+    for(uint32_t i=0; i<3; i++){
+        for(uint32_t j=0; j<3; j++){
+            if(table[i][j]==0){
+                r[tmp]=base[i][j]; 
+                tmp++;
+            }
+        }
+    }
+    // for(int i=0; i<free; i++){
+    //     printf("%d\n",r[i]);
+    // }
+    return r[rand()%free]; 
+}
+
 // mode: 1 - user/machine; 2 - machine/machine
 void newGame(char *filename, uint32_t mode)
 {
@@ -645,10 +669,11 @@ void newGame(char *filename, uint32_t mode)
             {
                 // Get the choice of user and check whether the place is empty
                 do
-                {
+                {   // Free the standard entry 
+                    fflush(stdin); 
                     printf("Choose the next move (1-9):\n");
                     scanf("%d", &choice);
-                } while (!checkFreePosition(curr_config, choice));
+                } while (!checkFreePosition(curr_config, choice) || (choice<0 || choice >9));
 
                 // Change the state of board
                 curr_config = changeBoard(curr_config, turn, choice);
@@ -787,16 +812,16 @@ void newGame(char *filename, uint32_t mode)
                 }
             }
 
-                // If it' a turn of user
+            // If it' a turn of user
             else
             {
                 // Get the choice of user and check whether the place is empty
-                do
-                {
-                    srand(time(NULL));
-                    choice = rand() % 8 + 1;
-                } while (!checkFreePosition(curr_config, choice));
-
+                // do
+                // {
+                //     srand(time(NULL));
+                //     choice = rand() % 8 + 1;
+                // } while (!checkFreePosition(curr_config, choice));
+                choice=getRandIndex(table);
                 // Change the state of board
                 curr_config = changeBoard(curr_config, turn, choice);
 
@@ -805,6 +830,7 @@ void newGame(char *filename, uint32_t mode)
 
                 printf("Second machine's move:\n");
             }
+            // Free the memory
             for(uint32_t k = 0; k < 3; k++)
             {
                 free(table[k]);
@@ -816,7 +842,7 @@ void newGame(char *filename, uint32_t mode)
             // Print the current state of board
             printBoard(curr_config);
 
-            // If the player won
+            // If the machine 2 won
             if (isWinPointer(table) == 1)
             {
                 printf("The machine 2 won!\n");
@@ -835,7 +861,7 @@ void newGame(char *filename, uint32_t mode)
                 break;
             }
 
-                // If the machine won
+            // If the machine 1 won
             else if (isWinPointer(table) == 2)
             {
                 printf("The machine 1 won!\n");
@@ -865,11 +891,10 @@ void newGame(char *filename, uint32_t mode)
                     break;
                 }
 
-                    // Change the matchbox (only after user's move)
+                // Change the matchbox (only after user's move)
                 else if(turn == 2)
                 {
                     curr_state = findMb(th, curr_config);
-
                     // If configuration is not basic configuration
                     if (curr_state == NULL)
                     {
@@ -878,6 +903,7 @@ void newGame(char *filename, uint32_t mode)
                 }
             }
         }
+        // Free the memory 
         for(uint32_t k = 0; k < 3; k++)
         {
             free(table[k]);
