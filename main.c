@@ -25,14 +25,17 @@ int main()
 
     while(1)
     {
-        printMenu();
-        scanf("%d", &option);
-
+        do{
+            fflush(stdin);
+            printMenu();
+            scanf("%d", &option);
+        }while(option<0 || option>4);
+        
         switch(option)
         {
             case 1:
             {
-                newGame("C:\\Users\\alexa\\Desktop\\Uni\\Structures\\Projet\\new_game.txt", 1);
+                newGame("./new_game.txt", 1);
                 break;
             }
 
@@ -44,7 +47,7 @@ int main()
                 for (uint32_t i = 0; i < n; i++)
                 {
                     printf("Game #%d\n", i+1);
-                    newGame("C:\\Users\\alexa\\Desktop\\Uni\\Structures\\Projet\\new_game.txt", 2);
+                    newGame("./new_game.txt", 2);
                     printf("\n");
                 }
                 break;
@@ -52,7 +55,7 @@ int main()
 
             case 3:
             {
-                FILE *new_file = fopen("C:\\Users\\alexa\\Desktop\\Uni\\Structures\\Projet\\new_game.txt", "w");
+                FILE *new_file = fopen("./new_game.txt", "w");
                 generateNewGame(new_file);
                 fclose(new_file);
                 printf("The new file is created.\n");
