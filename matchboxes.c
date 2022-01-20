@@ -15,16 +15,20 @@
  *
  */
 
-
+// Convert a 2-dimensional array to a number of base 3
 uint32_t tableTo3(uint8_t table[3][3])
 {
     uint32_t res = 0;
     uint32_t mult = 100000000;
+
+    // Start with the most significant digit
     for (uint32_t i = 0; i < 3; i++)
     {
         for (uint32_t j = 0; j < 3; j++)
         {
             res += table[i][j] * mult;
+
+            // Move to the next digit
             mult /= 10;
         }
     }
@@ -48,19 +52,25 @@ uint32_t tableTo3Pointer(uint8_t **table)
     return res;
 }
 
-
+// Convert a number of base 3 to the table [3][3]
 uint8_t** threeToTable(uint32_t three)
 {
+    // The resulting table
     uint8_t **res = malloc(3 * sizeof(uint8_t*));
     for(uint32_t j = 0; j < 3; j++)
     {
         res[j] = malloc(3 * sizeof(uint8_t));
     }
+
+    // The tab if filled starting from the last index
     for (int i = 2; i > -1 ; i--)
     {
         for (int j = 2; j > -1 ; j--)
         {
+            // Add the last digit to the table
             res[i][j] = three % 10;
+
+            // Move to the next least significant digit
             three /= 10;
         }
     }
