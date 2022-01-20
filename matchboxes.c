@@ -119,6 +119,8 @@ uint32_t translate3(uint32_t number)
     return res;
 }
 
+
+
 // Get a list of free billes for the configuration
 void tableToBilles(maillon_mb *mb)
 {
@@ -235,13 +237,15 @@ matchboxes *readGameState(FILE* file)
     // Index of matchbox
     uint32_t c = 0;
     // Variable used to read next character
-    uint32_t tmp;
+    uint32_t tmp=0;
     // Buffer index
     uint32_t i;
+    // Buffer number conversion
+    uint32_t nb; 
     // The character read from file
     uint8_t r=0;
     // Buffer to stock characters and transform them to int
-    uint8_t buffer[9];
+    char buffer[9]="";
     // Number of beads of specific colour
     uint32_t num_of_billes;
     // Current case of csv file
@@ -256,11 +260,14 @@ matchboxes *readGameState(FILE* file)
         {
             buffer[i]=r;
             i++;
-            tmp = fscanf(file,"%c",&r);
+            if( (tmp = fscanf(file,"%c",&r)) < 0){
+                perror("Error while reading the file\n"); 
+            }
 
         }
-        addHeadHash(th, atoi(buffer));
-        mb = findMb(th, atoi(buffer));
+        nb=atoi(buffer);
+        addHeadHash(th, nb);
+        mb = findMb(th, nb);
         emptyBuffer(buffer, 9);
 
         // For each cell after 2 (quantities of beads)
@@ -269,7 +276,9 @@ matchboxes *readGameState(FILE* file)
         {
             i = 0;
             // Read the next character after ","
-            tmp = fscanf(file,"%c",&r);
+            if( (tmp = fscanf(file,"%c",&r)) < 0){
+                perror("Error while reading the file\n"); 
+            }
 
             // Read till ",", if the last cell - read till "\n"
             if (case_c != 10)
@@ -278,7 +287,9 @@ matchboxes *readGameState(FILE* file)
                 {
                     buffer[i]=r;
                     i++;
-                    tmp = fscanf(file,"%c",&r);
+                    if( (tmp = fscanf(file,"%c",&r)) < 0){
+                        perror("Error while reading the file\n"); 
+                    }
                 }
             }
             else

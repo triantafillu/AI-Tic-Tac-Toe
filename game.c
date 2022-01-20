@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
+#include <string.h>
+
 #include "time.h"
 #include "matchboxes.h"
 #include "game.h"
@@ -50,6 +52,7 @@ _Bool isRow(uint8_t table[3][3], uint32_t val)
 
     return 0;
 }
+
 _Bool isRowPointer(uint8_t **table, uint32_t val)
 {
     for (uint32_t i = 0; i < 3; i++)
@@ -77,6 +80,7 @@ _Bool isDiagonal(uint8_t table[3][3], uint32_t val)
 
     return 0;
 }
+
 _Bool isDiagonalPointer(uint8_t **table, uint32_t val)
 {
     if ((table[0][0] == table[1][1]) && (table[0][0] == table[2][2]) && (table[0][0] == val))
@@ -109,6 +113,7 @@ uint32_t isWin(uint8_t table[3][3])
         return 0;
     }
 }
+
 uint32_t isWinPointer(uint8_t **table)
 {
     if (isColumnPointer(table, 1) || isRowPointer(table,1) || isDiagonalPointer(table, 1))
@@ -167,9 +172,8 @@ _Bool isValid(uint8_t table[3][3])
 void generateNewGame(FILE * file)
 {
     uint32_t config;
-    uint32_t *matchboxes = malloc(304 * sizeof(uint32_t));
-
     // The first empty configuration
+    uint32_t *matchboxes = malloc(304 * sizeof(uint32_t));
     uint8_t g[3][3] = {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}};
     config = tableTo3(g);
     matchboxes[0] = config;
@@ -220,6 +224,7 @@ void generateNewGame(FILE * file)
                 fprintf(file, "%d,", config);
 
                 printConfigToBilles(file, g);
+                //printf("%d\n", translate10(config)%304);
                 counter++;
             }
         }
@@ -330,13 +335,9 @@ uint32_t choiceToConfig(uint32_t choice, uint32_t player)
     return res;
 }
 
-// Transform billes accorrding to the current configuration
 uint32_t getBillesTransormation(maillon_mb *mb, uint32_t config, uint32_t choice)
 {
-    // Table with indexes of billes which will be rotated
     uint8_t billes_indexes[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
-
-    // Table with indexes of "base" matchbox
     uint8_t base[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
     uint32_t transformation = 0;
     uint32_t i, j;
@@ -533,7 +534,13 @@ void modifyMbDraw(maillon_mb *mb, enum billes b)
     addHeadMb(mb, b);
 }
 
-// Find the last empty place on the board
+// Add billes to matchbox in case of loss
+void modifyMbLoss(maillon_mb *mb, enum billes b)
+{
+    // 1 bille for replacement
+    addHeadMb(mb, b);
+}
+
 uint32_t findLastEmpty(uint8_t **tab)
 {
     uint8_t base[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
@@ -553,12 +560,10 @@ uint32_t findLastEmpty(uint8_t **tab)
 // mode: 1 - user/machine; 2 - machine/machine
 void newGame(char *filename, uint32_t mode)
 {
-    // Open the file with game state in reading mode
     FILE *file = fopen(filename, "rb");
 
     setbuf(stdout, 0);
-
-    // Load the file with matchboxes into hash table
+    // Load file with matchboxes
     matchboxes *th = readGameState(file);
 
     // Print empty board
@@ -579,9 +584,8 @@ void newGame(char *filename, uint32_t mode)
     enum billes billes_tab[5] = {0};
     enum billes curr_bille;
     uint32_t used_counter = 0;
-
-    // Current configuration in form of uint32_t [3][3]
     uint8_t **table = threeToTable(curr_config);
+    
 
     // If user - machine
     if (mode == 1)
@@ -596,7 +600,7 @@ void newGame(char *filename, uint32_t mode)
             // If it' a turn of machine
             if (turn == 2)
             {
-                // If there's only one place left on board (the case is not included into 304 matchboxes)
+                // If there's only one place left on board (the case is not included into 304 matchboxes
                 if (freePlacesPointer(table) == 1)
                 {
                     // Put cross into the last free case
@@ -633,6 +637,7 @@ void newGame(char *filename, uint32_t mode)
 
                     printf("Machine's move:\n");
                 }
+                
             }
 
             // If it' a turn of user
@@ -650,8 +655,13 @@ void newGame(char *filename, uint32_t mode)
 
                 // Change the turn to machine
                 turn = 2;
+                
             }
-
+            for(uint32_t k = 0; k < 3; k++)
+            {
+                free(table[k]);
+            }
+            free(table);
             table = threeToTable(curr_config);
 
             // Print the current state of board
@@ -662,13 +672,9 @@ void newGame(char *filename, uint32_t mode)
             {
                 printf("The player won!\n");
 
-                // Update beads in matchboxes
+                //Update beads in matchboxes
                 for (uint32_t i = 0; i < 5; i++)
                 {
-                    if (billes_tab[i] == 0)
-                    {
-                        break;
-                    }
                     if (mb_tab[i]->taken->size == 0)
                     {
                         tableToBilles(mb_tab[i]);
@@ -706,34 +712,30 @@ void newGame(char *filename, uint32_t mode)
                     }
                     break;
                 }
-
                 // Change the matchbox (only after user's move)
                 else if(turn == 2)
-                {
+                { 
                     curr_state = findMb(th, curr_config);
-
                     // If configuration is not basic configuration
                     if (curr_state == NULL)
                     {
                         curr_state = findBaseConfiguration(th, curr_config);
                     }
                 }
-            }
-
-
+            }   
         }
-        for(uint32_t k = 0; k < 3; k++)
+         for(uint32_t k = 0; k < 3; k++)
         {
             free(table[k]);
         }
-        free(table);
+        free(table); 
     }
 
     // If machine - machine
     else
     {
-        // turn: 2 - machine 1 (tracked); 1 - machine 2 (untracked)
-        // Machine 1 always plays first
+        // turn: 2 - machine(tracked); 1 - machine
+        // Machine always plays first
         uint32_t turn = 2;
 
         // While the game is on
@@ -742,7 +744,7 @@ void newGame(char *filename, uint32_t mode)
             // If it' a turn of machine
             if (turn == 2)
             {
-                // If there's only one place left on board (the case is not included into 304 matchboxes)
+                // If there's only one place left on board (the case is not included into 304 matchboxes
                 if (freePlacesPointer(table) == 1)
                 {
                     // Put cross into the last free case
@@ -768,7 +770,7 @@ void newGame(char *filename, uint32_t mode)
                         curr_config = changeBoard(curr_config, turn,
                                                   getBillesTransormation(curr_state, curr_config, choice));
                     }
-                    // If a basic matchbox
+                        // If a basic matchbox
                     else
                     {
                         curr_config = changeBoard(curr_config, turn, choice);
@@ -781,10 +783,10 @@ void newGame(char *filename, uint32_t mode)
                 }
             }
 
-            // If it' a turn of machine 2
+                // If it' a turn of user
             else
             {
-                // Choose a random place and check whether it's is empty
+                // Get the choice of user and check whether the place is empty
                 do
                 {
                     srand(time(NULL));
@@ -799,18 +801,23 @@ void newGame(char *filename, uint32_t mode)
 
                 printf("Second machine's move:\n");
             }
+            for(uint32_t k = 0; k < 3; k++)
+                {
+                    free(table[k]);
+                }
+                free(table);
 
             table = threeToTable(curr_config);
 
             // Print the current state of board
             printBoard(curr_config);
 
-            // If the machine 2 won (untracked)
+            // If the player won
             if (isWinPointer(table) == 1)
             {
                 printf("The machine 2 won!\n");
 
-                // Update beads in matchboxes
+                //Update beads in matchboxes
                 for (uint32_t i = 0; i < 5; i++)
                 {
                     if (billes_tab[i]!=0)
@@ -821,10 +828,15 @@ void newGame(char *filename, uint32_t mode)
                         }
                     }
                 }
+                // for(uint32_t k = 0; k < 3; k++)
+                // {
+                //     free(table[k]);
+                // }
+                // free(table);
                 break;
             }
 
-            // If the machine 1 won (tracked)
+                // If the machine won
             else if (isWinPointer(table) == 2)
             {
                 printf("The machine 1 won!\n");
@@ -854,7 +866,7 @@ void newGame(char *filename, uint32_t mode)
                     break;
                 }
 
-                // Change the matchbox (only after untracked machine's move)
+                    // Change the matchbox (only after user's move)
                 else if(turn == 2)
                 {
                     curr_state = findMb(th, curr_config);
@@ -867,21 +879,22 @@ void newGame(char *filename, uint32_t mode)
                 }
             }
         }
-
-        // Free the memory of 'table' variable
         for(uint32_t k = 0; k < 3; k++)
         {
             free(table[k]);
         }
         free(table);
+        
     }
+   
+    
 
-    // Write the state of matchboxes to the file
     fclose(file);
     FILE *f = fopen(filename, "w");
-    writeGameState(f, th);
-    fclose(f);
 
-    // Free the memory of hash table
+    writeGameState(f, th);
+
+    fclose(f);
     freeHashTable(th);
+
 }
