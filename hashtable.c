@@ -127,7 +127,6 @@ tab_maillon * removeHeadLTM(list_tab_maillons *l)
 void enlargeFree(maillon_mb *mb, uint32_t size)
 {
     tab_maillon *t;
-    uint32_t i;
 
     assert(mb->free->size == 0);
 
@@ -135,12 +134,6 @@ void enlargeFree(maillon_mb *mb, uint32_t size)
     assert(t != NULL);
 
     addHeadLTM(mb->ltm, t);
-
-//    for (i=0; i<size-1; i++)
-//    {
-//        t[i].next = &(t[i+1]);
-//    }
-//    t[size-1].next = NULL;
 
     mb->free->head = &(t->tab[0]);
     mb->free->tail = &(t->tab[t->size_tab - 1]);
