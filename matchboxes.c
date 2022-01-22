@@ -1,11 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
-#include <string.h>
-#include "aide_projet.h"
 #include "math.h"
 #include "matchboxes.h"
-#include "hashtable.h"
 #define CONTINUE 0
 
 /*
@@ -15,7 +12,7 @@
  *
  */
 
-
+// Tranform table to the number of base 3
 uint32_t tableTo3(uint8_t table[3][3])
 {
     uint32_t res = 0;
@@ -48,7 +45,7 @@ uint32_t tableTo3Pointer(uint8_t **table)
     return res;
 }
 
-
+// Transform a number of base 3 to the table
 uint8_t** threeToTable(uint32_t three)
 {
     uint8_t **res = malloc(3 * sizeof(uint8_t*));
@@ -94,7 +91,7 @@ uint32_t translate10 (uint32_t table)
     return res;
 }
 
-// Translate the decimal number to its table representation (base 3)
+// Translate the decimal number to its representation of base 3
 uint32_t translate3(uint32_t number)
 {
     uint32_t res = 0;
@@ -118,8 +115,6 @@ uint32_t translate3(uint32_t number)
 
     return res;
 }
-
-
 
 // Get a list of free billes for the configuration
 void tableToBilles(maillon_mb *mb)
@@ -165,7 +160,6 @@ uint32_t freePlaces(uint8_t table[3][3])
     return res;
 }
 
-
 uint32_t freePlacesPointer(uint8_t **table)
 {
     uint32_t res = 0;
@@ -182,7 +176,7 @@ uint32_t freePlacesPointer(uint8_t **table)
     return res;
 }
 
-
+// Print a number of free billes for this configuration by color to the file
 void printConfigToBilles(FILE * file, uint8_t config[3][3])
 {
     for (uint32_t i = 0; i < 3; i++)

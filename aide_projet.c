@@ -7,21 +7,6 @@
 #define CONTINUE 0
 #define FINISHED 1
 
-char print_value(uint8_t value)
-{
-    switch(value)
-    {
-        case (0):
-            return ' ';
-        case (1):
-            return 'x';
-        case (2):
-            return 'o';
-        default:
-            assert(0);
-    }
-}
-
 void appliquer_transformation_base(uint8_t grille[3][3], transformation tr)
 {
     uint8_t t;
@@ -130,57 +115,6 @@ void appliquer_transformation_base_pointer(uint8_t **grille, transformation tr)
     }
 }
 
-void print_grille_2d(uint8_t grille[3][3], FILE *f)
-{
-    fprintf(f, "|%c|%c|%c|\n", print_value(grille[0][0]), print_value(grille[0][1]), print_value(grille[0][2]));
-    fprintf(f, "|%c|%c|%c|\n", print_value(grille[1][0]), print_value(grille[1][1]), print_value(grille[1][2]));
-    fprintf(f, "|%c|%c|%c|\n", print_value(grille[2][0]), print_value(grille[2][1]), print_value(grille[2][2]));
-}
-
-void print_grille_1d(uint8_t grille[3][3], FILE *f)
-{
-    fprintf(f, "%c%c%c%c%c%c%c%c%c", print_value(grille[0][0]), print_value(grille[0][1]), print_value(grille[0][2]), print_value(grille[1][0]), print_value(grille[1][1]), print_value(grille[1][2]), print_value(grille[2][0]), print_value(grille[2][1]), print_value(grille[2][2]));
-}
-
-void print_all_transformations_1d(uint8_t g[3][3], FILE *f)
-{
-    print_grille_1d(g,f);
-    fprintf(f, "|");
-
-    appliquer_transformation_base(g, ROT_90);
-    print_grille_1d(g,f);
-    fprintf(f, "|");
-
-    appliquer_transformation_base(g, ROT_90);
-    print_grille_1d(g,f);
-    fprintf(f, "|");
-
-    appliquer_transformation_base(g, ROT_90);
-    print_grille_1d(g,f);
-    fprintf(f, "|");
-
-    appliquer_transformation_base(g, ROT_90);
-    appliquer_transformation_base(g, MIROIR_VERT);
-    print_grille_1d(g,f);
-    fprintf(f, "|");
-
-    appliquer_transformation_base(g, ROT_90);
-    print_grille_1d(g,f);
-    fprintf(f, "|");
-
-    appliquer_transformation_base(g, ROT_90);
-    print_grille_1d(g,f);
-    fprintf(f, "|");
-
-    appliquer_transformation_base(g, ROT_90);
-    print_grille_1d(g,f);
-
-    //On fait une derniere transformation pour remettre la grille dans son état initial
-    appliquer_transformation_base(g, ROT_90);
-    appliquer_transformation_base(g, MIROIR_VERT);
-    fprintf(f, "\n");
-}
-
 // Store all the configurations of board in the tab[7]
 void getConfigurations(uint32_t config, uint32_t tab[8])
 {
@@ -226,22 +160,7 @@ uint8_t next_configuration(uint8_t grille[3][3])
     return CONTINUE;
 }
 
-_Bool isSameArray(uint8_t table1[3][3], uint8_t table2[3][3])
-{
-    uint32_t sum = 0;
-    for (uint32_t i = 0; i<3; i++)
-    {
-        for (uint32_t j = 0; j<3; j++)
-        {
-            if(table1[i][j] == table2[i][j])
-            {
-                sum++;
-            }
-        }
-    }
-    return (sum == 9);
-}
-
+// Check whether t1 and t2 are equivalent
 _Bool isConfiguration(uint32_t t1, uint32_t t2)
 {
     uint8_t **table1 = threeToTable(t1);

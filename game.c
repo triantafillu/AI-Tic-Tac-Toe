@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
-#include <string.h>
-
 #include "time.h"
 #include "matchboxes.h"
 #include "game.h"
@@ -52,7 +50,6 @@ _Bool isRow(uint8_t table[3][3], uint32_t val)
 
     return 0;
 }
-
 _Bool isRowPointer(uint8_t **table, uint32_t val)
 {
     for (uint32_t i = 0; i < 3; i++)
@@ -80,7 +77,6 @@ _Bool isDiagonal(uint8_t table[3][3], uint32_t val)
 
     return 0;
 }
-
 _Bool isDiagonalPointer(uint8_t **table, uint32_t val)
 {
     if ((table[0][0] == table[1][1]) && (table[0][0] == table[2][2]) && (table[0][0] == val))
@@ -113,7 +109,6 @@ uint32_t isWin(uint8_t table[3][3])
         return 0;
     }
 }
-
 uint32_t isWinPointer(uint8_t **table)
 {
     if (isColumnPointer(table, 1) || isRowPointer(table,1) || isDiagonalPointer(table, 1))
@@ -224,7 +219,6 @@ void generateNewGame(FILE * file)
                 fprintf(file, "%d,", config);
 
                 printConfigToBilles(file, g);
-                //printf("%d\n", translate10(config)%304);
                 counter++;
             }
         }
@@ -334,6 +328,7 @@ uint32_t choiceToConfig(uint32_t choice, uint32_t player)
     return res;
 }
 
+// Get the position on board for a non-base configuration
 uint32_t getBillesTransormation(maillon_mb *mb, uint32_t config, uint32_t choice)
 {
     uint8_t billes_indexes[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
@@ -405,19 +400,19 @@ _Bool checkFreePosition(uint32_t config, uint32_t choice)
     }
 }
 
-
 // Choose a random bead from matchbox
 enum billes randomBille(maillon_mb *mb)
 {
     maillon_billes *m;
     maillon_billes *prev;
 
+    // Generate a random number between 1 and size of matchbox
     srand(time(NULL));
     uint32_t nb = rand() % (mb->taken->size);
     uint32_t i = 0;
 
+    // Find the corresponding maillon
     m = mb->taken->head;
-
     while (i < nb && m != NULL)
     {
         prev = m;
@@ -425,7 +420,7 @@ enum billes randomBille(maillon_mb *mb)
         i++;
     }
 
-
+    // Move it to the list of free
     if(m!=NULL)
     {
         if (nb == 0)
@@ -541,6 +536,7 @@ void modifyMbLoss(maillon_mb *mb, enum billes b)
     addHeadMb(mb, b);
 }
 
+// Find the last empty place left on the board
 uint32_t findLastEmpty(uint8_t **tab)
 {
     uint8_t base[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
@@ -557,27 +553,28 @@ uint32_t findLastEmpty(uint8_t **tab)
     return 0;
 }
 
-// Get free index for random game  
+// Get an index of a free place to make a move
 uint32_t getRandIndex(uint8_t** table)
 {
     srand(time(NULL)); 
-    uint32_t free=freePlacesPointer(table);
+    uint32_t free = freePlacesPointer(table);
     uint32_t base[3][3]={{1,2,3},{4,5,6},{7,8,9}};
-    //printf("%d\n",free);
+
     uint32_t r[free]; 
     int tmp=0; 
 
-    for(uint32_t i=0; i<3; i++){
-        for(uint32_t j=0; j<3; j++){
-            if(table[i][j]==0){
+    for(uint32_t i=0; i<3; i++)
+    {
+        for(uint32_t j=0; j<3; j++)
+        {
+            if(table[i][j]==0)
+            {
                 r[tmp]=base[i][j]; 
                 tmp++;
             }
         }
     }
-    // for(int i=0; i<free; i++){
-    //     printf("%d\n",r[i]);
-    // }
+
     return r[rand()%free]; 
 }
 
@@ -743,7 +740,7 @@ void newGame(char *filename, uint32_t mode)
                 }
                 // Change the matchbox (only after user's move)
                 else if(turn == 2)
-                { 
+                {
                     curr_state = findMb(th, curr_config);
                     // If configuration is not basic configuration
                     if (curr_state == NULL)
@@ -911,8 +908,6 @@ void newGame(char *filename, uint32_t mode)
         free(table);
         
     }
-   
-    
 
     fclose(file);
     FILE *f = fopen(filename, "w");

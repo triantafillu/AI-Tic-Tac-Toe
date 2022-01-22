@@ -1,9 +1,6 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <stdint.h>
 #include "matchboxes.h"
-#include "hashtable.h"
-#include "aide_projet.h"
 #include "game.h"
 
 void printMenu()
@@ -50,6 +47,7 @@ int main()
                     newGame("./new_game.txt", 2);
                     printf("\n");
                 }
+
                 break;
             }
 

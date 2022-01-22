@@ -7,7 +7,14 @@
 #include "hashtable.h"
 #include "aide_projet.h"
 
-//-----------------------------Billes-------------------------------------
+/*
+ *
+ * Functions related to arraylist and hash table data structures
+ *
+ */
+
+
+//-----------------------------Billes (liste)-------------------------------------
 // New bille
 maillon_billes *newMaillonBilles(enum billes b)
 {
@@ -20,6 +27,7 @@ maillon_billes *newMaillonBilles(enum billes b)
     return m;
 }
 
+// New liste containing billes
 list_billes *newListBilles()
 {
     list_billes *r = malloc(sizeof (list_billes));
@@ -33,6 +41,7 @@ list_billes *newListBilles()
     return r;
 }
 
+// Delete head of list with billes
 maillon_billes * removeHeadBilles(list_billes *l)
 {
     maillon_billes *t = l->head;
@@ -48,6 +57,7 @@ maillon_billes * removeHeadBilles(list_billes *l)
     return t;
 }
 
+// Add a new bille to list
 void addHeadBilles(list_billes *l, maillon_billes *m)
 {
     //maillon_billes *m = newMaillonBilles(b);
@@ -124,6 +134,7 @@ tab_maillon * removeHeadLTM(list_tab_maillons *l)
 
 // ---------------------------Matchbox (arraylist)-----------------------------
 
+// Add new empty maillons to the arraylist
 void enlargeFree(maillon_mb *mb, uint32_t size)
 {
     tab_maillon *t;
@@ -135,12 +146,6 @@ void enlargeFree(maillon_mb *mb, uint32_t size)
     assert(t != NULL);
 
     addHeadLTM(mb->ltm, t);
-
-//    for (i=0; i<size-1; i++)
-//    {
-//        t[i].next = &(t[i+1]);
-//    }
-//    t[size-1].next = NULL;
 
     mb->free->head = &(t->tab[0]);
     mb->free->tail = &(t->tab[t->size_tab - 1]);
@@ -197,6 +202,7 @@ enum billes removeBilleMb(maillon_mb* mb)
     return b;
 }
 
+// Free the memory of matchbox
 void freeMb(maillon_mb *mb)
 {
     tab_maillon  *t;
@@ -218,6 +224,7 @@ void freeMb(maillon_mb *mb)
 
 //-------------------------Hashing------------------------------
 
+// Add matchbox to the list
 void addHeadMbHash(list_mb *l, uint32_t config)
 {
     maillon_mb *m = newMaillonMb(config);
@@ -230,7 +237,8 @@ void addHeadMbHash(list_mb *l, uint32_t config)
     }
     l->size += 1;
 }
-//Nouvelle liste d'allumettes 
+
+// New list of matchboxes
 list_mb *newListMB()
 {
     list_mb *r = malloc(sizeof (list_mb));
@@ -244,6 +252,7 @@ list_mb *newListMB()
     return r;
 }
 
+// New hashtable
 matchboxes* newMatchboxes(uint32_t size)
 {
     uint32_t i;
@@ -261,9 +270,8 @@ matchboxes* newMatchboxes(uint32_t size)
     mb->size = size;
     return mb;
 }
-//Fcontion de hachage 
-//On fait la somme de toutes les configuration correspondantes à la configuration config 
-//puis on somme les chiffres de ces derniers dans la variable sum2
+
+// Hash function
 uint32_t hashing(matchboxes *mb, uint32_t config)
 {
     // Sum of 7 configurations
@@ -272,8 +280,11 @@ uint32_t hashing(matchboxes *mb, uint32_t config)
     // Sum of digits of sum1
     uint32_t sum2=0;
 
+    // Fill in the array with "transformation"
     uint32_t conf[8];
     getConfigurations(config, conf);
+
+    // Sum up each configuration
     for (uint32_t p = 0; p < 8; p++)
     {
         sum1+=conf[p];
@@ -282,6 +293,7 @@ uint32_t hashing(matchboxes *mb, uint32_t config)
     uint32_t tmp = sum1;
     uint32_t m;
 
+    // Calculate the sum of digits
     while(tmp > 0)
     {
         m = tmp % 10;
@@ -297,12 +309,14 @@ uint32_t hashing(matchboxes *mb, uint32_t config)
     return (sum1/sum2)%mb->size;
 }
 
+// Add a matchbox to the hash table
 void addHeadHash(matchboxes *mb, uint32_t config)
 {
     uint32_t p = hashing(mb, config);
     addHeadMbHash(mb->tab[p], config);
 }
 
+// Free the memory of hash table
 void freeHashTable(matchboxes *th)
 {
     uint32_t i;
@@ -327,6 +341,7 @@ void freeHashTable(matchboxes *th)
     free(th);
 }
 
+// Find a matchbox in hash table
 maillon_mb *findMb(matchboxes *th, uint32_t config)
 {
     maillon_mb *mb;
@@ -344,6 +359,7 @@ maillon_mb *findMb(matchboxes *th, uint32_t config)
     return NULL;
 }
 
+// Find a basic matchbox for the modification
 maillon_mb *findBaseConfiguration(matchboxes *th, uint32_t config)
 {
     maillon_mb *mb;
@@ -364,7 +380,10 @@ maillon_mb *findBaseConfiguration(matchboxes *th, uint32_t config)
     }
     return NULL;
 }
+
 // -----------------------Operations------------------------------
+
+// Cound the number of specific billes in the matchbox
 uint32_t countBilles(list_billes *l, enum billes b)
 {
     maillon_billes *p = l->head;

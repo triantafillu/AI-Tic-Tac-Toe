@@ -15,7 +15,7 @@ enum billes {yellow, red, green, blue, orange, purple, white, black, pink};
 // blue  | orange | purple
 // white | black  | pink
 
-// Maillon de bille
+// Maillon of bille
 typedef struct _maillon_billes
 {
     enum billes bille;
@@ -43,34 +43,38 @@ typedef struct
     tab_maillon *tail;
 } list_tab_maillons;
 
-// Maillon de matchbox
-//Une boite d'allumettes est une arraylist 
-//free->est vide au début on y ajoute les billes quand on joue 
-//takes sont les billes qui sont disponible pour jouer 
-//config-> nb en base 3 qui définit la configuration de la boite d'allumettes 
-//modifications-> tableau des nombres en base 3 des configurations possible de la boite d'allumettes 
+// Maillon of matchbox
+// Matchbox is an arraylist
 typedef struct _maillon_mb
 {
+    // Number of base 3 representing the matchbox
     uint32_t config;
 
+    // Free maillons
     list_billes *free;
+
+    // Mailloms with billes
     list_billes *taken;
+
+    // Adresses of the maillons (will be used to free the memory)
     list_tab_maillons *ltm;
 
+    // Transformations of this game board
     uint32_t modifications[8];
 
     struct _maillon_mb *next;
 }maillon_mb;
-//Liste de boites d'allumettes 
-//Servira dans le tableau de hachage 
+
+// List of matchboxes
+// Is used in hash table
 typedef struct
 {
     uint32_t size;
     maillon_mb *head;
     maillon_mb *tail;
 } list_mb;
-//Tableau de hachage 
-//Servira à stocker les différentes boites d'allumettes selon leur hachecode 
+
+// Hashtable, contains 304 matchboxes
 typedef struct
 {
     list_mb **tab;
