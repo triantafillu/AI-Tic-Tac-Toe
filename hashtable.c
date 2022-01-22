@@ -138,7 +138,6 @@ tab_maillon * removeHeadLTM(list_tab_maillons *l)
 void enlargeFree(maillon_mb *mb, uint32_t size)
 {
     tab_maillon *t;
-    uint32_t i;
 
     assert(mb->free->size == 0);
 

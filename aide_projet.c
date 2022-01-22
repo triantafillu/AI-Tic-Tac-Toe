@@ -174,11 +174,16 @@ _Bool isConfiguration(uint32_t t1, uint32_t t2)
             copy[i][j] = table1[i][j];
         }
     }
+    for(uint32_t k = 0; k < 3; k++)
+    {
+        free(table1[k]);
+    }
+    free(table1);
 
     appliquer_transformation_base(copy, ROT_90);
     t3 = tableTo3(copy);
     if (t3 == t2)
-    {
+    {   
         return 1;
     }
     else
@@ -237,12 +242,6 @@ _Bool isConfiguration(uint32_t t1, uint32_t t2)
             }
         }
     }
-
-    for(uint32_t k = 0; k < 3; k++)
-    {
-        free(table1[k]);
-    }
-    free(table1);
 
     return 0;
 
