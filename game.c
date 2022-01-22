@@ -813,11 +813,6 @@ void newGame(char *filename, uint32_t mode)
             else
             {
                 // Get the choice of user and check whether the place is empty
-                // do
-                // {
-                //     srand(time(NULL));
-                //     choice = rand() % 8 + 1;
-                // } while (!checkFreePosition(curr_config, choice));
                 choice=getRandIndex(table);
                 // Change the state of board
                 curr_config = changeBoard(curr_config, turn, choice);
